@@ -1,0 +1,12 @@
+<span class="icon-tree-1 ion-checkmark-round" ng-class="{'noseen': item.ngayxem == ''}">
+</span>
+<div class="tree-info1">
+    <p class="tree-name1" ng-model="collapsed3" ng-click="collapsed3=!collapsed3">{{item.nguoixuly}} -
+        <span class="tree-name1" ng-if="item.ngayxem != ''">{{item.ngayxem|date:'dd/MM/yyyy'}}</span>
+        <span class="tree-name1" ng-if="item.ngayxem == ''" style="color:black;">Chưa xử lý</span>
+    </p>
+    <div class="wrapper2-1" ng-show="collapsed3">
+        <p class="lbl2-14">Ngày nhận: {{item.ngaynhan}}</p>
+        <p class="lbl2-14">Ngày xử lý: {{item.ngayxuly}}</p>
+    </div>
+</div>

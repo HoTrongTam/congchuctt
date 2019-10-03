@@ -1,0 +1,111 @@
+.list-giaoviec .btn1-1 {font-size: 14px;}
+.list-giaoviec .content {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.fixed-top.list-giaoviec2 {
+    height: 79px;
+}
+.list-giaoviec .list {padding: 0;max-width: 100%;}
+.list-giaoviec .item2-1.item {width: 100%;text-align: left;border: none;padding: 15px 10px;}
+.fixed-top.list-giaoviec {bottom: 0;top: initial;background: #f5f5f5;border-bottom: none;padding: 10px 0;height: auto;}
+.list-giaoviec input.txt2-3 {
+    width: 100%;
+    padding: 5px 40px 5px 10px;
+}
+.list-giaoviec .btn1-1 {width: 50%}
+.list-giaoviec ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 185px;padding-top: 0;}
+.list-giaoviec .wrapper2-3 {position: relative;}
+.list-giaoviec .btn2-4 {width: 30px;height: 30px;position: absolute;top: 2px;right: 8px;border: none;background-color: #27A8D3;border-radius: 50%;padding: 0;}
+.list-giaoviec .iconsprite2-2 {background-position: -105px -64px;}
+.list-giaoviec .col-2 {width: calc(100% - 105px);}
+.list-giaoviec .lbl2-3 {max-width: 100%;color: #0066FF;font-weight: 600;font-size: 15px;}
+.list-giaoviec .lbl2-2 {font-size: 14px;font-style: italic;color: #0066FF;width: 75px;font-weight: 600;}
+.list-giaoviec .row2-1b {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 27px;
+    font-size: 13px;
+    width: 100%
+}
+.list-giaoviec .lbl2-5b {
+    width: 100%;
+}
+.list-giaoviec .lbl2-5 {width: calc(100% - 30px);white-space: normal;font-size: 15px}
+.list-giaoviec .lbl2-2 {font-size: 14px;font-style: italic;color: #0066FF;width: 75px;font-weight: 600;}
+.list-giaoviec .row2-1,.row2-1b {display: flex;align-items: flex-start;flex-wrap: wrap;}
+.list-giaoviec .style2-1 .lbl2-6 {font-weight: normal;font-size: 16px;color: #000;}
+.list-giaoviec .style2-1 .lbl2-4,.list-giaoviec .style2-1 .lbl2-5b,.list-giaoviec .style2-2 .lbl2-4 {font-size: 16px;color: #000;}
+.list-giaoviec .style2-1 .lbl2-5 {font-size: 16px;color: #000;}
+.list-giaoviec .style2-2 .row2-1b {margin-left: 0;}
+.list-giaoviec .style2-2 .lbl2-5 {font-size: 16px;color: #000}
+.list-giaoviec .lbl2-5c {display: flex;font-size: 16px;color: #000;align-items: center;margin: 3px 0px;}
+.list-giaoviec .lbl2-5d {font-size: 16px;padding-right: 6px;font-weight: 700;}
+.list-giaoviec .icon-doc-1 {
+  color: #0066FF;
+  font-size: 22px;
+  padding-right: 11px;
+}
+
+.icon-fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-fixed .iconsprite2-plus {
+    display: block;
+    background-color: #F65314;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: -5px;
+    z-index: 5;
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.icon-fixed .iconsprite2-plus {
+    background-position: -155px -175px;
+    background-size: 400px 400px;
+}
+
+.list-giaoviec .cbo2-3 {
+    display: none;
+}
+.list-giaoviec .content.child .btn1-1{width: 50%;}
+.list-giaoviec .content.child .btn1-1.active {border: none}
+/* .list-tracuu.drop .content.child .btn1-1:first-child{border-right: 1px solid #BBBBBB;font-weight: bold;color: #666666;} */
+.list-giaoviec .content.child {padding: 0;background: #f2f2f2}
+.list-giaoviec .fixed-top .btn1-1.activated {
+    border-bottom: none;
+}
+.list-giaoviec .fixed-top .btn1-1 {
+    transition: unset;
+    -webkit-transition: unset;
+    -moz-transition: unset;
+    -o-transition: unset;
+    transition-property: unset;
+}
+@media screen and (min-width: 768px) {
+    .list-giaoviec {background: #f2f2f2;}
+    .fixed-top.list-giaoviec {width: 70%;left: 15%;}
+}
+
+.platform-ios.platform-cordova .list-giaoviec ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {
+    top: 185px;
+}
+

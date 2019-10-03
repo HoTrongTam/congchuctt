@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-thongbao" hide-back-button="false">
+    <ion-content class="content-type1 has-header">
+        <div class="lbl2-24">
+            <span class="lbl2-24b">{{DataCTTB.TieuDe}}</span>
+            <span class="lbl2-24c">{{DataCTTB.NgayBatDau}}</span>
+        </div>
+        <div class="lbl2-25">
+            <div ng-bind-html="htmlBind"></div>
+        </div>
+        <div class="lbl2-10-1">
+            <span class="lbl2-10b">Tệp đính kèm: </span>
+            <div ng-repeat="filedk in datafile track by $index">
+                <span class="lbl2-10c" ng-click="openFile(filedk)" >
+                    <i class="icon2-3 ion-android-attach" ng-if="filedk.TenGoc"></i> {{filedk.TenGoc}}</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

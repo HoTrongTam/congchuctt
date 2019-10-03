@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chuyen-vb" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-chuyenvb">
+            <label class="item item-input item-stacked-label">
+                <textarea placeholder="Nội dung xử lý" class="texta2-1"></textarea>
+                <span class="input-label" aria-label="Nội dung xử lý">Nội dung xử lý</span>
+            </label>
+            <div class="wrapper2-4">
+                <label class="item item-input item-stacked-label">
+                    <input type="text" placeholder="Số ngày xử lý" class="">
+                    <span class="input-label">Số ngày xử lý</span>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <input type="text" placeholder="Hạn xử lý" class="txt2-4">
+                    <span class="input-label">Hạn xử lý</span>
+                    <span class="icon2-2 ion-android-calendar"></span>
+                </label>
+            </div>
+            <div class="wrapper2-5">
+                <span class="lbl2-4c">Thông báo: </span>
+                <label class="lbl2-9">
+                    <input type="checkbox" class="cbo2-1"> SMS
+                </label>
+                <label class="lbl2-9">
+                    <input type="checkbox" class="cbo2-1"> Email
+                </label>
+            </div>
+            <div class="content">
+                <button class="btn1-1 ion-navigate active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'> Cá nhân</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Phòng ban</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="group2-1">
+            <input type="text" class="txt2-2" placeholder="Nhập tìm kiếm">
+            <button class="btn2-3 iconsprite2-10"></button>
+        </div>
+        <div class="content2-1">
+            <p class="lbl2-15">Đã chọn 3</p>
+            <ion-list class="list2-5" ng-if="tabIndex===0">
+                <ion-item class="item2-15">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <input type="checkbox" class="cbo2-1">
+                            <span class="lbl2-17c" ng-model="collapsed" ng-click="collapsed=!collapsed">Nguyễn Minh Hải</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star" value="on">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <input type="text" placeholder="Số ngày xử lý" class="txt2-18">
+                        <label class="lbl2-19b">
+                            <input type="text" placeholder="Hạn xử lý" class="txt2-18">
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label>
+                    </div>
+                </ion-item>
+                <ion-item class="item2-15">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <input type="checkbox" class="cbo2-1">
+                            <span class="lbl2-17c" ng-model="collapsed" ng-click="collapsed=!collapsed">Nguyễn Văn Tuấn</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star" value="on">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <input type="text" placeholder="Số ngày xử lý" class="txt2-18">
+                        <label class="lbl2-19b">
+                            <input type="text" placeholder="Hạn xử lý" class="txt2-18">
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label>
+                    </div>
+                </ion-item>
+                <ion-item class="item2-15">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <input type="checkbox" class="cbo2-1">
+                            <span class="lbl2-17c" ng-model="collapsed" ng-click="collapsed=!collapsed">Nguyễn Mai Anh</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star" value="on">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <input type="text" placeholder="Số ngày xử lý" class="txt2-18">
+                        <label class="lbl2-19b">
+                            <input type="text" placeholder="Hạn xử lý" class="txt2-18">
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label>
+                    </div>
+                </ion-item>
+            </ion-list>
+            <ion-list class="list2-5" ng-if="tabIndex===1">
+                <ion-item class="item2-15">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <input type="checkbox" class="cbo2-1">
+                            <span class="lbl2-17c" ng-model="collapsed" ng-click="collapsed=!collapsed">Phòng Tài chính - Kế hoạch</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star" value="on">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <input type="text" placeholder="Số ngày xử lý" class="txt2-18">
+                        <label class="lbl2-19b">
+                            <input type="text" placeholder="Hạn xử lý" class="txt2-18">
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label>
+                    </div>
+                </ion-item>
+                <ion-item class="item2-15">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <input type="checkbox" class="cbo2-1">
+                            <span class="lbl2-17c" ng-model="collapsed" ng-click="collapsed=!collapsed">Phòng Y tế</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star" value="on">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <input type="text" placeholder="Số ngày xử lý" class="txt2-18">
+                        <label class="lbl2-19b">
+                            <input type="text" placeholder="Hạn xử lý" class="txt2-18">
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label>
+                    </div>
+                </ion-item>
+                <ion-item class="item2-15">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <input type="checkbox" class="cbo2-1">
+                            <span class="lbl2-17c" ng-model="collapsed" ng-click="collapsed=!collapsed">Phòng Quản lý đô thị</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star" value="on">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <input type="text" placeholder="Số ngày xử lý" class="txt2-18">
+                        <label class="lbl2-19b">
+                            <input type="text" placeholder="Hạn xử lý" class="txt2-18">
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+    <div class="fixed-top list-chuyenvb2">
+        <button class="btn2-2 ion-share">Chuyển</button>
+    </div>
+</ion-view>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-xulycongviec" hide-back-button="false">
+  <ion-content scroll="false" class="content-type1">
+    <div class="fixed-top list-xulycongviec2">
+      <form ng-submit="onSearch()">
+        <div class="wrapper2-3">
+          <input type="text" ng-model="searchForm.keyword" class="txt2-3" placeholder="Nhập tìm kiếm" />
+          <button type="submit" class="btn2-4 iconsprite2-2"></button>
+        </div>
+      </form>
+          <div class="content">
+            <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>
+              <!-- đang chọn xem tab nào thì tab đó thêm class "active" -->Văn bản {{countDSVB || ""}} </button>
+            <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Hồ sơ {{countHS || ""}}</button>
+            <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Chỉ đạo {{countTKCD || ""}}</button>
+          </div>
+    </div>
+  </ion-content>
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="Lấy dữ liệu mới" on-refresh="doRefresh();"></ion-refresher>
+    <ion-list class="list2-1" ng-repeat="item in danhsachVanBan track by $index" ng-if="tabIndex===0">
+      <ion-item class="item2-1" ng-click="vanbanChitiet(item)">
+        <div class="row2-1">
+          <ion-icon class="icon-doc-1 ion-folder "> </ion-icon>
+          <div class="col-2">
+            <p class="lbl2-3" ng-if="item.loaivanban==2">Số văn bản: {{item.sovanban}}</p>
+            <p class="lbl2-3" ng-if="item.loaivanban==1">Mã văn bản: {{item.mavanban}}</p>
+            <p class="lbl2-4">Hạn xử lý: {{item.hanxuly}}</p>
+          </div>
+          <p class="lbl2-2">{{item.ngaynhan}}</p>
+        </div>
+        <div class="row2-1">
+          <div class="row2-1b">
+            <span class="lbl2-5">{{item.trichyeu}}</span>
+            <label class="star2-1">
+              <input ng-model="isCheck" ng-init="(item.xulychinh==1)?(isCheck = true):(isCheck = false)" type="checkbox" class="star">
+              <span class="star-icon iconsprite2-star"></span>
+            </label>
+          </div>
+          <p class="lbl2-6">{{item.nguoiky}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="list2-1" ng-repeat="item in danhsachVanBan track by $index" ng-if="tabIndex===1">
+      <ion-item class="item2-1 style2-1" ng-click="hosoChitiet(item)">
+        <div class="row2-1">
+          <ion-icon class="icon-doc-1 ion-folder "> </ion-icon>
+          <div class="col-2">
+            <p class="lbl2-3">SBN: {{item.sobiennhan}}</p>
+          </div>
+          <p class="lbl2-2">{{item.ngaynhan}}</p>
+        </div>
+        <div class="row2-1">
+          <div class="row2-1b">
+            <div class="lbl2-5">
+              {{item.loaihoso}}
+              <p class="lbl2-5b">Họ Tên: {{item.hoten}}</p>
+            </div>
+          </div>
+          <div class="lbl2-6 style2-1">
+            <p class="lbl2-4">Hạn xử lý: {{item.hanxuly}}</p>
+            Ngày hẹn trả: {{item.ngayhentra}}
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="list2-1" ng-repeat="item in danhsachVanBan track by $index" ng-if="tabIndex===2">
+      <ion-item class="item2-1 style2-2" ng-click="chidaoChitiet(item)">
+        <p class="lbl2-3">Số văn bản: {{item.sovanban}}</p>
+        <div class="row2-1">
+          <div class="row2-1b">
+            <div class="lbl2-5">
+              {{item.trichyeu}}
+              <p class="lbl2-5c">
+                <span class="lbl2-5d">Nội dung chỉ đạo: </span> {{item.noidungchidao}}</p>
+              <p class="lbl2-5c">
+                <span class="lbl2-5d">Hạn xử lý: </span> {{item.hanxuly}}</p>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadPage();" distance="2" immediate-check="false"></ion-infinite-scroll>
+  </ion-content>
+  <!-- <div class="fixed-top list-xulycongviec" ng-if="tabIndex===0 || tabIndex===1">
+    <div class="content">
+      <label class="lbl2-7">
+      <input type="checkbox" class="cbo2-1" ng-click="toggleAll()">Chọn tất cả</label>
+      <button class="btn2-2" ng-click="tranfer()">Chuyển</button>
+    </div>
+  </div> -->
+</ion-view>

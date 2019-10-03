@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}">
+    <ion-content class="Profile has-header">
+        <div class="header-profile">
+            <img class="avatar-img" src="../../res/img/avatar_female.png" />
+            <p class="profile-name">{{ form.HoTen }}</p>
+            <!-- <div class="tabs">
+                <span class="tab-item active" ng-click='opentab("tab_content_1",1)' ng-class='{active:tabActive==1}'>Cá Nhân</span>
+                <span class="tab-item" ng-click='opentab("tab_content_2",2)' ng-class='{active:tabActive==2}'>Lý Lịch</span>
+            </div> -->
+        </div>
+        <div class="body-profile">
+            <div class="tab-content tab_content_1 active">
+                <div class="profile-info bg_color_profile_ttll">
+                    <!-- Bấm nút chỉnh sửa thì div profile-info sẽ thêm class open_edit -->
+                    <div class="profile-title">
+                        <span class="bt_profile_ttll icon_title bg_display_inline img-radius vertical-bottom"></span> Thông Tin Liên Lạc
+                        <button class="edit-icon" ng-click="onEditTapped();" ng-show="mode === 'read'">Chỉnh sửa</button>
+                    </div>
+                    <div class="profile-view" ng-show="mode === 'read'">
+                        <p class="profile-input">
+                            <span class="place">Số Điện Thoại</span>
+                            <span class="name-main">{{ form.DienThoai }}</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Chổ Ở Hiện Tại</span>
+                            <span class="name-main">{{ form.ChoOHienTai }}</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Thư Điện Tử</span>
+                            <span class="name-main">{{ form.Email }}</span>
+                        </p>
+						<p class="profile-input">
+                            <span class="place">Giới Tính</span>
+                            <span class="name-main">{{ (form.GioiTinhID === 2)?'Nam':'Nữ' }}</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Ngày Sinh</span>
+                            <span class="name-main">{{ form.NgaySinh }}/{{ form.ThangSinh }}/{{ form.NamSinh }}</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Nơi Sinh</span>
+                            <span class="name-main">#TP.Hồ Chí Minh</span>
+                        </p>
+                    </div>
+                    <div class="profile-edit" ng-show="mode === 'edit'">
+                        <div class="item item-input item-stacked-label">
+                            <input type="tel" ng-model="form.DienThoai" placeholder="Số Điện Thoại" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" />
+                            <span class="input-label" aria-label="Số Điện Thoại">Số Điện Thoại</span>
+                        </div>
+                        <div class="item item-input item-stacked-label">
+                            <input type="text" ng-model="form.ChoOhienTai" placeholder="Chổ Ở Hiện Tại" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" />
+                            <span class="input-label" aria-label="Chổ Ở Hiện Tại">Chổ Ở Hiện Tại</span>
+                        </div>
+                        <div class="item item-input item-stacked-label">
+                            <input type="email" ng-model="form.Email" placeholder="Thư Điện Tử" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" />
+                            <span class="input-label" aria-label="Thư Điện Tử">Thư Điện Tử</span>
+                        </div>
+
+						<div class="item item-input item-stacked-label">
+                            <div class="toggle-flat toggle1-1">
+                                <div class="opt {{ form.GioiTinhID === 2 ? 'active' : '' }}" ng-click="onSexTapped(2);">Nam</div>
+                                <div class="opt {{ form.GioiTinhID === 1 ? 'active' : '' }}" ng-click="onSexTapped(1);">Nữ</div>
+                            </div>
+                            <span class="input-label" aria-label="Giới Tính">Giới Tính</span>
+                        </div>
+                        <div class="item item-input item-stacked-label">
+                            <input ng-model="form.birthday" mobiscroll-date="setDatetime" placeholder="Ngày Sinh" readonly />
+                            <span class="input-label" aria-label="Ngày Sinh">Ngày Sinh</span>
+                        </div>
+                        <div class="item item-input item-stacked-label">
+                            <input type="text" placeholder="Nơi Sinh" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" />
+                            <span class="input-label" aria-label="Nơi Sinh">Nơi Sinh</span>
+                        </div>
+                        <div class="btn-edit-wrapper">
+                            <button class="button cancel-icon" ng-click="goBack();">Huỷ</button>
+                            <button class="button save-icon" ng-click="submit();">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content tab_content_2" ng-if="false">
+                <div class="profile-info bg_color_profile_ttmr">
+                    <p class="profile-title">
+                        <span class="bt_profile_ttmr icon_title bg_display_inline img-radius vertical-bottom"></span> Thông Tin Mở Rộng
+                        <button class="edit-icon bounceIn">Chỉnh sửa</button>
+                    </p>
+                    <div class="profile-view">
+                        <p class="profile-input">
+                            <span class="place">Nguyên Quán</span>
+                            <span class="name-main">Quy Nhơn</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Dân Tộc</span>
+                            <span class="name-main">Kinh</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Quốc Gia</span>
+                            <span class="name-main">Việt Nam</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Tôn Giáo</span>
+                            <span class="name-main">Không</span>
+                        </p>
+                        <p class="profile-input">
+                            <span class="place">Địa Chỉ Thường Trú</span>
+                            <span class="name-main">Tổ 44, Khu vực 5, Phường Quang Trung, Thành phố Quy Nhơn, Bình Định</span>
+                        </p>
+                    </div>
+                    <div class="profile-edit">
+                        <label class="item item-input item-stacked-label">
+                            <input type="text" placeholder="Nguyên Quán" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="Quy Nhơn">
+                            <span class="input-label" aria-label="Nguyên Quán">Nguyên Quán</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="">
+                                <option value=" ">Chọn dân tộc</option>
+                                <option value="Kinh" selected>Kinh</option>
+                            </select>
+                            <span class="input-label" aria-label="Dân Tộc">Dân Tộc</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="">
+                                <option value=" ">Chọn quốc gia</option>
+                                <option value="Việt Nam" selected>Việt Nam</option>
+                            </select>
+                            <span class="input-label" aria-label="Quốc Gia">Quốc Gia</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="">
+                                <option value=" ">Chọn tôn giáo</option>
+                                <option value="Không" selected>Không</option>
+                            </select>
+                            <span class="input-label" aria-label="Tôn Giáo">Tôn Giáo</span>
+                        </label>
+                        <!-- 4 Input dưới khi nhập xong sẽ nhập lại làm 1 field theo thứ tự địa chỉ thường trú , phường xã , quận huyện , tỉnh thành -->
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="Chọn tỉnh thành">
+                                <option value=" ">Chọn tỉnh thành</option>
+                                <option value="Hồ Chí Minh">Bình Định</option>
+                            </select>
+                            <span class="input-label" aria-label="Tỉnh Thành">Tỉnh Thành</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="Chọn tỉnh thành">
+                                <option value=" ">Chọn quận huyện</option>
+                                <option value="Quận Tân Bình">Quy Nhơn</option>
+                            </select>
+                            <span class="input-label" aria-label="Quận Huyện">Quận Huyện</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="Chọn tỉnh thành">
+                                <option value=" ">Chọn phường/xã</option>
+                                <option value="Hồ Chí Minh">Quang Trung</option>
+                            </select>
+                            <span class="input-label" aria-label="Phường/Xã">Phường Xã</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <input type="text" placeholder="Địa Chỉ Thường Trú" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="Tổ 44, Khu vực 5">
+                            <span class="input-label" aria-label="Địa Chỉ Thường Trú">Địa Chỉ Thường Trú</span>
+                        </label>
+                        <div class="btn-edit-wrapper">
+                            <button class="cancel-icon bounceIn">Huỷ</button>
+                            <button class="save-icon bounceIn">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info bg_color_profile_gttt no-padding">
+                    <p class="profile-title padd-top-10 padd-left-10 padd-right-10">
+                        <span class="bt_profile_gttt icon_title bg_display_inline img-radius vertical-bottom"></span> Thông Tin Giấy Tờ Tuỳ Thân
+                        <button class="add-icon bounceIn">Thêm</button>
+                    </p>
+                    <ion-list class="list-gttt">
+                        <ion-item class="list-gttt-loop">
+                            <button class="edit-list-gttt icon_title bg_sample bg_list_edit_gttt bounceIn"></button>
+                            <p class="list-gttt-name"><span>Loại Giấy Tờ:</span> Chứng Minh Nhân Dân</p>
+                            <p class="list-gttt-name"><span>Số Giấy Tờ:</span> 01234567890</p>
+                            <p class="list-gttt-name"><span>Ngày Cấp:</span> 15/04/2010</p>
+                            <p class="list-gttt-name"><span>Nơi Cấp:</span> CA TP.HCM</p>
+                        </ion-item>
+                        <ion-item class="list-gttt-loop">
+                            <button class="edit-list-gttt icon_title bg_sample bg_list_edit_gttt bounceIn"></button>
+                            <p class="list-gttt-name"><span>Loại Giấy Tờ:</span> Giấy Phép Lái Xe</p>
+                            <p class="list-gttt-name"><span>Số Giấy Tờ:</span> 01234567890</p>
+                            <p class="list-gttt-name"><span>Ngày Cấp:</span> 15/04/2010</p>
+                            <p class="list-gttt-name"><span>Nơi Cấp:</span> CA TP.HCM</p>
+                        </ion-item>
+                    </ion-list>
+                    <!-- Nếu dữ liệu trống hết là Thêm còn nếu form có dữ liệu là edit
+                    Edit là sửa từng item trong list -->
+                    <div class="profile-edit">
+                        <label class="item item-input item-stacked-label">
+                            <select class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="Chọn tỉnh thành">
+                                <option value=" ">Chọn loại giấy tờ</option>
+                                <option value="Chứng minh nhân dân">Chứng minh nhân dân</option>
+                            </select>
+                            <span class="input-label" aria-label="Quận Huyện">Loại Giấy Tờ</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <input type="text" placeholder="Số Giấy Tờ" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="01234567890">
+                            <span class="input-label" aria-label="Số Giấy Tờ">Số Giấy Tờ</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <input type="date" placeholder="Ngày Cấp" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="15/04/2010">
+                            <span class="input-label" aria-label="Ngày Cấp">Ngày Cấp</span>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <input type="text" placeholder="Nơi Cấp" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty" style="" value="CA TP.HCM">
+                            <span class="input-label" aria-label="Nơi Cấp">Nơi Cấp</span>
+                        </label>
+                        <div class="btn-edit-wrapper">
+                            <button class="button cancel-icon" ng-click="goBack()">Huỷ</button>
+                            <button class="button save-icon" ng-click="submit();">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

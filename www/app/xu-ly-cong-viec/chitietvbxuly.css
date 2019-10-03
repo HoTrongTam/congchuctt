@@ -1,0 +1,143 @@
+[class*="chitiet-"] .container {padding: 0 15px;margin-bottom: 70px;}
+[class*="chitiet-"] .lbl2-10 {font-size: 16px;font-family: ' Bold', '';margin-bottom: 5px;}
+[class*="chitiet-"] .lbl2-10c {color: #0066FF;font-size: 16px;}
+[class*="chitiet-"] .lbl2-10c.style2-1 {font-weight: 600;}
+.icon2-3.ion-android-attach {text-align: center;width: 20px;height: 20px;font-size: 13px;color: #75A8B4;background: #B5E1EA;display: inline-block;border-radius: 50%;transform: rotate(30deg);}
+[class*="chitiet-"] .lbl2-11 {font-size: 16px;font-weight: 700;color: #333333;margin-bottom: 8px;}
+[class*="chitiet-"] .img2-1 {width: 40px;height: 40px;margin-right: 10px;}
+[class*="chitiet-"] .lbl2-12 {display: flex;font-size: 16px;padding: 10px 0 10px 0;}
+[class*="chitiet-"] .lbl2-12b {width: calc(100% - 50px);}
+[class*="chitiet-"] .lbl2-12c {display: flex;justify-content: space-between;color: #0066FF;}
+[class*="chitiet-"] .lbl2-12e {margin-bottom: 5px;}
+[class*="chitiet-"] .lbl2-12f,[class*="chitiet-"] .lbl2-12g {display: block;width: 100%;}
+[class*="chitiet-"] .lbl2-12k {color: #0066FF;}
+[class*="chitiet-"] .btn2-2.ion-share:before {font-size: 20px;padding-right: 5px;}
+.btn2-2:last-child {background: #FF9803;}
+.iconbfsprite2-2:before {content: "";width: 20px;height: 20px;display: inline-block;background-position: -148px -69px;margin-right: 5px;}
+.iconbfsprite2-3:before {content: "";width: 35px;height: 35px;display: inline-block;background-position: -177px -63px;margin-right: 10px;}
+[class*="chitiet-"] .lbl2-13b.iconbfsprite2-3 {display: flex;align-items: center;padding-left: 10px;font-weight: 700;font-size: 16px;color: #666;width: calc(100% - 70px);}
+[class*="chitiet-"] .lbl2-13 {display: flex;justify-content: space-between;margin-top: 1px;}
+[class*="chitiet-"] .cbo2-1 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    top: 3px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: transparent;
+    border: 1px solid #e3e3e3;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+    border-radius: 3px;
+}
+.fixed-top[class*="chitiet-"] .cbo2-1 {bottom: 0;top: initial;background: transparent;border-bottom: none;height: auto;padding: 10px 0;}
+.fixed-top[class*="chitiet-"] .cbo2-1:checked::before {line-height: 0px;}
+[class*="chitiet-"] .btn1-1 {font-size: 14px;}
+[class*="chitiet-"] .cbo2-1:checked {background: #009F8D;border: none;}
+[class*="chitiet-"] .cbo2-1:checked::before {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    /* content: '✔'; */
+    content: '✓';
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+[class*="chitiet-"] .cbo2-1::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #009F8D;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+[class*="chitiet-"] .row2-1,.row2-1b {display: flex;align-items: flex-start;flex-wrap: wrap;}
+[class*="chitiet-"] .list {padding: 0;max-width: 100%;}
+[class*="chitiet-"] .item2-1.item {width: 100%;text-align: left;border: none;padding: 15px 10px;border-bottom: 1px dashed rgba(0, 0, 0, 0.29);}
+[class*="chitiet-"] .item2-1.item:first-child {padding-top: 10px;}
+[class*="chitiet-"] .lbl2-2 {font-size: 13px;font-style: italic;color: #0066FF;width: 70px;}
+[class*="chitiet-"] .col-2 {width: calc(100% - 100px);}
+[class*="chitiet-"] .lbl2-3 {max-width: 100%;color: #0066FF;font-weight: 600;font-size: 16px;}
+[class*="chitiet-"] .row2-1b {display: flex;margin-left: 30px;}
+[class*="chitiet-"] .row2-1b {margin-left: 27px;font-size: 13px;width: 100%}
+[class*="chitiet-"] .lbl2-5 {width: calc(100% - 30px);white-space: normal;}
+[class*="chitiet-"] .star2-1 .star-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-position: -37px -64px;
+}
+[class*="chitiet-"] .star:checked~.star-icon {background-position: -73px -64px;}
+[class*="chitiet-"] .lbl2-6 {margin-left: 27px;color: #666;font-weight: 600;}
+.fixed-top[class*="chitiet-"] {bottom: 0;top: initial;background: #f5f5f5;border-bottom: none;padding: 10px 0;height: auto;}
+[class*="chitiet-"] .content {display: flex;align-items: center;padding: 0 10px;justify-content: space-between;}
+.lbl2-7,.btn2-2 {font-size: 14px;width: 48%;display: flex;align-items: center;justify-content: center;background: #F2F2F2;padding: 5px 10px;border-radius: 5px;box-shadow: 0px 1px 2px #7f7f7f;}
+.btn2-2 {background: #0098FF;border: none;color: #fff;}
+[class*="chitiet-"] .item2-1.item:last-child {margin-bottom: 45px;}
+[class*="chitiet-"] ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 105px;padding-top: 0;}
+[class*="chitiet-"] .iconsprite2-2 {background-position: -105px -64px;}
+[class*="chitiet-"] .dropd2-1 {font-family: 'Open Sans Regular', 'Open Sans';font-size: 16px;color: #606060;height: 30px;width: 70px;text-align: left;background: #F5F5F5;}
+[class*="chitiet-"] .textarea2-2 {width: 100%;height: 42px;font-size: 16px;border-bottom: 1px solid #ddd;color: #333333;text-align: left;margin-top: 20px;}
+.btn2-15 {width: 50px;display: block;margin: 15px auto;padding: 5px;border-radius: 3px;border: none;background: #fff;-webkit-box-shadow: 0 3px 6px #777;-moz-box-shadow: 0 3px 6px #777;box-shadow: 0 3px 6px #777;}
+/* Cây xử lý */
+.tree2-1 .tree-item2 {border: none;padding: 0;display: flex;margin: 0;flex-wrap: wrap;}
+.tree2-1 .icon2-3{width: 20px;height: 20px;text-align: center;line-height: 22px;font-size: 13px;color: #fff;background: #C2E577;border-radius: 50%;margin-top: 1px;}
+.tree2-1 .tree-info {padding-left: 10px;width: calc(100% - 30px);min-height: 40px;}
+.tree2-1 .tree-name {color: #009933;font-weight: 700;font-size: 15px;margin-bottom: 5px;}
+.tree2-1 .tree-item2:before {content: "";position: absolute;top: 2px;bottom: 0;left: 10px;display: block;z-index: -1;width: 0;border-left: 1px dashed #009933;}
+.tree2-1b .tree-item2:after {content: "";position: absolute;top: 8px;bottom: 0;left: -20px;display: block;z-index: -1;width: 30px;border-top: 1px dashed #009933;}
+.tree2-1 .tree-item2:last-child:before {bottom: 31px;}
+.tree2-1 .tree2-1b {padding-left: 30px;width: 100%;}
+.tree2-1 .wrapper2-3 {margin-bottom: 10px;}
+.tree2-1 .tree-name2 {display: inline-block;}
+.tree2-1 .tree2-1b .tree-item2 {overflow: visible}
+.tree-item2.disabled .icon2-3{background: #979C8A;}
+.tree-item2.disabled .tree-name{color:#000;}
+.tree-item2.disabled .tree-name2{color: #f00;}
+.tree2-1b.child .tree-item2::before{display: none}
+.chitiet-vbd .mbsc-control  {
+  border: solid 1px #e3e3e3;
+  text-align: center;
+  width: 40%;
+  font-size: 15px;
+}
+/* End: Cây xử lý */
+
+@media screen and (min-width: 480px) {
+    [class*="chitiet-"] .container.style2-1 {padding: 0 10px;width: 70%;margin: 0 auto 70px;}
+}
+@media screen and (min-width: 768px) {
+    [class*="chitiet-"] {background: #f2f2f2;}
+    [class*="chitiet-"] .container {width: 70%;margin: 0 auto 70px;}
+    .fixed-top[class*="chitiet-"] {width: 70%;left: 15%;}
+    [class*="chitiet-"] .textarea2-2{background: transparent;}
+}
+
+.platform-ios.platform-cordova [class*="chitiet-"] ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {
+    top: 125px;
+}
+
+.platform-ios.platform-cordova [class*="chitiet-"] .overflow-scroll .scroll {
+    margin-bottom: 60px;
+}

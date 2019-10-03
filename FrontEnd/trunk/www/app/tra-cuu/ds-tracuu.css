@@ -1,0 +1,57 @@
+.list-tracuu .row2-1,.row2-1b {display: flex;align-items: flex-start;flex-wrap: wrap;justify-content: space-between;}
+.list-tracuu .list {padding: 0;max-width: 100%;}
+.list-tracuu .item2-1.item {width: 100%;text-align: left;border: none;padding: 15px 10px;border-bottom: 1px dashed rgba(0, 0, 0, 0.29);}
+.list-tracuu .item2-1.item:first-child {padding-top: 10px;}
+.list-tracuu .lbl2-2 {font-size: 14px;font-style: italic;color: #0066FF;width: 70px;font-weight: 600;}
+.list-tracuu .lbl2-3 {max-width: 100%;color: #0066FF;font-weight: 600;font-size: 16px;}
+.list-tracuu .row2-1b {display: flex;}
+.list-tracuu .row2-1b {width: 100%} 
+.list-tracuu .lbl2-5 {white-space: normal;font-size: 16px}
+.list-tracuu .star2-1 .star-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-position: -37px -64px;
+}
+.list-tracuu .star:checked~.star-icon {background-position: -73px -64px;}
+.list-tracuu .lbl2-6 {color: #666;font-weight: 600;margin-top: 3px;font-size:16px}
+.fixed-top.list-tracuu {bottom: 0;top: initial;background: #f5f5f5;border-bottom: none;padding: 10px 0;height: auto;}
+.list-tracuu .content {display: flex;align-items: center;padding: 0;justify-content: space-between;flex-wrap: wrap;}
+.lbl2-7,.btn2-2 {font-size: 14px;width: 48%;display: flex;align-items: center;justify-content: center;background: #F2F2F2;padding: 5px 10px;border-radius: 5px;box-shadow: 0px 1px 2px #7f7f7f;}
+.btn2-2 {background: #0098FF;border: none;color: #fff;}
+.list-tracuu .item2-1.item:last-child {margin-bottom: 45px;}
+.fixed-top.list-tracuu2 {height: 80px;}
+input.txt2-3 {width: 100%;padding: 5px 30px 5px 10px;}
+.list-tracuu ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 135px;padding-top: 0;}
+.list-tracuu .wrapper2-3 {position: relative;}
+.list-tracuu .btn2-4 {width: 30px;height: 30px;position: absolute;top: 3px;right: 5px;border: none;background-color: #27A8D3;border-radius: 50%;padding: 0;}
+.list-tracuu .iconsprite2-2 {background-position: -105px -64px;}
+.list-tracuu .style2-1 .lbl2-6 {font-weight: normal;font-size: 16px;color: #000;}
+.list-tracuu .style2-1 .lbl2-4,.list-tracuu .style2-1 .lbl2-5b,.list-tracuu .style2-2 .lbl2-4 {font-size: 16px;color: #000;}
+.list-tracuu .style2-1 .lbl2-5 {font-size: 16px;color: #000;}
+.list-tracuu .style2-2 .row2-1b {margin-left: 0;}
+.list-tracuu .style2-2 .lbl2-5 {font-size: 16px;color: #000}
+.list-tracuu .lbl2-5c {display: flex;font-size: 16px;color: #000;align-items: center;margin: 3px 0px;}
+.list-tracuu .lbl2-5d {font-size: 16px;padding-right: 6px;font-weight: 700;}
+
+.drop .fixed-top.list-tracuu2 {height: 105px;}
+.list-tracuu .btn1-1 {font-size: 14px;}
+.list-tracuu.drop .btn1-1 {height: 35px;}
+.list-tracuu.drop .content {background: #D6D6D6}
+.list-tracuu.drop .content.child .btn1-1{width: 50%;}
+.list-tracuu.drop .content.child .btn1-1.active {border: none}
+.list-tracuu.drop .content.child .btn1-1:first-child{border-right: 1px solid #BBBBBB;font-weight: bold;color: #666666;}
+.list-tracuu.drop .content.child {padding: 0;background: #f2f2f2}
+.list-tracuu.drop ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 155px;padding-top: 0;}
+.lbl2-4 {
+    font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+    .list-tracuu {background: #f2f2f2;}
+    .fixed-top.list-tracuu {width: 70%;left: 15%;}
+}

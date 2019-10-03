@@ -1,0 +1,347 @@
+.Profile { background: #F7F9FC;}
+.header-profile {
+    padding: 30px 15px 70px;
+    position: relative;
+    text-align: center;
+    background: url(../../../res/img/bg-left-menu.jpg) no-repeat, url(res/img/bg-left-menu.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.72);
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.72)
+}
+.header-profile:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: rgba(0, 0, 0, 0.3);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+img.avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #fff;
+    position: relative;
+}
+.header-profile p {
+    font-size: 14px;
+    margin-bottom: 0px;
+    color: #fff;
+    position: relative;
+}
+.header-profile p.profile-job {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.header-profile .tabs {
+    left: 0;
+    background: transparent;
+}
+.header-profile .tabs span.tab-item {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 12px;
+    line-height: 55px;
+    font-weight: 600;
+}
+.header-profile .tabs span.tab-item.active {
+    border-width: 0px 0px 2px 0px !important;
+    border-style: solid;
+}
+.tab-content {
+    /* display: none; */
+    background: transparent;
+    width: 100%;
+}
+/* .tab-content.active {
+    display: block;
+} */
+.profile-info {
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #fff;
+    -webkit-box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.25);
+}
+.body-profile {
+    padding: 10px;
+}
+.profile-input {
+    clear: both;
+    margin: 0;
+    font-size: 12px;
+    color: #bdbdbd;
+    padding: 5px 0;
+    display: flow-root;
+    border-bottom: 1px solid #e3e3e3;
+}
+.profile-input:last-child {
+    border-bottom: none;
+}
+.profile-title {
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: 5px 0;
+}
+.name-main {
+    float: right;
+    font-weight: 600;
+    color: #666;
+    max-width: 60%;
+    text-align: right;
+}
+.edit-icon, .add-icon {
+    float: right;
+    font-size: 10px;
+    color: #cccccc;
+    padding-right: 0;
+    padding-left: 18px;
+    line-height: 18px;
+    position: relative;
+    border: none;
+    background-color: transparent;
+}
+.btn-edit-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.save-icon, .cancel-icon {
+    width: 120px;
+    background: #E9E9E9;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.25);
+}
+.cancel-icon {
+    color: #585757;
+    margin-right: 15px;
+}
+
+/* .save-icon, .cancel-icon, .profile-edit {
+    display: none;
+} */
+button.edit-icon:before,
+button.add-icon:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+button.edit-list-gttt {
+    position: absolute;
+    border: none;
+    top: 5px;
+    right: 10px;
+    padding: 0;
+    width:20px; height:20px;
+}
+.list-gttt .list {
+    padding: 0;
+    max-width: 100%;
+}
+ion-item.list-gttt-loop.item {
+    border: none;
+    border-top: 1px solid #e3e3e3;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    position: relative;
+}
+ion-item.list-gttt-loop.item .list-gttt-name {
+    font-size: 12px;
+    color: #666;
+}
+ion-item.list-gttt-loop.item .list-gttt-name span {
+    display: inline-block;
+    width: 75px;
+}
+ion-item.list-gttt-loop.item .list-gttt-name-sub {
+    font-size: 12px;
+    line-height: 13px;
+    color: #90949c;
+}
+ion-item.list-gttt-loop.item .list-gttt-name-cv {
+    font-weight: 600;
+}
+.profile-info.bg_color_profile_ttll {
+    border-left: 2px solid #fd8b61;
+}
+.profile-info.bg_color_profile_ttll .profile-title,
+.profile-info.bg_color_profile_ttll .edit-icon {
+    color: #fd8b61;
+}
+.profile-info.bg_color_profile_ttll .save-icon {
+    background: #fd8b61;
+}
+.bg_display_inline {
+    display: inline-block; width: 20px; height:20px; border-radius: 50%;
+}
+.bt_profile_ttll {
+    background-color: #fd8b61;
+}
+.profile-info.bg_color_profile_ttcn {
+    border-left: 2px solid #4ec4f6;
+}
+.profile-info.bg_color_profile_ttcn .profile-title,
+.profile-info.bg_color_profile_ttcn .edit-icon {
+    color: #4ec4f6;
+}
+.profile-info.bg_color_profile_ttcn .save-icon {
+    background: #4ec4f6;
+}
+.bt_profile_ttcn {
+    background-color: #4ec4f6;
+}
+.profile-info.bg_color_profile_ttmr {
+    border-left: 2px solid #52bd89;
+}
+.profile-info.bg_color_profile_ttmr .profile-title,
+.profile-info.bg_color_profile_ttmr .edit-icon {
+    color: #52bd89;
+}
+.profile-info.bg_color_profile_ttmr .save-icon {
+    background: #52bd89;
+}
+.bt_profile_ttmr {
+    background-color: #52bd89;
+}
+.profile-info.bg_color_profile_gttt {
+    border-left: 2px solid #b968c7;
+}
+.profile-info.bg_color_profile_gttt .profile-title,
+.profile-info.bg_color_profile_gttt .add-icon {
+    color: #b968c7;
+}
+.profile-info.bg_color_profile_gttt .save-icon {
+    background: #b968c7;
+}
+.profile-info.bg_color_profile_gttt .btn-edit-wrapper {
+    padding-bottom: 10px;
+}
+.bt_profile_gttt {
+    background-color: #b968c7;
+}
+.profile-info.bg_color_profile_ttcb {
+    border-left: 2px solid #efc126;
+}
+.profile-info.bg_color_profile_ttcb .profile-title,
+.profile-info.bg_color_profile_ttcb .edit-icon {
+    color: #efc126;
+}
+.profile-info.bg_color_profile_ttcb .save-icon {
+    background: #efc126;
+}
+.bt_profile_ttcb {
+    background-color: #efc126;
+}
+.bt_profile_ttcv {
+    background-color: #da4436;
+}
+.profile-info.bg_color_profile_ttcv {
+    border-left: 2px solid #da4436;
+}
+.profile-info.bg_color_profile_ttcv .profile-title {
+    color: #da4436;
+}
+.profile-info.bg_color_profile_gttt .profile-edit {
+    padding: 0 10px;
+}
+/*-------- Start: Edit trang thông tin cá nhân ----------*/
+.profile-info.open_edit .edit-icon,
+.profile-info.open_edit .add-icon,
+.profile-info.open_edit .profile-view,
+.profile-info.open_edit .list-gttt {
+    display: none;
+}
+.profile-info.open_edit .save-icon,
+.profile-info.open_edit .cancel-icon,
+.profile-info.open_edit .profile-edit {
+    display: block;
+}
+.profile-edit .input-label {
+    max-width: 100%;
+}
+.profile-info .item-stacked-label input[type="date"] {
+    padding: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+    line-height: 34px;
+    height: 28px;
+    color: #777777;
+    background: transparent;
+    border-radius: 0;
+    font-weight: normal;
+}
+.profile-info .item-stacked-label select {
+    padding: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #999 !important;
+    line-height: 34px;
+    height: 28px;
+    width: 101%;
+    margin-left: -3px;
+    color: #777777;
+    background: transparent;
+    border-radius: 0;
+    font-weight: normal;
+    border: none;
+}
+.profile-info .item-stacked-label input[type="date"]:after,
+.profile-info .item-stacked-label select:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-width: 8px 4px 0 4px;
+    border-top-color: #777777;
+    position: absolute;
+    right: 6px;
+    bottom: 26px;
+}
+.profile-edit .item-input input[type="tel"],
+.profile-edit .item-input input[type="text"],
+.profile-edit .item-input input[type="email"] {
+    border-bottom: 1px solid #dedede;
+}
+.profile-edit .toggle1-1 {
+    margin: 0 auto;
+    border-color:#fd8b61;
+}
+.profile-edit .toggle1-1 .opt {color:#e96f42;}
+.profile-edit .toggle1-1 .opt.active {
+    background-color: #fd8b61;
+    color:#fff;
+}
+.profile-edit input[readonly]:not(.cloned-text-input) {
+    border-bottom: 1px solid #dedede;
+    background: none;
+}
+.profile-edit .button{
+    line-height: 38px;
+    min-height: 35px;
+    /* height: 40px; */
+    padding: 0 15px;
+    height: 40px;
+}
+/*-------- End: Edit trang thông tin cá nhân ----------*/
+@media screen and (min-width: 768px){
+    .body-profile {
+        width: 70%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}

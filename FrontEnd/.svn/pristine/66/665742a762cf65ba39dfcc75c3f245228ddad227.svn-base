@@ -1,0 +1,65 @@
+.hdsd .scroll {
+	padding: 15px;
+	text-align: center;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;    
+}
+.lbl1-hd1 {
+    background: green;
+	text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    line-height: 25px;
+}
+.lbl1-hd2 {
+	text-align: left;
+}
+.lbl1-hd2 br{
+	line-height: 30px;
+}
+.box1-hd1{
+	display: inline-block;
+	width: 100%;
+	margin: 15px auto;
+	clear: both;
+	max-width: 400px;
+} 
+.btn1-hd1 {
+	height: 60px;
+    display: inline-block;
+    width: 48%;
+    float: left;
+    background: #4285f4;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding-left: 35px;
+    position: relative;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.btn1-hd1:before{
+	position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    font-size: 25px;
+}
+.btn1-hd1:nth-child(2){
+	float: right;
+	background: #34a853;
+}
+.btn1-hd1:hover, .btn1-hd1:active {
+	transform: scale(0.95,0.95);
+}
+@media screen and (min-width: 768px) {
+	.hdsd .scroll {
+	    padding: 15px 15%;
+	}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<ion-view class="profile" hide-nav-bar="true">
+    <ion-content class="no-header">
+        <div class="box2-1">
+            <div class="wrapper2-1">
+                <button class="btn2-1 iconbfsprite2-menu" menu-toggle="left"></button>
+                <!-- <button class="btn2-1 iconbfsprite2-user"></button> -->
+            </div>
+            <div class="wrapper2-2">
+                <ion-avatar item-start>
+                    <img class="imgavatar" src="{{anhDaiDien || res/img/avatar_female.png}}" ng-if="hasImg"> </ion-avatar>
+                <p class="info2-1" ng-if="!hasImg">N</p>
+                <p class="lbl2-1">{{form.ten}}</p>
+                <p class="lbl2-2">{{form.tenchucvu}}</p>
+            </div>
+        </div>
+        <div class="tabs">
+            <span class="tab-item" ng-click='opentab(1)' ng-class='{active:tabActive==1}'>Thông tin tài khoản</span>
+            <span class="tab-item" ng-click='opentab(2)' ng-class='{active:tabActive==2}'>Đổi mật khẩu</span>
+        </div>
+        <div class="body-profile">
+            <div class="tab-content tab_content_1 active" ng-if='tabActive==1'>
+                <div class="group2-input">
+                    <span class="lbl2-14">Tên đăng nhập</span>
+                    <input type="text" class="txt2-14" value="{{form.tendangnhap}}" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Họ tên</span>
+                    <input type="text" class="txt2-14" value="{{form.ten}}" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Giới tính</span>
+                    <select class="cbo2-14" disabled>
+                        <option selected>{{gender.gioitinh}}</option>               
+                    </select>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Điện thoại</span>
+                    <input type="text" class="txt2-14" value="{{form.sdt}}" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Email</span>
+                    <input type="text" class="txt2-14" value="{{form.email}}" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Phòng ban</span>
+                    <input type="text" class="txt2-14" value="{{form.tenphongban}}" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Chức vụ</span>
+                    <select class="cbo2-14" disabled>
+                        <option selected>{{form.tenchucvu}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tab-content tab_content_2 active" ng-if='tabActive==2'>
+                <input type="password" class="txt2-15" placeholder="Nhập mật khẩu cũ" ng-model="formChangePass.passwordold">
+                <input type="password" class="txt2-15" placeholder="Nhập mật khẩu mới" ng-model="formChangePass.password">
+                <input type="password" class="txt2-15" placeholder="Nhập lại mật khẩu mới" ng-model="check.NewPassMatch" ng-blur="checkPassword();">
+                <button class="btn2-14 iconbfsprite2-4" ng-click="submit();">Lưu thay đổi</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

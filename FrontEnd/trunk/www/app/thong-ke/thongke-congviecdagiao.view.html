@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-xulyphananh">
+    <ion-content class="content-type1 has-header">
+        <div class="wrapper2-16">
+            <select class="cbo2-15">
+                <option value="Tháng 11">Tháng 11</option>
+                <option value="Tháng 12">Tháng 12</option>
+            </select>
+            <select class="cbo2-15">
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+            </select>
+        </div>
+        <div class="chart-container">
+            <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+        </div>
+    </ion-content>
+</ion-view>

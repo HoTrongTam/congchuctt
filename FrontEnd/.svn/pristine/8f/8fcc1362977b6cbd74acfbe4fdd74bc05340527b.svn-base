@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<ion-view view-title="{{ ::title | uppercase }}" class="thong-ke-1">
+    <ion-content class="has-header">
+
+    	<div class="box1-20 margin1-4">
+    		<div class="box1-18 line-bottom">
+    			<p class="lbl1-17">Tình hình tiếp nhận và xử lý</p>
+    		</div>
+    		<div class="box1-14">
+    			<p class="lbl1-16">
+    				<span class="lbl1-16c">Thời gian: </span>
+    				<span class="lbl1-16b">Năm 2017<!-- data --></span>
+    			</p>
+    		</div>
+    		<div class="box1-16" >
+    			<div fusioncharts width="100%" height="550" type="msbar2d" dataSource="{{myDataSource_chart_thuly}}" ></div>
+    			<!-- set height động cho chart:  
+					height = 60 * [số tháng]
+					Vd: chart hiển thị 6 tháng => height= 60 * 6 = 360
+    			-->
+    		</div>
+    	</div>
+    	<div class="box1-20">
+    		<div class="box1-13 line-bottom">
+    			<p class="lbl1-17">Tình hình xử lý hồ sơ</p>
+    		</div>
+    		<div class="box1-14">
+    			<p class="lbl1-16">
+    				<span class="lbl1-16c">Thời gian: </span>
+    				<span class="lbl1-16b">Năm 2017<!-- data --></span>
+    				<span class="lbl1-16b bf-phay" ng-show="false">Tháng 11<!-- ẩn để uat --><!-- data. Nếu không có thì không hiển thị --></span>
+    				<!-- Trường hợp 1: Lấy tháng click chọn xem trên chart tình hình tiếp nhận & xử lý.
+						Trường hợp 2: Default lấy tháng hiện tại
+    				-->
+    			</p>
+    		</div>
+    		<div class="box1-15" >
+    			<div fusioncharts width="100%" type=" pie3d" dataSource="{{myDataSource_chart_xuly}}" ></div>
+    		</div>
+    	</div>
+    </ion-content>
+</ion-view>

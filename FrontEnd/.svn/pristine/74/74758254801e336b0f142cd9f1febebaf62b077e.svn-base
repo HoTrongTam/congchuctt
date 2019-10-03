@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="home style2-1" hide-nav-bar="true">
+    <ion-content class="no-header">
+        <div class="box2-1">
+            <div class="wrapper2-1">
+                <button class="btn2-1 iconbfsprite2-menu"></button>
+                <button class="btn2-1 iconbfsprite2-user"></button>
+            </div>
+            <div class="wrapper2-2">
+                <img class="logo2-1" src="../../res/img/logo.png"  src="res/img/logo.png"/>
+                <p class="lbl2-1">Uỷ ban nhân dân quận 7</p>
+                <p class="lbl2-2">Thành phố hồ chí minh</p>
+            </div>
+        </div>
+        <ion-list class="lst2-1">
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-xlcv"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Xử lý công việc</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-lct"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Lịch công tác</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-tk"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Thống kê</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-gv"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Giao việc</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-tc"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Tra cứu</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-db"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Danh bạ</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-email"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Email</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-td"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Trao đổi</span>
+            </ion-item>
+            <ion-item class="item2-1">
+                <span class="icon2-1 icon2-tb"><i class="lbl2-3b">35</i></span>
+                <span class="lbl2-3">Thông báo</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

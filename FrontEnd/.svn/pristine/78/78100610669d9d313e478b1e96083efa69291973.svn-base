@@ -1,0 +1,305 @@
+[class*="ecitizen-"], [class*="ecityzen-"], [class*="iconmain-"], .iconmain-warning:before, .box-7.type1 .btn-back-2:before,
+.iconbfmain-delete:before,
+.iconbfmain-notification:before {
+    background-image: url(../res/img/main.png), url(res/img/main.png);
+    background-size: 315px 385px;
+}
+[class*="iconmain2-"] {
+    background-image: url(../res/img/main2.png), url(res/img/main2.png);
+    background-size: 280px 385px;
+}
+[class*="iconsprite-"],
+[class*="iconbfsprite-"]:before,
+.bar-positive .button.button-icon[class*="bf-iconsprite-"]:before,
+.bar-positive .button.button-icon.iconsprite-8-4,
+.item-type2 .chk-type1+label [class*="status"],
+.table-type1 .lbl-10:after,
+.table-type2 .lbl-10.type1:before,
+.ds-vbden button.lbl-1.selected:before,
+.btn-demo:before,
+.user-register .step-icon:before,
+.bf-sprite-forward:before,
+[class*="bf-sprite-"]:before,
+.iconbfsprite-vblienket1 {
+    background-image: url(../res/img/main2_1.png), url(res/img/main2_1.png);
+    background-size: 280px 350px;
+}
+
+[class*="iconsprite2-"],
+[class*="bf-iconsprite2-"]:before,
+[class*="iconbfsprite2-"]:before,
+[class*="af-iconsprite2-"]:after,
+.item-options [class*="iconsize45-"],
+label.star-label .star-icon,
+[class*=bg_sample],
+[class*=bgbf_sample]:before,
+[class*=bgaf_sample]:after,
+.icon1-1,
+.icon-fixed .view-icon-size1,
+.collapse-list-input:before,
+.ds-hs [class*=bg_sample] {
+    background-image: url(../res/img/main2_2.png), url(res/img/main2_2.png);
+    background-repeat: no-repeat;
+    background-size: 385px 385px;
+}
+/*start: chi tiet van ban den */
+.bg_header_ctvbd {
+    background: url(../res/img/main2_2.png), url(res/img/main2_2.png);
+    background-repeat: no-repeat;
+    background-position: -2px 0px;
+    background-size: 200px 240px;
+}
+.icon-fixed .view-icon-size1 {
+    background-position: -168px -28px;
+}
+.document-detail .iconsprite-attachment1 {
+    background-position: -239px -274px;
+}
+
+.iconbfsprite-vblienket:before {
+    background-position: -103px -297px;
+}
+
+.bg_authority_ctvbd {
+    background-position: -36px -3px;
+}
+
+.document-detail .iconsprite-tenboso {
+    background-position: -105px -280px;
+}
+
+.bg_date_ctvbd {
+    background-position: -115px -10px;
+}
+
+.bg_smartphone_ctvbd {
+    background-position: -221px -10px;
+}
+
+.bg_phuongthuc_ctvbd {
+    background-position: -11px -44px;
+}
+
+.bg_chuaxulytruochan_ctvbd {
+    background-position: -142px -38px;
+}
+
+.bg_status_ctvbd {
+    background-position: -10px -186px;
+}
+.iconsprite-6-1 {
+    background-position: -188px -8px;
+}
+
+.iconsprite-7-1 {
+    background-position: -220px -8px;
+}
+
+.box-10 .lbl-1.status-3 .iconsprite-tinhtrang {
+    background-position: -181px -11px;
+}
+
+.box-10 .lbl-1.status-2 .iconsprite-tinhtrang {
+    background-position: -217px -11px;
+}
+
+.bg_sprite2_10 {
+    background-position: -247px -281px;
+}
+
+/*  end: chi tiet van ban den */
+/* start: dung chung hinh main.png */
+.bar button.back-button:before, .bar .button.back-button:before, .button.icon-left.ion-chevron-left.button-clear.button-dark:before,
+.btn-demo:before, .btn-search-1:before,
+.btn-bar.bar.bar-footer .tab-item.prev:before,
+.btn-bar.bar.bar-footer .tab-item.next:after,
+.ecitizen-icon3:before ,
+.bar .button-icon.ion-android-funnel:before,
+.box-7 .btn-back-2,
+.menu.menu-right [class*="icon"],
+.widget-content .btn-type6:before,
+.obj-type-13 .lbl-23:before, .widget.type3 .list-type5 .item:before, .box-12.icon-tick:before,
+.iconmain-more1:after,
+.lbl-24.lbl-step-hoantat:after,
+.lbl-26[class*="iconmain-"]:before ,
+.menu.menu-left .list .item .icon-size1,
+.table-type5 .lbl-18:after,
+.pane1-2 .box-type12 [class*="icon"],
+.modal .btn1-back1:before,
+[class*="spritemainbf"]:before,
+.item2-10 .icon2-10
+{
+    background-image: url(../res/img/main.png), url(res/img/main.png);
+    background-size: 315px 385px;
+    background-repeat: no-repeat;
+}
+/* end: dung chung hinh main.png */
+
+/*start: dung chung hinh main_2.png */
+.menu.menu-left .list .item .icon-changepass,
+.bg_display_inline,
+button.edit-icon:before, button.add-icon:before,
+button.edit-list-gttt
+{
+    background-image: url(../res/img/main_2.png), url(res/img/main_2.png);
+    background-size: 75px 85px;
+}
+/*  end: dung chung hinh main_2.png */
+
+/*start: intro.view | intro*/
+.ecityzen-tim-thutuc { background-position: -71px -1px; }
+.ecityzen-tin-tuc { background-position: -106px -1px; }
+.ecityzen-demooffline { background-position: -141px -1px; }
+/*end: intro.view | intro*/
+
+/*start: sign-in | login.view */
+.bar button.back-button:before, 
+.bar .button.back-button:before, 
+.button.icon-left.ion-chevron-left.button-clear.button-dark:before,
+.modal .btn1-back1:before {
+    background-position: -146px -109px;
+}
+.btn-demo:before { background-position: -218px -42px;}
+/*  end: sign-in | login.view */
+
+/*start: nut search */
+.btn-search-1:before { background-position: -4px -109px;}
+/*  end: nut search */
+
+/*start: dang ky | user-register */
+.btn-bar.bar.bar-footer .tab-item.prev:before { background-position: -10px -7px;}
+.btn-bar.bar.bar-footer .tab-item.next:after { background-position: -40px -7px;}
+/*  end: dang ky | user-register */
+
+/*start: home */
+.ecitizen-icon1 { background-position: -4px -145px;}
+.ecitizen-icon2 { background-position: -40px -146px; }
+/*end: home */
+
+/*start: nut filter */
+.bar .button-icon.ion-android-funnel:before { background-position: -210px -70px;}
+/*  end: nut filter */
+
+/*start: form filter */
+.box-7 .btn-back-2 { background-position: 0px 0px;}
+.box-7.type1 .btn-back-2:before { background-position: -181px -182px; }
+.icon4 {background-position: -180px -216px;}
+.icon6 {background-position: -180px -250px; position: absolute; left: 10px; bottom: 17px;}
+.icon5 {background-position: -180px -285px; position: absolute; left: 10px; bottom: 17px;}
+/*  end: form filter */
+/*start: chi tiet thuc tuc | procedure-detail */
+.iconmain-1 {background-position: -5px -250px}
+.iconmain-2 {background-position: -39px -250px}
+.iconmain-3 {background-position: -73px -250px}
+.iconmain-4 {background-position: -109px -250px}
+.iconmain-5 {background-position: -145px -250px}
+.div-bottom-type1:before {
+    background: url(../res/img/gradient-trans-f5f5f5.png) repeat-x, url(res/img/gradient-trans-f5f5f5.png) repeat-x;
+    background-position: left top;
+    background-size: 1px 20px;
+}
+.widget-content .btn-type6:before { background-position: -17px -212px;}
+.obj-type-13 .lbl-23:before, .widget.type3 .list-type5 .item:before, .box-12.icon-tick:before { background-position: 0px -212px;}
+.widget-content .btn-type6.clr-1:before { background-position: -19px -229px;}
+.iconmain-6 { background-position: 0px -281px;}
+.iconmain-7 { background-position: -36px -281px;}
+.iconmain-8 { background-position: -70px -281px;}
+.iconmain-9 { background-position: -105px -281px;}
+.iconmain-13 { background-position: -254px -315px; }
+.iconmain-14 { background-position: -254px -287px; }
+.iconmain-more1:after { background-position: -255px -140px;}
+.iconmain-22 { background-position: -220px -10px; }
+.iconmain-15 { background-position: -218px -149px; }
+.iconmain-16 { background-position: -219px -182px; }
+.iconmain-17 { background-position: -251px -39px; }
+.iconmain-18 { background-position: -249px -75px; }
+/*  end: chi tiet thuc tuc | procedure-detail */
+
+/*start: 5 trang thai cua ho so */
+.ecitizen-icon3.status1:before { background-position: -6px -175px;}
+.ecitizen-icon3.statusVTN:before { background-position: -6px -175px;}
+.ecitizen-icon3.status2:before { background-position: -41px -175px;}
+.ecitizen-icon3.statusTHS:before { background-position: -41px -175px;}
+.ecitizen-icon3.status3:before { background-position: -75px -175px;}
+.ecitizen-icon3.statusDXL:before { background-position: -75px -175px;}
+.ecitizen-icon3.status4:before { background-position: -110px -176px;}
+.ecitizen-icon3.statusBSH:before { background-position: -110px -176px;}
+.ecitizen-icon3.status5:before { background-position: -145px -176px;}
+.ecitizen-icon3.statusDHT:before { background-position: -145px -176px;}
+/*  end: 5 trang thai cua ho so */
+
+.ecitizen-icon5 {background-position: -5px -321px;}
+.ecitizen-icon6 { background-position: -44px -323px; }
+.ecitizen-icon7 { background-position: -77px -323px; }
+
+/*start: document-detail > ui timeline */
+.lbl-24.lbl-step-hoantat:after { background-position: -260px -19px;}
+.iconmain-tiepnhan:before { background-position: -183px -322px;}
+.iconmain-hentra:before { background-position: -147px -322px;}
+.iconmain-hoantat:before{ background-position: -217px -321px}
+/*  end: document-detail > ui timeline */
+
+.iconmain-word {background-position: -219px -218px;}
+.iconmain-excel {background-position: -253px -218px;}
+.iconmain-pdf {background-position: -254px -254px;}
+.iconmain-image {background-position: -254px -183px;}
+.iconmain-powerpoint {background-position: -218px -253px;}
+.iconmain-filedefault {background-position: -219px -113px;}
+
+/*start: menu-left */
+.icon-home {background-position: -82px -357px;}
+.icon-mydoc {background-position: -154px -357px;}
+.icon-listprod {background-position: -224px -357px;}
+.active .icon-home, .selected .icon-home {background-position: -118px -357px;}
+.active .icon-mydoc, .selected .icon-mydoc{background-position: -189px -357px;}
+.active .icon-listprod, .selected .icon-listprod {background-position: -259px -357px;}
+.icon-about {background-position: -53px -357px;}
+.icon-logout {background-position: -1px -357px;}
+.icon-exit {background-position: -26px -357px;}
+.menu.menu-left .list .item .icon-changepass { background-position: -44px -28px;}
+/*  end: menu-left */
+
+/*start: user-profile */
+.bg_display_inline { background-size: 75px 85px;}
+.bg_list_edit_gttt { background-position: -43px -5px;}
+.bt_profile_ttll { background-position: -18px -15px;;}
+.profile-info.bg_color_profile_ttll .edit-icon:before { background-position: -14px 1px;}
+.profile-info.bg_color_profile_ttcn .edit-icon:before { background-position: 1px 1px;}
+.bt_profile_ttcn { background-position: 3px -33px;}
+.profile-info.bg_color_profile_ttmr .edit-icon:before { background-position: -30px 1px;}
+.bt_profile_ttmr { background-position: 3px -15px;}
+.profile-info.bg_color_profile_gttt .add-icon:before { background-position: -59px 0px;}
+.bt_profile_gttt { background-position: -16px -33px;}
+.profile-info.bg_color_profile_ttcb .edit-icon:before { background-position: -112px -219px;}
+.bt_profile_ttcb { background-position: -252px -252px;}
+.bt_profile_ttcv { background-position: -252px -286px;}
+/*  end: user-profile */
+
+/*start: filter >> document-list filter*/
+.box-type12.type3 .ecitizen-icon3.statusVTN:before { background-position: -2px -175px;}
+.box-type12.type3 .ecitizen-icon3.statusTHS:before { background-position: -37px -175px;}
+.box-type12.type3 .ecitizen-icon3.statusDXL:before { background-position: -71px -175px;}
+.box-type12.type3 .ecitizen-icon3.statusBSH:before { background-position: -106px -175px;}
+.box-type12.type3 .ecitizen-icon3.statusDHT:before { background-position: -142px -175px;}
+.table-type5 .lbl-18:after { background-position: -116px -326px;}
+.table-type5 .lbl-18.type1:after { background-position: -108px -326px;}
+/*  end: filter >> document-list filter*/
+
+@media screen and (min-width: 768px){
+	/*start: dang ky | user-register */
+	.step-info .step-icon:before {
+	    background: url(../res/img/main.png) no-repeat, url(res/img/main.png) no-repeat;
+	    background-size: 315px 385px;
+	}
+	.step-info .step-icon.s1:before { background-position: 0px -35px;}
+	.step-info .step-icon.s2:before { background-position: -35px -35px; }
+    .step-info .step-icon.s3:before { background-position: -70px -35px; }
+    .step-info .step-icon.s4:before { background-position: -105px -35px; }
+    .step-info .step-icon.s5:before {background-position: -280px -35px;}
+    .step-info.active .step-icon.s1:before { background-position: 0px -70px; }
+    .step-info.active .step-icon.s2:before { background-position: -35px -70px; }
+    .step-info.active .step-icon.s3:before { background-position: -70px -70px; }
+    .step-info.active .step-icon.s4:before { background-position: -105px -70px; }
+    .step-info.active .step-icon.s5:before {background-position: -280px -70px;}
+	/*  end: dang ky | user-register */
+}

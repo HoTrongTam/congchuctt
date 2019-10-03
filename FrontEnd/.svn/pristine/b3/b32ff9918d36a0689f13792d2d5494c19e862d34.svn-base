@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-danhba" hide-back-button="true">
+    <ion-content class="content-type1 has-header">
+        <div class="wrapper2-13">
+            <p class="lbl2-13c" data="N"></p>
+            <p class="lbl2-13d">Nguyễn Văn Toàn</p>
+        </div>
+        <div class="lst2-8">
+            <button class="item2-8">
+                <span class="icon2-8 ion-ios-chatbubble"></span>
+                <p class="lbl2-13e">Nhắn tin</p>
+            </button>
+            <button class="item2-8">
+                <span class="icon2-8 ion-ios-telephone"></span>
+                <p class="lbl2-13e">Gọi điện</p>
+            </button>
+            <button class="item2-8">
+                <span class="icon2-8 ion-ios-videocam"></span>
+                <p class="lbl2-13e">Zalo</p>
+            </button>
+            <button class="item2-8">
+                <span class="icon2-8 ion-ios-email"></span>
+                <p class="lbl2-13e">Gửi thư</p>
+            </button>
+        </div>
+        <div class="wrapper2-13">
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Số điện thoại: </span>
+                <span class="lbl2-13h">0988650788 </span>
+            </p>
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Email: </span>
+                <span class="lbl2-13h">nvtoan.quan7@tphcm.gov.vn </span>
+            </p>
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Phòng ban: </span>
+                <span class="lbl2-13h">Văn phòng HĐND & UBND </span>
+            </p>
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Chức vụ: </span>
+                <span class="lbl2-13h">Chánh văn phòng </span>
+            </p>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-lichcongtac" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-lichcongtac">
+            <div class="wrapper2-3">
+                <input type="text" class="txt2-3" placeholder="Nhập tìm kiếm lịch công tác" />
+                <button class="btn2-4 iconsprite2-3"></button>
+            </div>
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Lịch ngày</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Lịch tuần</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Lịch tháng</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="wapper2-7" ng-if="tabIndex===0">
+            <div class="lst2-6">
+                <select class="dropdown2-1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <select class="dropdown2-1">
+                    <option value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                </select>
+                <select class="dropdown2-1">
+                    <option value="1">Năm 2016</option>
+                    <option value="2">Năm 2017</option>
+                    <option value="3">Năm 2018</option>
+                </select>
+            </div>
+            <div class="lbl2-17">Thứ 5 ngày 30/10/2017</div>
+            <ion-list class="list2-1">
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">8:00</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 1</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach"></button>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">13:30</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Làm việc với đơn vị đầu tư bãi giữ xe thông minh</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Phạm Văn Vũ (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 3</p>
+                    </div>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">8:00</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 1</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach"></button>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">13:30</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Làm việc với đơn vị đầu tư bãi giữ xe thông minh</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Phạm Văn Vũ (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 3</p>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="wapper2-7" ng-if="tabIndex===1">
+            <div class="lst2-6">
+                <select class="dropdown2-1">
+                    <option value="1">Năm 2016</option>
+                    <option value="2">Năm 2017</option>
+                    <option value="3">Năm 2018</option>
+                </select>
+                <select class="dropdown2-1 style2-1">
+                    <option value="1">Tuần 1 (01/01/2017 đến 01/01/2017)</option>
+                    <option value="2">Tuần 2 (01/01/2017 đến 01/01/2017)</option>
+                    <option value="3">Tuần 3 (01/01/2017 đến 01/01/2017)</option>
+                </select>
+
+            </div>
+            <div class="lbl2-17">Thứ 2 ngày 23/10/2017</div>
+            <ion-list class="list2-1">
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">8:00</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 1</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach"></button>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">13:30</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Làm việc với đơn vị đầu tư bãi giữ xe thông minh</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Phạm Văn Vũ (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 3</p>
+                    </div>
+                </ion-item>
+            </ion-list>
+            <div class="lbl2-17">Thứ 5 ngày 30/10/2017</div>
+            <ion-list class="list2-1">
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">8:00</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 1</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach"></button>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18">13:30</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Làm việc với đơn vị đầu tư bãi giữ xe thông minh</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Phạm Văn Vũ (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 3</p>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="wapper2-7" ng-if="tabIndex===2">
+            <div class="lst2-6">
+                <select class="dropdown2-1">
+                    <option value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                </select>
+                <select class="dropdown2-1">
+                    <option value="1">Năm 2016</option>
+                    <option value="2">Năm 2017</option>
+                    <option value="3">Năm 2018</option>
+                </select>
+            </div>
+            <div class="lbl2-17">Thứ 5 ngày 30/10/2017</div>
+            <ion-list class="list2-1">
+                <ion-item class="item2-1">
+                    <div class="lbl2-18 style2-1">
+                        8:00
+                        <p class="lbl2-18f">25/10/2017</p>
+                    </div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 1</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach"></button>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18 style2-1">13:30<p class="lbl2-18f">25/10/2017</p></div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Làm việc với đơn vị đầu tư bãi giữ xe thông minh</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Phạm Văn Vũ (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 3</p>
+                    </div>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18 style2-1">8:00<p class="lbl2-18f">25/10/2017</p></div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 1</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach"></button>
+                </ion-item>
+                <ion-item class="item2-1">
+                    <div class="lbl2-18 style2-1">13:30<p class="lbl2-18f">25/10/2017</p></div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">Làm việc với đơn vị đầu tư bãi giữ xe thông minh</p>
+                        <p class="lbl2-18d">Chủ trì: Đ/C Phạm Văn Vũ (Phó chủ tịch)</p>
+                        <p class="lbl2-18e">Địa điểm: Phòng họp số 3</p>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

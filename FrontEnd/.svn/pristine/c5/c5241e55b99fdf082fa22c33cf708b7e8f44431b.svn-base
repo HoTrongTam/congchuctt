@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<ion-view view-title="{{ 'Thông tin ứng dụng' | uppercase }}" class="about">
+    <ion-content class="has-header">
+		<div class="lbl2-25">
+			Ứng dụng điện thoại di động Văn phòng điện tử phục vụ cán bộ công chức
+		</div>
+		<ul class="lst2-9">
+			<li class="item2-9">Xem lịch công tác</li>
+			<li class="item2-9">Xem, xử lý văn bản đi, văn bản đến</li>
+			<li class="item2-9">Xem, xử lý hồ sơ hành chính</li>
+			<li class="item2-9">Giao việc</li>
+			<li class="item2-9">Theo dõi công việc đã giao</li>
+			<li class="item2-9">
+				Thống kê
+				<ul class="lst2-9b">
+					<li class="item2-9b">Thống kê tình hình xử lý văn bản</li>
+					<li class="item2-9b">Thống kê tình hình xử lý hồ sơ</li>
+					<li class="item2-9b">Thống kê tình hình xử lý phản ánh, kiến nghị</li>
+					<li class="item2-9b">Thống kê tình hình xử phạt hành chính</li>
+					<li class="item2-9b">Thống kê tình hình giải quyết đơn thư</li>
+					<li class="item2-9b">Thống kê công việc đã giao</li>
+					<li class="item2-9b">Thống kê tình hình xử phạt hành chính</li>
+					<li class="item2-9b">Thống kê chuyên ngành theo lĩnh vực</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="lbl2-26">Phiên bản: 1.0</div>
+    </ion-content>
+</ion-view>

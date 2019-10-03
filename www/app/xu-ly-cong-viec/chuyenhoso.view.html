@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chuyen-vb" hide-back-button="false">
+    <ion-content class="has-header">
+        <p class="lbl2-19">Số biên nhận: {{sobiennhan}}</p>
+        <p class="lbl2-19b">{{loaihoho}}</p>
+        <p class="lbl2-19b">Họ tên: {{nguoidaidien}}</p>
+        <textarea placeholder="Nội dung xử lý" ng-model="formmodal.noidungxuly" class="texta2-1"></textarea>
+        <div class="wrapper2-5">
+            <span class="lbl2-4c">Thông báo: </span>
+            <label class="lbl2-9">
+                <input type="checkbox" ng-model="formmodal.sendsms" class="cbo2-1"> SMS
+            </label>
+            <label class="lbl2-9">
+                <input type="checkbox" ng-model="formmodal.sendemail" class="cbo2-1"> Email
+            </label>
+        </div>
+        <label class="item item-input item-stacked-label">
+            Người nhận:
+        </label>
+        <div class="group2-1">
+            <input type="text" class="txt2-2 lbl-search-1" ng-model="formmodal.nguoinhanid" mobiscroll-select="dsCN">
+            <button class="btn2-3 iconsprite2-10"></button>
+        </div>
+    </ion-content>
+    <div class="fixed-top list-chuyenvb2">
+        <button class="btn2-2 ion-share" ng-click="submit()">Chuyển</button>
+    </div>
+</ion-view>

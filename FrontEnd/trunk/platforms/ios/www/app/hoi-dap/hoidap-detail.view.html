@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<ion-view view-title="{{ ::title | uppercase }}" class="cthdap">
+    <ion-content class="has-header">
+        <div class="section-main layout-1">
+            <h1 class="lbl1-3" ng-bind-html="detail.NoiDungCauHoi"></h1>
+            <div class="tag-header">
+                <div class="item-tag">
+                    Ngày Tạo: {{dt.getTime(detail.NgayHoi,'date')}}
+                </div>
+            </div>
+        </div>
+        <div class="section-main color2-1 row">
+            <div class="col col-10">
+                <div class="iconsize2-1 ion-ios-chatboxes"></div>
+            </div>
+            <div class="col col-90">
+                <h2 class="lbl1-4">Thông tin người đáp</h2>
+                <div class="wrapper2-1">
+                    <div class="row2-1">
+                        <span class="icon2-1 ion-android-textsms"></span>
+                        <span class="lbl2-1a">Người trả lời: </span>
+                        <span class="lbl2-1a style2-1" ng-if="detail.HoTenNguoiTraLoi">{{detail.HoTenNguoiTraLoi}}</span>
+                    </div>
+                    <div class="row2-1">
+                        <span class="icon2-1 ion-person-stalker"></span>
+                        <span class="lbl2-1a">Chức vụ: </span>
+                        <span class="lbl2-1a">{{detail.ChucVu}}</span>
+                    </div>
+                    <div class="row2-1">
+                        <span class="icon2-1 ion-android-calendar"></span>
+                        <span class="lbl2-1a">Ngày Trả lời: </span>
+                        <span class="lbl2-1a">{{dt.getTime(detail.NgayTraLoi,'date')}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-main color2-2 row">
+            <div class="col col-10">
+                <div class="iconsize2-1 ion-ios-list"></div>
+            </div>
+            <div class="col col-90">
+                <h2 class="lbl1-4">Nội dung trả lời</h2>
+                <div class="wrapper2-1 style2-1" ng-bind-html="detail.NoiDungTraLoi">
+
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

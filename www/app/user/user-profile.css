@@ -1,0 +1,233 @@
+.profile .box2-1 {
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    background: -webkit-linear-gradient(top, rgba(50, 140, 204, 1) 0%, #31B8D9 100%);
+    background: -o-linear-gradient(top, rgba(50, 140, 204, 1) 0%, #31B8D9 100%);
+    background: -ms-linear-gradient(top, rgba(50, 140, 204, 1) 0%, #31B8D9 100%);
+    background: linear-gradient(to bottom, rgba(50, 140, 204, 1) 0%, #31B8D9 100%);
+    position: relative;
+    z-index: 9;
+    -webkit-box-shadow: 0 3px 6px #AAC5D2;
+    -moz-box-shadow: 0 3px 6px #AAC5D2;
+    box-shadow: 0 3px 6px #AAC5D2;
+}
+
+.profile .wrapper2-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 0;
+}
+
+.profile .wrapper2-2 {
+    padding-bottom: 10px;
+    margin-top: -30px;
+}
+
+.profile .btn2-1 {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.profile .btn2-1[class*='iconbfsprite2-']:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.profile .logo2-1 {
+    margin-top: -10px;
+}
+
+.profile .lbl2-1 {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    font-family: ' Bold', '';
+}
+
+.profile .lbl2-2 {
+    font-size: 14px;
+    color: #fff;
+    font-family: ' Bold', '';
+    font-weight: 700;
+}
+
+.profile .lst2-1 .list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+}
+
+.profile .item2-1 {
+    width: 33.333333%;
+    margin: 0;
+    padding: 20px 15px;
+    border: none;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.profile .item2-1:nth-child(3n+3) {
+    border-right: none
+}
+
+.profile .icon2-1 {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profile .lbl2-3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile .lbl2-3b {
+    background: #F13131;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 11px;
+    width: 20px;
+    border-radius: 50%;
+    display: block;
+    height: 20px;
+    text-align: center;
+    line-height: 10px;
+    float: right;
+    margin-top: -8px;
+    margin-right: -8px;
+}
+
+.profile .info2-1 {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Arial Bold', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+    background: #0C50ED;
+    border-radius: 50%;
+}
+
+.profile .tabs {
+    position: relative;
+    height: 35px;
+    background: #F2F2F2;
+    line-height: 35px;
+    padding: 0;
+}
+
+.profile .tab-item {
+    max-width: 50%;
+    font-size: 16px;
+}
+
+.profile .tab-item.active {
+    background-color: rgba(255, 255, 255, 0);
+    width: 50%;
+    color: #0000ff;
+    font-size: 16px;
+    border-bottom: 2px solid #0000ff;
+}
+
+.profile .tab-content.active {
+    padding: 20px 10px;
+}
+
+.profile .group2-input {
+    display: flex;
+    align-items: center;
+    padding: 12px 0 8px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.profile .lbl2-14 {
+    width: 102px;
+    font-size: 16px;
+}
+
+.profile .txt2-14,
+.profile .cbo2-14 {
+    width: calc(100% - 102px);
+    background-color: #FFFCF4;
+    
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;
+    outline-style: none;
+    padding: 0 5px;
+    height: 22px;
+}
+
+.profile .cbo2-14 {
+    border: 1px solid #aaa;
+}
+
+.profile .btn2-14 {
+    width: 100%;
+    padding: 5px;
+    color: #fff;
+    background-color: #4D94DB;
+    border: none;
+    border-radius: 5px;
+    
+    font-weight: 600;
+    margin-top: 15px;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .btn2-14:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    
+    background-position: -217px -71px;
+}
+
+.profile .txt2-15 {
+    padding: 10px 0;
+    background-color: #fafafa;
+    margin-bottom: 5px;
+    
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(153, 153, 153);
+    text-align: left;
+    border-color: transparent;
+    outline-style: none;
+    height: 28px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .profile .tab-content.active {
+        padding: 20px 10px;
+        width: 70%;
+        margin: 0 auto;
+    }
+}

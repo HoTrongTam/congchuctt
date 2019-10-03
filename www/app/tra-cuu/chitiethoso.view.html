@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-hoso" hide-back-button="false">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-chitiethoso">
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Chi tiết hồ sơ</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Quá trình xử lý</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Hồ sơ kèm theo</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="container" ng-if="tabIndex===0">
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Số biên nhận: </span>
+                <span class="lbl2-10c">{{DataCTHS.sobiennhan}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Trạng thái: </span>
+                <span class="lbl2-10c">{{DataCTHS.trangthai}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Lĩnh vực: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.linhvuc}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Loại hồ sơ: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.loaihoso}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Người đại diện: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.nguoidaidien}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Địa chỉ đăng ký: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.diachithuongtru}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày nhận: </span>
+                <span class="lbl2-10c">{{DataCTHS.ngaynhan}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày hẹn trả: </span>
+                <span class="lbl2-10c">{{DataCTHS.ngayhentra}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày hoàn thành: </span>
+                <span class="lbl2-10c">{{DataCTHS.ngayhoanthanh}}</span>
+            </div>
+            <div class="lbl2-11">Thông tin người đại diện</div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Giới tính: </span>
+                <span class="lbl2-10c style2-2">{{gioitinhn}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày sinh: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.ngaysinh}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Số CMND: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.socmnd}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Điện thoại: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.dienthoai}}</span>
+            </div>
+            <!-- <div class="lbl2-10">
+                <span class="lbl2-10b">Email: </span>
+                <span class="lbl2-10c style2-2">{{DataCTHS.email}}</span>
+            </div> -->
+            <!-- <div class="lbl2-11">Thông tin xử lý</div>
+            <div class="lbl2-12">
+                <img src="res/img/avatar.png" class="img2-1">
+                <div class="lbl2-12b">
+                    <div class="lbl2-12c">
+                        <div class="lbl2-12e">
+                            <span class="lbl2-12f">Chuyên viên</span>
+                            <span class="lbl2-12g">{{DataCTHS.thongtinxulys.tennguoixuly}}</span>
+                        </div>
+                        <p class="lbl2-12h">{{DataCTHS.thongtinxulys.thoigianxuly}}</p>
+                    </div>
+                    <div class="lbl2-12d">
+                        <span class="lbl2-12i">Nội dung xử lý:</span>
+                        <span class="lbl2-12k">{{DataCTHS.thongtinxulys.noidungxuly}}</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="container" ng-if="tabIndex===1">
+            <ion-tree-list items="DataQTXL" template-url="app/tra-cuu/chitietvbxuly.treeview.html"></ion-tree-list>
+        </div>
+        <div class="container style2-1" ng-if="tabIndex===2">
+            <div class="lbl2-14" ng-repeat="list in DataHSKT">
+                <br/>{{list.tenhosokemtheo}}
+                <br/>Bản chính :  {{list.banchinh}}
+                <br/>Bản sao :  {{list.bansao}}
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

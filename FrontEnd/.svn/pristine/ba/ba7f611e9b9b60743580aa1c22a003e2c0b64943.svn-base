@@ -1,0 +1,35 @@
+.news-detail {
+	background: #fff;
+}
+.news-detail .scroll{
+	display: inline-block;
+	width: 100%;
+	padding: 15px;
+}
+.lbl1-14 {
+	font-size: 16px;
+    color: #4285f4;
+    font-weight: bold;
+    line-height: 25px;
+}
+.lbl1-15{
+	color: #888;
+    font-style: italic;
+    margin: 10px auto;
+}
+.box1-13{
+	padding-bottom:10px;
+}
+.box1-13 img{
+	max-width: 100%;
+}
+@media screen and (min-width: 768px){
+	.news-detail .scroll{
+		padding: 15px 10%;
+	}
+}
+@media screen and (min-width: 1024px){
+	.news-detail .scroll{
+		padding: 15px 15%;
+	}
+}

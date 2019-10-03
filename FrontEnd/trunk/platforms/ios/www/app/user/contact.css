@@ -1,0 +1,130 @@
+.contact {
+	background: url(../../res/img/contact.jpg) no-repeat, url(res/img/contact.jpg) no-repeat;
+	background-size: contain;
+	background-position: right bottom;
+	text-align: center;
+	background-color:#f5f5f5;
+}
+.contact .scroll-content {
+	display: table;
+	width: 100%;
+	height:100%;
+}
+.contact .scroll-content .scroll {
+	display: table-cell;
+	vertical-align: top;
+	padding-top: 10%;
+}
+.box1-40 {
+	display: inline-table;
+    width: 90%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0;
+    margin: 12px auto;
+    box-shadow: 1px 1px 1px #aaa;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.box1-40:active, .box1-40:hover {
+	-webkit-transform: scale(0.98, 0.98);
+	-moz-transform: scale(0.98, 0.98);
+	-o-transform: scale(0.98, 0.98);
+	transform: scale(0.98, 0.98);
+}
+.box1-40:first-child {margin-top: 25px;}
+.lbl1-52 {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	float: left;
+	background-color:#34a853;
+	margin: 0;
+}
+.lbl1-52:before {
+	color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+}
+.lbl1-52.ion-social-whatsapp {}
+.lbl1-52.ion-social-whatsapp:before {}
+.box1-41 {
+	display: table-cell;
+    width: 100%;
+    padding: 5px 0px;
+    vertical-align: middle;
+    height: 80px;
+    overflow: hidden;
+}
+.lbl1-53a {color:#333; display: block; font-size: 13px; line-height: 15px; margin-bottom:5px;}
+.lbl1-53b {
+	font-size: 17px;
+    line-height: 22px;
+    color: #2aa94c;
+    font-weight: 500;
+}
+.lbl1-52.ion-android-mail {background-color:#4285f4;}
+.lbl1-53b br{}
+.lbl1-53c {display: none;}
+.lbl1-53d {
+	text-decoration: none;
+	font-size: 17px;
+	color:#4285f4;
+	font-weight: 500;
+}
+.lbl1-53f {
+	text-decoration: none;
+	color:#4285f4;
+	display: block;
+	font-size: 17px;
+}
+.box1-40.size-2 { display: none;}
+.lbl1-52.ion-earth {
+	background: #fbbc05;
+    background: #ea4335;
+}
+@media screen and (max-width: 767px) and (orientation:landscape){
+	.box1-40 { max-width: 420px;}
+	.contact {background-size: auto 88%; }
+	.contact .scroll-content .scroll {
+		padding-top: 0px;
+	    padding-right: 40%;
+	    vertical-align: middle;
+	    padding-bottom: 60px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.box1-40 {
+		max-width: 450px;
+	    display: table;
+	    clear: both;
+	    margin: 30px auto;
+	}
+	.lbl1-53b br, .lbl1-53d br { display: none; }
+	.lbl1-53a { margin-bottom: 6px;}
+	.lbl1-53c { display: inline-block; padding: 0 5px;}
+	.box1-40.size-2 {
+		display: table;
+		width: 90%;
+	}
+	.box1-41 {padding: 5px;}
+	.contact {
+		background-size: auto 68%;
+    	background-position: 120px bottom;
+	}
+	.contact .scroll-content .scroll {
+		padding: 18% 25% 0 0;
+	}
+}
+@media screen and (min-width: 768px) and (orientation:landscape){
+	.contact {
+		background-size: auto 80%;
+    	background-position: right bottom;
+	}
+	.contact .scroll-content .scroll {
+		padding: 10% 30% 0 0;
+	}
+}

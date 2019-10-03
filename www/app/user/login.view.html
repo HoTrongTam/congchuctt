@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<ion-view view-title="{{ ::title | uppercase }}" class="login" hide-nav-bar="true">
+    <ion-content scroll="false" has-header="false" class="no-header">
+        <div class="form-login">
+            <form name="formLogin">
+                <label class="item item-input item-stacked-label">
+                    <span class="icon2-5 iconsprite2-12"></span>
+                    <input class="txt2-21" type="text" name="username" ng-model="user_form.username" placeholder="Tên đăng nhập">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="icon2-5 iconsprite2-11"></span>
+                    <input class="txt2-21" type="password" name="password" ng-model="user_form.password" placeholder="Mật khẩu" placeholder="Mật khẩu">
+                </label>
+                <button type="submit" class="btn-login" ng-click="signin();">ĐĂNG NHẬP</button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

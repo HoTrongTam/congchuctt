@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+
+<!--
+    - title
+    - back / cloce
+    - html content
+    ...
+-->
+
+<ion-modal-view>
+
+    <div class="bar bar-header bar-light">
+        <div class="buttons">
+            <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="p_close();"></a>
+        </div>
+      	<h1 class="title">{{ ::p_title }}</h1>
+    </div>
+
+    <ion-content class="padding">
+	    <div ng-bind-html="p_content"></div>
+    </ion-content>
+
+</ion-modal-view>

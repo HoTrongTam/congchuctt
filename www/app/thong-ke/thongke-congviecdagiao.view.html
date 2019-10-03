@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-congviecdagiao">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-thongke">
+            <div class="content">
+                <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Thống kê việc
+                    đã giao</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Thống kê việc
+                    được giao</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header" overflow-scroll="false">
+        <div class="container2-1" ng-if="tabIndex===0">
+            <div class="wrapper2-16">
+                <select class="cbo2-15" ng-model="countSelectedMonths" ng-options="label for label in monthArray"
+                    ng-change="onChangeMonths(countSelectedMonths)">
+                </select>
+                <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray"
+                    ng-change="onChangeYears(countSelectedYears)">
+                </select>
+            </div>
+            <div class="chart-container">
+                <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+            </div>
+        </div>
+        <div class="container2-1" ng-if="tabIndex===1">
+                <div class="wrapper2-16">
+                    <select class="cbo2-15" ng-model="countSelectedMonths" ng-options="label for label in monthArray"
+                        ng-change="onChangeMonths(countSelectedMonths)">
+                    </select>
+                    <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray"
+                        ng-change="onChangeYears(countSelectedYears)">
+                    </select>
+                </div>
+                <div class="chart-container">
+                    <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+                </div>
+            </div>
+    </ion-content>
+</ion-view>

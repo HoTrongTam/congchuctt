@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-danhba" hide-back-button="false">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-danhba2">
+            <div class="wrapper2-3">
+                <form name="formtimkiemdanhba">
+                <input type="text" class="txt2-3" ng-model="danhba_form.danhba" name="danhba" placeholder="Nhập tìm kiếm" />
+                <button class="btn2-4 iconsprite2-2" type="submit" ng-click="timkiemDanhba();"></button>
+            </form>
+            </div>
+        </div>
+    </ion-content>
+
+    <ion-content class="has-header">
+        <ion-list class="list1-2">
+            <ion-item class="item-type1" ng-repeat="list in mydanhba">
+                <div class="row-type3" id="{{list.UserID}}" ng-click="gotoChitietdanhba({{list.UserID}});">
+                    <div class="col-1">
+                        <button class="lbl1-2 selected avatar-icon-letter" data="{{list.charName | uppercase}}">
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="lbl2-18 style2-1">{{list.HoTen}} {{(list.TenPhongBan) ? ' - ' + list.TenPhongBan : ''}}</p>
+                        <p class="lbl2-18">Chức vụ: {{list.TenChucVu}}</p>
+                        <p class="lbl2-18">Số điện thoại: {{list.SoDienThoai}}</p>
+                        <p class="lbl2-18">Email: {{list.Email}}</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item-type1" ng-repeat="list in timdanhba">
+                    <div class="row-type3" >
+                        <div class="col-1">
+                            <button class="lbl1-2 selected avatar-icon-letter" data="N">
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <p class="lbl2-18 style2-1">{{list.HoTen}} {{(list.TenPhongBan) ? ' - ' + list.TenPhongBan : ''}}</p>
+                            <p class="lbl2-18">Chức vụ: {{list.TenChucVu}}</p>
+                            <p class="lbl2-18">Số điện thoại: {{list.SoDienThoai}}</p>
+                            <p class="lbl2-18">Email: {{list.Email}}</p>
+                        </div>
+                    </div>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll ng-if="!isLoadMore" on-infinite="loadDanhBa()" distance="1%"></ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>

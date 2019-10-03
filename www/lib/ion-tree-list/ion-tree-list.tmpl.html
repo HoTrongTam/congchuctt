@@ -1,0 +1,13 @@
+<link type="text/css" rel="stylesheet" ng-href="{{baseUrl}}/ion-tree-list.min.css" />
+<!-- <ion-view class="has-header">
+  <ion-content> -->
+    <script type="text/ng-template" id="items_renderer">
+      <ion-item class="tree-item1 depth-{{item.depth}}" ng-click="emitEvent(item)" ng-include="templateUrl">
+      </ion-item>
+      <ion-list ng-model="item.congviecs" ng-repeat="item in item.congviecs" ng-hide="item.collapsed" ng-include="'items_renderer'" show-reorder="showReorder">
+      </ion-list>
+    </script>
+
+    <div class="tree-root-1 list" ng-model="items">
+      <span ng-repeat="item in items" ng-include="'items_renderer'"></span>
+    </div>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="dashboard home-1">
+    <ion-content class="has-header">
+        <div class="widget bg-white">
+            <button class="box-type1" on-tap='onAddPostTap()'>
+                <div class="avatar"><img src="res/img/hinh-avatar.jpg" /></div>
+                <p class="lbl-3">Bạn đang nghĩ gì?</p>
+            </button>
+            <button class="btn-type4 ion-camera-2"></button>
+        </div>
+        <div class="widget type1">
+            <div class="widget-content">
+                <p class="lbl-widget-title">Hồ sơ của bạn</p>
+                <div class="h-view">
+                    <div class="h-scroll">
+                        <ion-list class="list-type6">
+                            <ion-item class="item">
+                                <div class="item-view">
+                                    <div class="box-type2">
+                                        <p class="row-info font-utm-cafeta">
+                                            <ion-icon class="ecitizen-icon1"> </ion-icon>15172758 | 1700709000003</p>
+                                        <p class="row-info max-4row">
+                                            <ion-icon class="ecitizen-icon2"> </ion-icon>Cấp giấy chứng nhận đăng ký bổ sung hoạt động dạy nghề (dùng cho các cơ sở dạy nghề đã đăng ký hoạt động dạy nghề)</p>
+                                    </div>
+                                    <div class="box-type3 status3">
+                                        <div class="col1">
+                                            <p class="info1"><span class="ecitizen-icon3 status3"></span><span class="lbl-4">Đang xử lý</span><span class="lbl-4b">01/06/2017</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item class="item">
+                                <div class="item-view">
+                                    <div class="box-type2">
+                                        <p class="row-info  font-utm-cafeta">
+                                            <ion-icon class="ecitizen-icon1"> </ion-icon>15172758 | 1700709000003</p>
+                                        <p class="row-info max-4row">
+                                            <ion-icon class="ecitizen-icon2"> </ion-icon>Cấp giấy chứng nhận đăng ký bổ sung hoạt động dạy nghề (dùng cho các cơ sở dạy nghề đã đăng ký hoạt động dạy nghề)</p>
+                                    </div>
+                                    <div class="box-type3 status1">
+                                        <div class="col1">
+                                            <p class="info1"><span class="ecitizen-icon3 status1"></span><span class="lbl-4">HS chưa gửi</span><span class="lbl-4b">01/06/2017</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item class="item">
+                                <div class="item-view">
+                                    <div class="box-type2">
+                                        <p class="row-info font-utm-cafeta">
+                                            <ion-icon class="ecitizen-icon1"> </ion-icon>15172758 | 1700709000003</p>
+                                        <p class="row-info max-4row">
+                                            <ion-icon class="ecitizen-icon2"> </ion-icon>Cấp giấy chứng nhận đăng ký bổ sung hoạt động dạy nghề (dùng cho các cơ sở dạy nghề đã đăng ký hoạt động dạy nghề)</p>
+                                    </div>
+                                    <div class="box-type3 status2">
+                                        <div class="col1">
+                                            <p class="info1"><span class="ecitizen-icon3 status2"></span><span class="lbl-4">HS đã gửi</span><span class="lbl-4b">01/06/2017</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item class="item">
+                                <div class="item-view">
+                                    <div class="box-type2">
+                                        <p class="row-info font-utm-cafeta">
+                                            <ion-icon class="ecitizen-icon1"> </ion-icon>15172758 | 1700709000003</p>
+                                        <p class="row-info max-4row">
+                                            <ion-icon class="ecitizen-icon2"> </ion-icon>Cấp giấy chứng nhận đăng ký bổ sung hoạt động dạy nghề (dùng cho các cơ sở dạy nghề đã đăng ký hoạt động dạy nghề)</p>
+                                    </div>
+                                    <div class="box-type3 status4">
+                                        <div class="col1">
+                                            <p class="info1"><span class="ecitizen-icon3 status4"></span><span class="lbl-4">YC bổ sung</span><span class="lbl-4b">01/06/2017</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item class="item">
+                                <div class="item-view">
+                                    <div class="box-type2">
+                                        <p class="row-info font-utm-cafeta">
+                                            <ion-icon class="ecitizen-icon1"> </ion-icon>15172758 | 1700709000003</p>
+                                        <p class="row-info max-4row">
+                                            <ion-icon class="ecitizen-icon2"> </ion-icon>  </p>
+                                    </div>
+                                    <div class="box-type3 status5">
+                                        <div class="col1">
+                                            <p class="info1"><span class="ecitizen-icon3 status5"></span><span class="lbl-4">Hoàn tất</span><span class="lbl-4b">01/06/2017</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <!-- <ion-item class="item"  ng-repeat="ele in listBrief" >
+                                <div class="item-view">
+                                    <div class="box-type2">
+                                        <p class="row-info font-utm-cafeta"><ion-icon class="ecitizen-icon1"> </ion-icon>{{ele.MaTraCuu}} | {{ele.SoBienNhan}}</p>
+                                        <p class="row-info max-4row"><ion-icon class="ecitizen-icon2"> </ion-icon>{{ele.NoiDung}}</p>
+                                    </div>
+                                    <div class="box-type3 status{{ele.MaTinhTrang}}">
+                                        <div class="col1">
+                                            <p class="info1"><span class="ecitizen-icon3 status{{ele.MaTinhTrang}}"></span><span class="lbl-4">{{ele.TenTinhTrang}}</span><span class="lbl-4b">{{ele.NgayHenTra}}</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item> -->
+                        </ion-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget type2">
+            <div class="widget-content">
+                <p class="lbl-widget-title">Đơn vị cung cấp DV Công</p>
+                <ion-list class="list-type11">
+                  <ion-item class="obj-type-10">
+                     <div class="col-1"><p class="lbl-type13">18</p></div>
+                    <div class="col-2">
+                      <p class="lbl-type12">
+                          Cảnh sát phòng cháy chữa cháy
+                      </p>
+                    </div>
+                  </ion-item>
+                  <ion-item class="obj-type-10">
+                     <div class="col-1"><p class="lbl-type13">18</p></div>
+                    <div class="col-2">
+                      <p class="lbl-type12">
+                          Sở Lao động thương binh và xã hội
+                      </p>
+                    </div>
+                  </ion-item>
+                  <ion-item class="obj-type-10">
+                     <div class="col-1"><p class="lbl-type13">18</p></div>
+                    <div class="col-2">
+                      <p class="lbl-type12">
+                          Sở giao thông vận tải
+                      </p>
+                    </div>
+                  </ion-item>
+                  <ion-item class="obj-type-10">
+                     <div class="col-1"><p class="lbl-type13">18</p></div>
+                    <div class="col-2">
+                      <p class="lbl-type12">
+                          Sở tài nguyên môi trường
+                      </p>
+                    </div>
+                  </ion-item>
+                  <ion-item class="obj-type-10">
+                    <div class="col-1"><p class="lbl-type13">18</p></div>
+                    <div class="col-2">
+                      <p class="lbl-type12">
+                          Sở thông tin truyền thông
+                      </p>
+                    </div>
+                  </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-lichcongtac" hide-back-button="false">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-lichcongtac">
+            <div class="wrapper2-3">
+                <input type="text" class="txt2-3" placeholder="Nhập tìm kiếm lịch công tác" ng-model="keyword.inputFind" name="inputFind"
+                />
+                <button class="btn2-4 iconsprite2-3" ng-click="show();"></button>
+            </div>
+            <div class="content">
+                <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Lịch ngày</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Lịch tuần</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Lịch tháng</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="wapper2-7" ng-if="tabIndex===0">
+            <div class="lst2-6">
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1" ng-model="countSelectedDays" ng-options="label for label in dayArray" ng-change="onChangeDays(countSelectedDays)">
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)"></select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+            </div>
+            <div ng-if="myData" ng-model="myData">
+
+                <div ng-if="true" class="lbl2-17">
+                    {{myData.data[0].thuhop + " Ngày" || ""}} {{myData.data[0].ngayhop || ""}}
+                </div>
+                <div ng-if="false">
+                </div>
+            </div>
+            <ion-list class="list2-1">
+                <ion-item class="item2-1" ng-repeat="list in myData.data" data-tap-disabled="true" ng-click="getChiTietLCTYB({{list.lichcongtacid}})">
+                    <div class="lbl2-18">{{list.giohop || ""}}</div>
+                    <div class="lbl2-18b">
+                        <p class="lbl2-18c">{{list.noidunghop || ""}}</p>
+                        <p class="lbl2-18d">Chủ Trì: {{list.nguoichutri || ""}}</p>
+                        <p class="lbl2-18e">Địa điểm: {{list.diadiem || ""}}</p>
+                    </div>
+                    <button class="btn2-16 ion-android-attach" ng-if="!list.filedinhkems.length == 0"></button>
+                </ion-item>
+            </ion-list>
+            <div ng-bind-html="message" ng-if="message"></div>
+        </div>
+        <div class="wapper2-7" ng-if="tabIndex===1">
+            <div class="lst2-6">
+                <Label class="wrapper2-20 style2-1">
+                    <select class="dropdown2-1" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1 style2-1" ng-model="countSelectedWeek" ng-options="label as 'Từ ngày '+ label[0] +' đến ngày '+ label[1] for label in week"
+                        ng-change="onChangeWeek(countSelectedWeek)" >
+                        <option value="" disabled>Chọn tuần</option>
+                        <!-- <option value="{{list[0]}}+{{list[1]}}" ng-repeat="list in week" >(Từ {{list[0]}}/{{formdate.month}} đến ngày {{list[1]}}/{{formdate.month}})</option> -->
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+            </div>
+            <div ng-model="myDataTuan" ng-repeat="list in myDataTuan.data">
+                <div class="lbl2-17" ng-if="list.ngayhop">{{list.thuhop}} ngày {{list.ngayhop}}</div>
+                <ion-list class="list2-1">
+                    <ion-item class="item2-1" ng-click="getChiTietLCTYB({{list.lichcongtacid}})">
+                        <div class="lbl2-18">{{list.giohop || ""}}</div>
+                        <div class="lbl2-18b">
+                            <p class="lbl2-18c">{{list.noidunghop || ""}}</p>
+                            <p class="lbl2-18d">Chủ Trì: {{list.nguoichutri || ""}}</p>
+                            <p class="lbl2-18e">Địa điểm: {{list.diadiem || ""}}</p>
+                        </div>
+                        <button class="btn2-16 ion-android-attach" ng-if="!list.filedinhkems.length == 0"></button>
+                    </ion-item>
+                </ion-list>
+            </div>
+
+        </div>
+        <div class="wapper2-7" ng-if="tabIndex===2">
+            <div class="lst2-6">
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+                <Label class="wrapper2-20">
+                    <select class="dropdown2-1" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+                    </select>
+                    <i class="icon2-10 icon ion-chevron-down"></i>
+                </Label>
+            </div>
+            <div>
+                <div class="lbl2-17" ng-if="myDataThang">Tháng {{formdate.month}} năm {{formdate.year}}</div>
+                <!-- <div class="lbl2-17" ng-if="list.ngayhop">{{list.thuhop}} ngày {{list.ngayhop}}</div> -->
+                <ion-list class="list2-1">
+                    <ion-item class="item2-1" ng-model="myDataThang" ng-repeat="list in myDataThang.data">
+                        <div class="lbl2-19">
+                            {{list.giohop || ""}}
+                            <div>{{list.ngayhop}}</div>
+                        </div>
+                        <div class="lbl2-18b" ng-click="getChiTietLCTYB({{list.lichcongtacid}})">
+                            <p class="lbl2-18c">{{list.noidunghop || ""}}</p>
+                            <p class="lbl2-18d">Chủ Trì: {{list.nguoichutri || ""}}</p>
+                            <p class="lbl2-18e">Địa điểm: {{list.diadiem || ""}}</p>
+                        </div>
+                        <button class="btn2-16 ion-android-attach" ng-if="!list.filedinhkems.length == 0"></button>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

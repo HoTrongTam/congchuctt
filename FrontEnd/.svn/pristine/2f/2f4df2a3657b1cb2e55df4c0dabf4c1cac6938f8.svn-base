@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="search">
+
+    <ion-content class="has-header">
+
+        <div class="widget type6">
+        	<input type="text" placeholder="Tìm kiếm thủ tục..." />
+        	<button class="btn-type9" data-label="Tìm kiếm" ng-click="search();"></button>
+        </div>
+    </ion-content>
+
+</ion-view>

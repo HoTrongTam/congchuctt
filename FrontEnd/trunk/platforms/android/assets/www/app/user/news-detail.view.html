@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::detail.TieuDe }}" class="news-detail">
+    <ion-content class="has-header">
+    	<p class="lbl1-14">{{ ::detail.TieuDe }}</p>
+    	<p class="lbl1-15">Cập nhật: {{ dt.getTime(item.CreatedDate, 'datetime') }} )</p>
+    	<div class="box1-13">
+			<div class="html-content">
+				<div ng-bind-html="detail.NoiDung"></div>
+			</div>
+    	</div>
+        <p class="lbl1-10">Tin tức liên quan</p>
+        <ion-list class="list1-1">
+			<ion-item class="item1-2" ng-repeat="item in dsTinTuc track by $index" ng-click="onTinTucTapped(item);">
+				<a class="lbl1-12">{{ ::item.TieuDe }}</a>
+				<p class="lbl1-11">
+					<span class="lbl1-11a">
+						<img class="img1-2" src="{{ item.HinhDaiDien || 'res/img/data-news/tin-default.jpg' }}" />
+					</span>
+					<span class="lbl1-11b" ng-bind-html="item.GioiThieu"></span>
+				</p>
+				<p class="lbl1-13">Cập nhật: {{ dt.getTime(item.CreatedDate, 'datetime') }}</p>
+			</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

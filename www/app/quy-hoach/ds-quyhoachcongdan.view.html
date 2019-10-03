@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-thongbao" hide-back-button="false">
+    <ion-content class="content-type1 has-header">
+        <iframe width="100%" height="100%" allow="geolocation" src="https://quyhoach-q7.hochiminhcity.gov.vn
+        " ng-if="!network"></iframe>
+        <div ng-if="network" style="text-align: center; font-size: 24px;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>Không có kết nối mạng !</div>
+    </ion-content>
+</ion-view>

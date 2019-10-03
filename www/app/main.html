@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<ion-side-menus enable-menu-with-back-views="false" class="main-menu">
+
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-positive" align-title="left">
+            <ion-nav-back-button class="button button-icon ion-android-arrow-back no-text"></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon ion-android-menu" menu-toggle="left" ng-click="onMenuTapped();"></button>
+
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <span ng-if="showBtnBarRight">
+                    <!-- <button class="button button-icon iconbfmain-notification" ng-click="gotoNotification()">
+                        <span class="lbl1-num-notification" ng-if="user.KhachHangID&&notifyMessageCount>0">{{notifyMessageCount}}</span>
+                    </button> -->
+                    <button class="button button-icon ion-ios-search-strong" ng-click="openFilter();" ng-if="show_filter"></button>
+                    <button class="button btn2-10 iconsprite2-schedule" ng-click="openPopover($event);" ng-if="show_filter2"></button>
+                </span>
+            </ion-nav-buttons>
+      </ion-nav-bar>
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <div class="bg-menu-left"></div>
+        <ion-header-bar class="bar expanded" ng-click="onUserDetailTap();" menu-close>
+            <div class="wrapper1-2">
+                <div class="img2-1"></div>
+                <p class="lbl2-1">Công chức trực tuyến</p>
+                <p class="lbl2-2">Thành phố hồ chí minh</p>
+            </div>
+        </ion-header-bar>
+        <ion-content class="expanded">
+            <ion-list>
+                <ion-item class="item-icon-left stable {{item.cssStyle}}" ng-class="{ 'selected': item.selected }" ng-repeat="item in menu"
+                    ng-click="onItemTapped(item);" ng-if="item.active">
+                    <i class="icon-size1 {{ item.icon }}"></i>{{ item.name }}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+
+</ion-side-menus>

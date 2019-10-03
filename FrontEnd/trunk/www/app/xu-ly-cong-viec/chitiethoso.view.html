@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-hoso" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-chitiethoso">
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Chi tiết hồ sơ</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Quá trình xử lý</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Hồ sơ kèm theo</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="container" ng-if="tabIndex===0">
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Số biên nhận: </span>
+                <span class="lbl2-10c">1600709500085</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Trạng thái: </span>
+                <span class="lbl2-10c">Thụ lý hồ sơ</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Lĩnh vực: </span>
+                <span class="lbl2-10c style2-2">Kinh tế</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Loại hồ sơ: </span>
+                <span class="lbl2-10c style2-2">Cấp thay đổi nội dung đăng ký kinh doanh</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Hạn xử lý: </span>
+                <span class="lbl2-10c">11:30 24/10/2017</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Người đại diện: </span>
+                <span class="lbl2-10c style2-2">Nguyễn Thị Kim Hương</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Địa chỉ đăng ký: </span>
+                <span class="lbl2-10c style2-2">89 Phường Tân Phong</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày nhận: </span>
+                <span class="lbl2-10c">22/10/2017</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày hẹn trả: </span>
+                <span class="lbl2-10c">31/10/2017</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày hoàn thành: </span>
+                <span class="lbl2-10c"></span>
+            </div>
+            <div class="lbl2-11">Thông tin người đại diện</div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Giới tính: </span>
+                <span class="lbl2-10c style2-2">Nữ</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày sinh: </span>
+                <span class="lbl2-10c style2-2">09/08/1990</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Số CMND: </span>
+                <span class="lbl2-10c style2-2">368771377</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Điện thoại: </span>
+                <span class="lbl2-10c style2-2">0988680788</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Email: </span>
+                <span class="lbl2-10c style2-2">kimhuong@gmail.com</span>
+            </div>
+            <div class="lbl2-11">Thông tin xử lý</div>
+            <div class="lbl2-12">
+                <img src="../../res/img/avatar.png" src="res/img/avatar.png" class="img2-1">
+                <div class="lbl2-12b">
+                    <div class="lbl2-12c">
+                        <div class="lbl2-12e">
+                            <span class="lbl2-12f">Chuyên viên</span>
+                            <span class="lbl2-12g">Nguyễn Công Luân</span>
+                        </div>
+                        <p class="lbl2-12h">10:10 31/10/2017</p>
+                    </div>
+                    <div class="lbl2-12d">
+                        <span class="lbl2-12i">Nội dung xử lý:</span>
+                        <span class="lbl2-12k">Trình lãnh đạo phê duyệt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-if="tabIndex===1">
+            <ion-list class="tree2-1">
+                <ion-item class="tree-item2">
+                    <span class="icon2-3 ion-checkmark-round"></span>
+                    <div class="tree-info">
+                        <p class="tree-name" ng-model="collapsed" ng-click="collapsed=!collapsed">Nguyễn Văn Ngô -
+                            <span class="tree-name2">22/10/2017</span>
+                        </p>
+                        <div class="wrapper2-3" ng-show="collapsed">
+                            <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                            <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                            <p class="lbl2-14">Nội dung xử lý: </p>
+                        </div>
+                    </div>
+                    <ion-list class="tree2-1b">
+                        <ion-item class="tree-item2">
+                            <span class="icon2-3 ion-checkmark-round"></span>
+                            <div class="tree-info">
+                                <p class="tree-name" ng-model="collapsed1" ng-click="collapsed1=!collapsed1">Nguyễn Thành Công -
+                                    <span class="tree-name2">24/10/2017</span>
+                                </p>
+                                <div class="wrapper2-3" ng-show="collapsed1">
+                                    <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                    <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                    <p class="lbl2-14">Nội dung xử lý: </p>
+                                </div>
+                            </div>
+                            <ion-list class="tree2-1b">
+                                <ion-item class="tree-item2">
+                                    <span class="icon2-3 ion-checkmark-round"></span>
+                                    <div class="tree-info">
+                                        <p class="tree-name" ng-model="collapsed2" ng-click="collapsed2=!collapsed2">Lưu Thị Lê Hải -
+                                            <span class="tree-name2">29/10/2017</span>
+                                        </p>
+                                        <div class="wrapper2-3" ng-show="collapsed2">
+                                            <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                            <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                            <p class="lbl2-14">Nội dung xử lý: </p>
+                                        </div>
+                                    </div>
+                                    <ion-list class="tree2-1b">
+                                        <ion-item class="tree-item2">
+                                            <span class="icon2-3 ion-checkmark-round"></span>
+                                            <div class="tree-info">
+                                                <p class="tree-name" ng-model="collapsed3" ng-click="collapsed3=!collapsed3">Nguyễn Công Luân -
+                                                    <span class="tree-name2">30/10/2017</span>
+                                                </p>
+                                                <div class="wrapper2-3" ng-show="collapsed3">
+                                                    <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                                    <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                                    <p class="lbl2-14">Nội dung xử lý: </p>
+                                                </div>
+                                            </div>
+                                            <ion-list class="tree2-1b child">
+                                                <ion-item class="tree-item2 disabled">
+                                                    <span class="icon2-3 ion-checkmark-round"></span>
+                                                    <div class="tree-info">
+                                                        <p class="tree-name" ng-model="collapsed4" ng-click="collapsed4=!collapsed4">Nguyễn Công Tuấn -
+                                                            <span class="tree-name2">30/10/2017</span>
+                                                        </p>
+                                                        <div class="wrapper2-3" ng-show="collapsed4">
+                                                            <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                                            <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                                            <p class="lbl2-14">Nội dung xử lý: </p>
+                                                        </div>
+                                                    </div>
+                                                </ion-item>
+                                            </ion-list>
+                                        </ion-item>
+                                    </ion-list>
+                                </ion-item>
+                            </ion-list>
+                        </ion-item>
+                    </ion-list>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="container style2-1" ng-if="tabIndex===2">
+            <div class="lbl2-14">
+                - Thông báo thay đổi nội dung đăng ký kinh doanh của hộ kinh doanh
+                <br/> 1 Bản chính 
+                <br/>- Giấy chứng nhận đăng ký kinh doanh đã cấp
+                <br/>1 Bản sao
+            </div>
+        </div>
+    </ion-content>
+    <div class="fixed-top chitiet-hoso">
+        <div class="content">
+            <button class="btn2-2 ion-share">Chuyển</button>
+            <button class="btn2-2 iconbfsprite2-2 sprite">Trả lại</button>
+        </div>
+    </div>
+</ion-view>

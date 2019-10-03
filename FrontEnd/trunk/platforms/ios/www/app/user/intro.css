@@ -1,0 +1,76 @@
+.pane.intro { background: #f2f2f2; }
+.intro-box1 {
+    background: url(../../res/img/bg-homepb.jpg) no-repeat, url(res/img/bg-homepb.jpg) no-repeat;
+    height: calc(100vh - 145px);
+    background-size: cover;
+    background-position: center center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+.intro-box1 .content {
+    color: #fff;
+    line-height: 26px;
+    text-align: center;
+}
+.intro-img-logo {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+}
+.lbl-2b {
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}
+.btn-type1 {
+    background: none;
+    border: 1px solid #fff;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    min-width: 100px;
+    text-transform: uppercase;
+}
+.btn-dangky {
+    background: #f7941d;
+    border-color: #f7941d;
+}
+.btn-type2 {
+    display: inline-block;
+    width: 33.3%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border: none;
+    background-color: transparent;
+    height: 100px;
+}
+.btn-type2 .icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+.btn-type2 .lbl-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 36px;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 0 5px;
+}
+@media screen and (max-width: 767px) and (orientation: landscape){
+	.intro-img-logo {
+	    display: none;
+	}
+}	

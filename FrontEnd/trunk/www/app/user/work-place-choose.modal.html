@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<ion-modal-view class="server-choose">
+
+<!-- <div class="div-popup popup-style1"> -->
+	<!-- <div class="my-backdrop" ng-click="serverChooseModal.hide();"></div> -->
+
+	<div class="bar bar-header bar-positive item-input-inset">
+	<label class="item-input-wrapper">
+		<i class="icon ion-ios-search placeholder-icon"></i>
+		<input type="search" placeholder="Tìm tên server...">
+	</label>
+	<button class="button button-clear" ng-click="workPlaceModal.hide();">Đóng</button>
+	</div>
+
+
+	<!-- <div class="box-1 row3control frm-search">
+		<button class="btn-2 bf-sprite-1-back2" ng-click="serverChooseModal.hide();"></button>
+	   	<input type="text" class="input-type16" placeholder="Nhập tên bệnh viện..." />
+		<span class="icon-search sprite1-5-2"></span>
+	</div> -->
+	<ion-content class="has-header">
+
+		<!-- <ion-refresher pulling-text="Lấy dữ liệu mới" on-refresh="doRefresh();"></ion-refresher> -->
+
+		<ion-list class="list1-2">
+			<ion-item class="item1-3" ng-repeat="item in workPlaces track by $index" ng-click="onServerSelected(item);">
+				<!-- <p class="ionsize3"><img src="res/img/homepb-icon.png" /></p> -->
+				<p class="ionsize3"><img src="{{ item.Icon }}" /></p>
+				<p class="lbl-desc">{{ ::item.AppName }}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+<!-- </div> -->
+
+<!-- <div class="div-popup popup-style1">
+	<div class="my-backdrop" ng-click="serverChooseModal.hide();"></div>
+	<div class="box-1 row3control frm-search">
+		<button class="btn-2 bf-sprite-1-back2" ng-click="serverChooseModal.hide();"></button>
+	   	<input type="text" class="input-type16" placeholder="Nhập tên bệnh viện..." />
+		<span class="icon-search sprite1-5-2"></span>
+	</div>
+	<ion-content class="box-2">
+		<ion-list class="list-4">
+			<ion-item class="item-4" ng-repeat="item in dsBenhVien track by $index" ng-click="onBenhVienSelected(item);">
+				<p class="ionsize3"><img src="res/img/data/dakhoavinh.png" /></p>
+				<p class="lbl-desc">{{ ::item.TenBenhVien }}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</div> -->
+
+</ion-modal-view>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<ion-view view-title="{{ ::title | uppercase }}" class="thong-ke-2">
+	<ion-content class="has-header">
+		<div class="box1-17">
+			<p class="lbl1-27 ion-android-globe"></p>
+			<p class="lbl1-28">
+				<span class="lbl1-28a">Tỉnh nhận được</span>
+				<span class="lbl1-28b">268<!-- tổng lượt nộp HS qua mạng --></span>
+				<span class="lbl1-28c">Hồ sơ nộp qua mạng</span>
+			</p>
+		</div>
+		<div class="box1-17 style2">
+			<p class="lbl1-27 ion-social-whatsapp"></p>
+			<p class="lbl1-28">
+				<span class="lbl1-28a">Hỗ trợ trực tuyến</span>
+				<span class="lbl1-28d">0333.618.429<span class="lbl1-28f"><br></span>0333.619.429</span>
+				<span class="lbl1-28e">Email: chinhquyendientu@quangninh.gov.vn</span>
+			</p>
+			<p class="lbl1-29">Email: chinhquyendientu@quangninh.gov.vn</p>
+		</div>
+		<div class="box1-19">
+			<p class="lbl1-26">Thống kê nhận hồ sơ qua mạng</p>
+			<div class="chart-box">
+				<div class="chart-view">
+				<div fusioncharts width="100%" height="480" type="heatmap" dataSource="{{myDataSource6}}" ></div><!-- Tính height động: height= [số đơn vị] * 60. Vd: 8 đơn vị => height = 60 * 8 = 480 -->
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

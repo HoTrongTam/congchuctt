@@ -1,0 +1,138 @@
+.angular-google-map,
+.angular-google-map-container {
+	height: 100%;
+}
+
+/* .buttons.buttons-left.header-item {
+    opacity: 1;
+    display: inherit;
+}s */
+
+.bar .no-text span.back-text {
+	display: none;
+}
+
+.badge-number.badgenumber::after {
+	display: none;
+}
+
+.popup-mini2-1 {
+	height: 160px;
+}
+
+.popup-mini2-1 .bar.bar-header {
+	background: transparent;
+	color: #666;
+	border-bottom: 1px solid #ddd;
+	position: static;
+}
+
+.popup-mini2-1 .bar .title {
+	font-size: 15px;
+	font-weight: 600;
+	color: #0000FF;
+}
+
+.popup-mini2-1 .list {
+	padding: 0;
+	margin: 0;
+}
+
+.popup-mini2-1 .item {
+	border-left: 0;
+	border-right: 0;
+}
+
+.popup-mini2-1.popover .scroll-content {
+	border-radius: 0;
+}
+
+.badge-number[data-badge]:after {
+	content: attr(data-badge);
+	/*font-size: .3em;*/
+	background-color: #f00;
+	color: white;
+	width: 17px;
+	height: 17px;
+	line-height: 16px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 0.6em;
+	border: 1px solid white;
+}
+
+.map {
+	width: 100%, auto;
+	height: 100%;
+}
+
+.has-error .list:before {
+	font-family: Ionicons;
+	content: "\f25c";
+	font-size: 15em;
+	text-align: center;
+	width: 100%;
+	padding-top: 50%;
+	position: absolute;
+	color: #DEDEDE;
+}
+
+.has-error .list:after {
+	content: "Hãy kéo xuống để thử lại.";
+	position: absolute;
+	padding-top: 80%;
+	width: 100%;
+	text-align: center;
+	color: #A3A0A0;
+	font-size: 1.2em;
+}
+
+.toggle-flat .opt.fail.active {
+	background-color: #ef473a;
+	color: white;
+}
+
+.toggle-flat .opt.active {
+	background-color: #4A90E2;
+	color: white;
+	font-weight: bold;
+}
+
+.toggle-flat .opt.success.active {
+	background-color: #33cd5f;
+	color: white;
+}
+
+.toggle-flat .opt {
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	color: #4A90E2;
+}
+
+.toggle-flat {
+	display: -webkit-inline-box;
+	width: 170px;
+	height: 35px;
+	line-height: 34px;
+	padding: 0;
+	border: 1px solid #4A90E2;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+
+/*
+ion-scroll[direction=x] {
+  width: 100vw;
+}
+ion-scroll[delegate-handle=calendarScroll] {
+  height: 90px;
+}
+ion-scroll[direction=y] {
+  height: calc(100vh - 33px - 33px - 90px - 15px);
+}*/
+
+.bar .title {
+	font-weight: normal;
+	font-size: 14px;
+}

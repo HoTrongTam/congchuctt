@@ -1,0 +1,40 @@
+.thongke-chuyennganh .fixed-top.list-thongke {background: transparent;border: none;}
+.thongke-chuyennganh .btn1-1 {width: 33.333333%;font-size: 12px;}
+.thongke-chuyennganh .content.style2-1 .btn1-1 {width: 100%;}
+/* .thongke-chuyennganh .content.style2-1 .btn1-12 {width: 100%;} */
+.thongke-chuyennganh .btn1-1.active { border-bottom-color: #009866;color: #009866;}
+.thongke-chuyennganh ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 90px;padding-top: 0;}
+.thongke-chuyennganh .wrapper2-16 {padding: 10px;text-align: right}
+.thongke-chuyennganh .cbo2-15 {padding: 5px;border: none;font-weight: 600;font-size: 16px;margin-left: 5px;color: #009900;background: transparent}
+.thongke-chuyennganh .wrapper2-17 {padding: 15px 0;margin: 0 10px;border-top: 1px solid #ddd;}
+.thongke-chuyennganh .lbl2-34 {text-align: center;font-weight: 700;font-size: 16px;color: #333333;}
+.thongke-chuyennganh .wrapper2-17b {padding: 5px 20px 0;display: flex;align-items: center;font-size: 14px;}
+.thongke-chuyennganh .box2-2 {width: 50%;}
+.thongke-chuyennganh .lbl2-34b {font-weight: 700;color: #009933;padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #F2F2F2;}
+.thongke-chuyennganh .lbl2-34b::before {content: "•";display: inline-block;color: #009933;font-size: 25px;margin-right: 5px;vertical-align: bottom;}
+.thongke-chuyennganh .lbl2-34c {margin-bottom: 3px;}
+.thongke-chuyennganh .lst2-10 {padding-left: 10px;}
+.thongke-chuyennganh .item2-10 {margin-bottom: 3px;}
+.thongke-chuyennganh .box2-2 {width: 50%;}
+.thongke-chuyennganh .lbl2-34b {font-weight: 700;color: #009933;padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #F2F2F2;}
+.thongke-chuyennganh .lbl2-34b::before {content: "•";display: inline-block;color: #009933;font-size: 25px;margin-right: 5px;vertical-align: bottom;}
+.thongke-chuyennganh .lbl2-34c {margin-bottom: 3px;}
+.thongke-chuyennganh .lst2-10 {padding-left: 10px;}
+.thongke-chuyennganh .item2-10 {margin-bottom: 3px;}
+.thongke-chuyennganh .page-slider {padding: 8px 10px;align-items: center;font-size: 16px;font-weight: 600;color: #666666;background: #F2F2F2;display: flex;justify-content: center;}
+.thongke-chuyennganh .lbl2-30 {padding: 0 12px;}
+.thongke-chuyennganh .icon2-10 {padding: 0;width: 25px;height: 25px;background: transparent;border: none;}
+.thongke-chuyennganh .slider-pager {display: none}
+.thongke-chuyennganh .content {display: flex;}
+.thongke-chuyennganh [class*="-scroller"] { }
+@media (min-width: 480px) {
+    .thongke-chuyennganh .btn1-1 {font-size: 14px;}
+}
+
+@media (min-width: 767px) {
+    .thongke-chuyennganh .wrapper2-17{width: 70%;margin: 0 auto}
+}
+
+.platform-ios.platform-cordova .thongke-chuyennganh ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {
+    top: 110px;
+}

@@ -1,0 +1,455 @@
+.login {
+    background: url(../../res/img/login.jpg) no-repeat, url(res/img/login.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.login .title {
+    display: -webkit-box;
+    height: 44px;
+    line-height: 18px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    left: 50px;
+    right: 50px;
+}
+
+.label-server-choose {
+    font-size: 10px;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.login.pane .scroll-content {
+    bottom: 45px;
+}
+
+.login .form-login {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.login .item.item-input.item-stacked-label {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.login .item.item-input {
+    margin-top: 5px;
+}
+
+.login .item-stacked-label input[type="text"],
+.login .item-stacked-label input[type="password"],
+.login .item-stacked-label input[type="email"],
+.login .item-stacked-label input[type="number"] {
+    border: none;
+    color: #000;
+    background: #fff;
+    height: 36px;
+    border-radius: 3px;
+    padding-left: 40px;
+}
+
+.login .item-stacked-label input[type="text"]::placeholder,
+.login .item-stacked-label input[type="password"]::placeholder,
+.login .item-stacked-label .input-label {
+    color: #fff;
+}
+
+button.btn-login {
+    height: 40px;
+    background: inherit;
+    background-color: rgba(51, 153, 0, 1);
+    border: none;
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.row-wfull .button.btn1-5 {
+    width: 100%;
+    background: #0084fd;
+    height: 49px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.icon2-5 {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+}
+
+.iconsprite2-12 {
+    background-position: -104px -93px;
+}
+
+.iconsprite2-11 {
+    background-position: -140px -93px;
+}
+
+.login .row-wfull .button.btn1-5:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: -20px;
+    position: absolute;
+}
+
+.login .row-wfull .button.btn1-4 {
+    background: none;
+    color: #fff;
+    font-size: 12px;
+    height: 40px;
+    min-height: 40px;
+    line-height: 30px;
+    margin: 10px auto 0 auto;
+    width: 100%;
+    text-transform: inherit;
+    padding-bottom: 10px;
+}
+
+.login .row-wfull .button.btn1-4:before {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.row-wfull,
+.links {
+    display: block;
+    width: 100%;
+}
+
+.links .link-type1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+.btn-demo {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    height: 45px;
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0 10px;
+}
+
+.btn-demo:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px -3px 0;
+}
+
+.login .bar-header .button {
+    padding: 0;
+    width: 44px;
+}
+
+.login .bar-header .button:before {
+    font-size: 28px;
+}
+
+.login .button.ion-ios-arrow-left:before {
+    font-size: 35px;
+}
+
+.login .button.ion-ios-arrow-left {
+    border-right: 1px solid #192230;
+}
+
+.btn1-3 {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.modal .btn1-back1:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+}
+
+/*start: modal chon serve */
+
+.server-choose .bar.bar-header {
+    padding: 10px;
+}
+
+.server-choose .item-input-wrapper {
+    margin: 8px 5px 8px 0;
+    height: 28px;
+    border: none;
+    width: calc(100% - 55px);
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.item1-3 {
+    display: inline-block;
+    width: 50%;
+    /*max-width: 250px;*/
+    float: left;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    background: transparent;
+}
+
+.item1-3 .ionsize3 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.ionsize3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item1-3 .lbl-desc {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 100%;
+    white-space: normal;
+    height: 45px;
+    -webkit-box-align: center;
+}
+
+/*  end: modal chon serve */
+
+/*start: them nut action o bottom */
+
+.box1-36 {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}
+
+.lbl1-action1 {}
+
+.chk1-action {
+    all: unset;
+    position: relative;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    display: block;
+    z-index: 5;
+}
+
+.chk1-action:before {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #ea4335;
+    background: #4285f4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #333;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.chk1-action:before {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.chk1-action:hover:before,
+.chk1-action:active:before {
+    width: 48px;
+    height: 48px;
+}
+
+.box1-37 {
+    position: absolute;
+    bottom: 45px;
+    right: -20px;
+    z-index: 4;
+    opacity: 0;
+}
+
+.box1-37:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    position: absolute;
+    bottom: -70px;
+    right: 0;
+    z-index: -1;
+}
+
+.box1-37,
+.box1-37:before {
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    -o-transform-origin: right bottom;
+    transform-origin: right bottom;
+}
+
+.chk1-action:checked~.box1-37,
+.chk1-action:checked~.box1-37:before {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.btn1-15 {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    display: flex;
+    min-width: 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn1-15:last-child {
+    padding-bottom: 20px;
+}
+
+.btn1-15:hover,
+.btn1-15:active {
+    background: #f5f4f4;
+}
+
+.lbl-btn1-15a {
+    color: #000;
+    font-size: 15px;
+}
+
+.lbl-btn1-15b {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+    box-shadow: 2px 2px 2px #333;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.lbl-btn1-15b:before {
+    line-height: 48px;
+    font-size: 26px;
+    color: #fff;
+}
+
+.background1-1 .lbl-btn1-15b {
+    background: #fbbc05;
+}
+
+.background1-2 .lbl-btn1-15b {
+    background: #34a853;
+}
+
+.btn1-15:hover .lbl-btn1-15b,
+.btn1-15:active .lbl-btn1-15b {
+    -webkit-transform: scale(0.95, 0.95);
+    -moz-transform: scale(0.95, 0.95);
+    -o-transform: scale(0.95, 0.95);
+    transform: scale(0.95, 0.95);
+}
+
+/*  end: them nut action o bottom */
+
+@media screen and (orientation: landscape) {
+    .login {
+        background-image: url(../../res/img/login.jpg), url(res/img/login.jpg);
+        background-position: center bottom;
+        padding-bottom: 0;
+    }
+    .login .form-login {
+        top: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .login.modal {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    /*.keyboard-open .login .form-login {
+        top: 50%;
+        bottom: auto;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }*/
+    .login {
+        background-position: unset;
+    }
+}

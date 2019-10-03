@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<ion-view title="{{ ::title | uppercase }}" class="user-register">
+	<!-- <ion-modal-view class="login"> -->
+    <!-- <div class="bar bar-header bar-light">
+        <h1 class="title">ĐĂNG KÝ TÀI KHOẢN</h1>
+    </div> -->
+    <div class="steps">
+        <!-- <p class="step-info" ng-class="{'active': step === 1}" ng-click="onStepSelected(1);"><span class="step-icon s1"></span><span class="step-desc">Thông tin tài khoản</span></p> -->
+        <p class="step-info" ng-class="{'active': step === 1}" ng-click="onStepSelected(1);"><span class="step-icon s2"></span><span class="step-desc">Thông tin đăng nhập</span></p>
+        <p class="step-info" ng-class="{'active': step === 2}" ng-click="onStepSelected(2);"><span class="step-icon s3"></span><span class="step-desc">Thông tin liên lạc</span></p>
+        <!-- <p class="step-info" ng-class="{'active': step === 4}" ng-click="onStepSelected(4);"><span class="step-icon s4"></span><span class="step-desc">Xác nhận mã PIN</span></p> -->
+    </div>
+
+    <ion-content class="has-header">
+        <!-- <div class="list" ng-if="step === 1">
+            <div class="row-t1">
+                <p class="lbl-inline">Loại tài khoản</p>
+                <div class="toggle-flat option-type1">
+                    <div class="opt" ng-class="{'active':form_register.LoaiTaiKhoan === 1}" ng-click="onSelectType(1)">Cá nhân</div>
+                    <div class="opt" ng-class="{'active':form_register.LoaiTaiKhoan === 2}" ng-click="onSelectType(2)">Doanh nghiệp</div>
+                </div>
+            </div>
+            <label class="item item-input item-stacked-label">
+                <input type="text" ng-model="form_register.HoTen" placeholder="Nhập họ và tên/ tên đơn vị" autofocus />
+                <span class="input-label">Họ và tên/ Tên đơn vị</span>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <input type="text" ng-model="form_register.ChungMinhNhanDan" placeholder="Nhập số CMND/ Mã số thuế" />
+                <span class="input-label">Số CMND/ Mã số thuế</span>
+            </label>
+        </div> -->
+        <!-- <div class="list" ng-if="step === 2">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Ngày sinh</span>
+                <input type="number" placeholder="">
+                <label class="item item-input">
+                    <select
+                        ng-model="monthSelected"
+                        ng-change="onSelectItemChanged('month', monthSelected)"
+                        ng-options="item.name for item in months track by item.value"
+                        >
+                        <option value="">Chọn</option>
+                    </select>
+                </label>
+                <input type="number" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Giới tính</span>
+                <select
+                    ng-model="sexualSelected"
+                    ng-change="onSelectItemChanged('sexual', sexualSelected)"
+                    ng-options="item.name for item in sexuals track by item.value"
+                    >
+                    <option value="">Chọn</option>
+                </select>
+            </label>
+        </div> -->
+        <div class="list" ng-if="step === 1">
+            <label class="item item-input item-stacked-label">
+                <input type="text" ng-model="form_register.UserName" placeholder="Nhập tên tài khoản" autofocus />
+                <span class="input-label">Tài khoản</span>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <input type="password" ng-model="form_register.Password" placeholder="Nhập mật khẩu" />
+                <span class="input-label">Mật khẩu</span>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="assertive" ng-if="!password_match">Mật khẩu không giống</span>
+                <input type="password" ng-model="form_register.password_match" placeholder="Nhập lại mật khẩu" ng-blur="checkPassword();">
+                <span class="input-label">Xác nhận mật khẩu</span>
+            </label>
+        </div>
+        <div class="list" ng-if="step === 2">
+            <label class="item item-input item-stacked-label">
+                <span class="assertive" ng-if="!err_email">email không đúng</span>
+                <input type="email" ng-model="form_register.Email" placeholder="Nhập địa chỉ email" ng-blur="checkEmail();" autofocus />
+                <span class="input-label">Email</span>
+
+            </label>
+            <label class="item item-input item-stacked-label">
+                <input type="text" ng-model="form_register.SoDienThoai" placeholder="Nhập số điện thoại (vd: 090...)" />
+                <span class="input-label">Số điện thoại</span>
+            </label>
+            <div class="row-t1 txt-center">
+                <p class="lbl-line">Nhận mã pin xác minh qua</p>
+                <div class="toggle-flat">
+                    <div class="opt" ng-class="{'active':!form_register.IsSendEmail}" ng-click="changeSendType(0)">Điện thoại</div>
+                    <div class="opt" ng-class="{'active':form_register.IsSendEmail}" ng-click="changeSendType(1)">email</div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="list" ng-if="step === 4">
+            <p class="lbl-1">Vui lòng kiểm tra tin nhắn/ email để nhận 6 ký tự mã PIN.</p>
+            <label class="item item-input item-stacked-label w-250px">
+                <input type="number" placeholder="******" autofocus>
+            </label>
+        </div> -->
+    </ion-content>
+    <ion-footer-bar class="btn-bar">
+        <div class="tabs">
+            <a class="tab-item prev" ng-click="goBack();">QUAY VỀ</a>
+            <!-- dark-bg light -->
+            <a class="tab-item next" ng-click="goNext();">{{ step === 2 ? 'ĐĂNG KÝ' : 'BƯỚC KẾ' }}</a>
+            <!-- calm-bg light -->
+        </div>
+    </ion-footer-bar>
+<!-- </ion-modal-view> -->
+</ion-view>

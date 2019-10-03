@@ -1,0 +1,104 @@
+.chitiet-giaoviec .wrapper2-20.style2-1 {
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+
+.chitiet-giaoviec .lbl2-11 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.chitiet-giaoviec .lbl2-10 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.chitiet-giaoviec .lbl2-10c.style2-1 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chitiet-giaoviec .lbl2-10.style2-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.chitiet-giaoviec .lbl2-10d {
+    font-size: 15px;
+    display: inline-block;
+    width: calc(100% - 20px);
+    color: #666;
+}
+
+.chitiet-giaoviec .teaxtarea2-1 {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.chitiet-giaoviec .file2-1 {
+    display: none;
+}
+
+.chitiet-giaoviec .wrapper2-21 {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chitiet-giaoviec .lbl2-27 {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    background: url('../../res/img/UploadPhotos.png'), url('res/img/UploadPhotos.png') no-repeat;
+    background-size: contain;
+}
+
+.chitiet-giaoviec .lbl2-28 {
+    font-weight: 600;
+}
+
+.chitiet-giaoviec ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {
+    top: 70px !important;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
+.chitiet-giaoviec .btn1-2 {
+    height: 45px;
+    background-color: transparent;
+    border: none;
+}
+.chitiet-giaoviec .icon-size3 {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    line-height: 32px;
+    border: none;
+}
+.chitiet-giaoviec .file-header-lbl {
+    color: #666;
+    padding-left: 3%;
+    background-color: #e3e3e3;
+    border-radius: 12px;
+}
+.chitiet-giaoviec .hoidap-file {
+    border: none;
+    /* width: 300px; */
+}
+.chitiet-giaoviec .img-lbl1 {
+    height: 20px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: #7da5ef;
+}

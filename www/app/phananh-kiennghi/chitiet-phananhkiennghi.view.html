@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-pakn" hide-back-button="false">
+    <ion-content class="has-header container">
+        <div>
+            <div class="wrapper2-20">
+                <div class="lbl2-11">Thông tin phản ánh</div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Người phản ánh kiến nghị: </span>
+                    <span class="lbl2-10c style2-1">{{dataChiTietPAKN.ThongTinPAKN.HoTenNguoiHoi}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Điện Thoại: </span>
+                    <span class="lbl2-10c">{{dataChiTietPAKN.ThongTinPAKN.DienThoaiNguoiHoi}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Email: </span>
+                    <span class="lbl2-10c">{{dataChiTietPAKN.ThongTinPAKN.EmailNguoiHoi}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Lĩnh vực: </span>
+                    <span class="lbl2-10c">{{dataChiTietPAKN.ThongTinPAKN.TenLinhVuc}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Tiêu đề: </span>
+                    <span class="lbl2-10c">{{dataChiTietPAKN.ThongTinPAKN.TieuDe}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Nội dung: </span>
+                    <span class="lbl2-10c">{{dataChiTietPAKN.ThongTinPAKN.NoiDungHtml}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-13b style2-2">Tệp đính kèm: </span>
+                    <br />
+                    <span class="lbl2-10c" ng-repeat="file in dataChiTietPAKN.TepDinhKemHoi track by $index" ng-click="openFile(file.filename, file.fileid)">
+                        <i class="icon2-3 ion-android-attach"></i> {{file.filename}}
+                        <br />
+                    </span>
+                </div>
+            </div>
+            <div class="wrapper2-20" ng-if="ftinhTrang">
+                <div class="lbl2-11">Thông tin xử lý</div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Người giải đáp: </span>
+                    <span class="lbl2-10c style2-1">{{dataChiTietPAKN.ThongTinPAKN.TenNguoiTraLoi}}</span>
+                </div>
+                <div class="lbl2-10 style2-1">
+                    <ion-icon class="icon2-20 ion-checkmark" ng-if="flagTinhTrangXL"></ion-icon>
+                    <ion-icon class="icon2-20" ng-if="!flagTinhTrangXL"></ion-icon>
+                    <span class="lbl2-10d">Không xử lý</span>
+                    <ion-icon class="icon2-20 ion-checkmark" ng-if="dataChiTietPAKN.ThongTinPAKN.CongKhai"></ion-icon>
+                    <ion-icon class="icon2-20" ng-if="!dataChiTietPAKN.ThongTinPAKN.CongKhai"></ion-icon>
+                    <span class="lbl2-10d">Công khai</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Nội dung xử lý: </span>
+                    <span class="lbl2-10c">
+                        <div ng-bind-html="htmlBind"></div>
+                    </span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-13b style2-2">Tệp đính kèm: </span>
+                    <br />
+                    <span class="lbl2-10c" ng-repeat="file in dataChiTietPAKN.TepDinhKemTraLoi track by $index" ng-click="openFile(file.filename, file.fileid)">
+                        <i class="icon2-3 ion-android-attach"></i> {{file.filename}}
+                        <br />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

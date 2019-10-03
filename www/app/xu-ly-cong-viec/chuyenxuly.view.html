@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chuyen-vb" hide-back-button="false">
+    <ion-content class="has-header">
+        <div class="list-chuyenvb">
+            <label class="item item-input item-stacked-label">
+                <textarea placeholder="Nội dung xử lý" ng-model="formVanbanden.noidungxuly" class="texta2-1"></textarea>
+                <span class="input-label" aria-label="Nội dung xử lý">Nội dung xử lý</span>
+            </label>
+            <div class="wrapper2-4">
+                <label class="item item-input item-stacked-label">
+                    <input type="text" ng-model="formVanbanden.songayxuly" placeholder="Số ngày xử lý" class="">
+                    <span class="input-label">Số ngày xử lý</span>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <input type="text" ng-model="formVanbanden.thoihanxuly" placeholder="Hạn xử lý" class="txt2-4" mobiscroll-date>
+                    <span class="input-label">Hạn xử lý</span>
+                    <span class="icon2-2 ion-android-calendar"></span>
+                </label>
+            </div>
+            <div class="wrapper2-5">
+                <span class="lbl2-4c">Thông báo: </span>
+                <label class="lbl2-9">
+                    <input type="checkbox" ng-model="formVanbanden.sms" class="cbo2-1"> SMS
+                </label>
+                <label class="lbl2-9">
+                    <input type="checkbox" ng-model="formVanbanden.email" class="cbo2-1"> Email
+                </label>
+            </div>
+            <div class="content" ng-if="!vanbandi">
+                <button class="btn1-1 ion-navigate active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'> Cá nhân</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Phòng ban</button>
+            </div>
+            <div class="content" ng-if="vanbandi">
+                <button class="btn1-1 ion-navigate active" ng-class='{active: tabIndex===0}' ng-click='onTabVanthu(0)'> Lãnh đạo phòng</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabVanthu(1)'>Văn thư phòng</button>
+            </div>
+        </div>
+        <div class="group2-1" ng-if="tabIndex===0">
+            <input type="text" class="txt2-2 lbl-search-1" ng-model="formmodal.nguoinhanid" mobiscroll-select="dsCN">
+            <button class="btn2-3 iconsprite2-10"></button>
+        </div>
+        <div class="group2-1" ng-if="tabIndex===1 && vanbandi">
+            <input type="text" class="txt2-2 lbl-search-1" ng-model="formmodal.nguoinhanid" mobiscroll-select="dsCN">
+            <button class="btn2-3 iconsprite2-10"></button>
+        </div>
+        <div class="group2-1" ng-if="tabIndex===1 && !vanbandi">
+            <input type="text" class="txt2-2 lbl-search-1" ng-model="formmodal.nguoinhanid" mobiscroll-select="dsPB">
+            <button class="btn2-3 iconsprite2-10"></button>
+        </div>
+        <div class="content2-1">
+            <p class="lbl2-15">Danh sách đã chọn</p>
+            <ion-list class="list2-5" ng-if="vanbandi">
+                <ion-item class="item2-15" ng-repeat="item in tempNguoixulys track by $index">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <span class="lbl2-17c">{{item.tennguoinhan}}</span>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+            <ion-list class="list2-5" ng-if="tabIndex===0 && !vanbandi">
+                <ion-item class="item2-15" ng-repeat="item in tempNguoixulys track by $index">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <span class="lbl2-17c" ng-click="collapsed=!collapsed">{{item.tennguoinhan}}</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" ng-model="item.isCheck" ng-click="setNguoixulychinh($index)" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="!collapsed">
+                        <textarea ng-model="item.noidungchidao" placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <div class="wrapper2-4">
+                            <label class="item item-input item-stacked-label lbl2-19b">
+                                <input ng-model="item.xulytungay"  placeholder="Ngày xử lý" class="txt2-4 ng-valid ng-dirty ng-valid-parse ng-touched ng-empty lbl-date"
+                                    mobiscroll-date/>
+                                <span class="input-label" aria-label="Ngày xử lý">Ngày xử lý</span>
+                            </label>
+                            <label class="item item-input item-stacked-label lbl2-19b">
+                                <input ng-model="item.xulydenngay" placeholder="Hạn xử lý" class="txt2-4 ng-valid ng-dirty ng-valid-parse ng-touched ng-empty lbl-date"
+                                    mobiscroll-date/>
+                                <span class="input-label" aria-label="Hạn xử lý">Hạn xử lý</span>
+                            </label>
+                        </div>
+                        <!-- <label class="item item-input item-stacked-label">
+                            <input type="text" ng-model="formVanbanden.thoihanxuly" placeholder="Hạn xử lý" class="txt2-4" mobiscroll-date>
+                            <span class="input-label">Hạn xử lý</span>
+                            <span class="icon2-2 ion-android-calendar"></span>
+                        </label> -->
+                    </div>
+                </ion-item>
+            </ion-list>
+            <ion-list class="list2-5" ng-if="tabIndex===1 && !vanbandi">
+                <ion-item class="item2-15" ng-repeat="item in tempNguoixulys track by $index">
+                    <div class="lbl2-17">
+                        <div class="lbl2-17b">
+                            <span class="lbl2-17c" ng-click="collapsed=!collapsed">{{item.tennguoinhan}}</span>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" ng-model="item.isCheck" ng-click="setNguoixulychinh($index)" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-19" ng-show="collapsed">
+                        <textarea ng-model="item.noidungchidao" placeholder="Nội dung xử lý" class="texta2-2"></textarea>
+                        <label class="item item-input item-stacked-label lbl2-19b">
+                            <input ng-model="item.xulytungay" placeholder="Ngày xử lý" class="txt2-4 ng-valid ng-dirty ng-valid-parse ng-touched ng-empty lbl-date"
+                                mobiscroll-date/>
+                            <span class="input-label" aria-label="Ngày xử lý">Ngày xử lý</span>
+                        </label>
+                        <label class="item item-input item-stacked-label lbl2-19b">
+                            <input ng-model="item.xulydenngay" placeholder="Hạn xử lý" class="txt2-4 ng-valid ng-dirty ng-valid-parse ng-touched ng-empty lbl-date"
+                                mobiscroll-date/>
+                            <span class="input-label" aria-label="Hạn xử lý">Hạn xử lý</span>
+                        </label>
+                        <!-- <label class="item item-input item-stacked-label">
+                          <input type="text" ng-model="formVanbanden.thoihanxuly" placeholder="Hạn xử lý" class="txt2-4" mobiscroll-date>
+                          <span class="input-label">Hạn xử lý</span>
+                          <span class="icon2-2 ion-android-calendar"></span>
+                      </label> -->
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+    <div class="fixed-top list-chuyenvb2">
+        <button class="btn2-2 ion-share" ng-click="submit()">Chuyển</button>
+    </div>
+</ion-view>

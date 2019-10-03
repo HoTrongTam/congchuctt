@@ -1,0 +1,23 @@
+.server-choose input[type='search'] {
+    /*padding: 10px;*/
+    /*color: #68aba8;*/
+}
+
+.server-choose .bar-header .item-input-wrapper {
+    /*background-color: #077772;*/
+    /*border: 1px solid #1e847f;*/
+    margin: 10px;
+    /*color: #fff;*/
+}
+.server-choose .list {
+    max-width: none;
+    margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+    .server-choose { text-align: center; }
+    .server-choose .list {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

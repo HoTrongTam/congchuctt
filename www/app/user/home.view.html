@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="home style2-{{idindexhinhnen}}" hide-nav-bar="true">
+    <ion-content class="no-header">
+        <div class="box2-1">
+            <div class="wrapper2-1">
+                <button class="btn2-1 iconbfsprite2-menu" menu-toggle="left"></button>
+                <button class="btn2-1 iconbfsprite2-user" ng-click="gotoSignin();"></button>
+                <div class="lst2-10" ng-if="optionUser">
+                    <button class="item2-10" ng-click="gotoUserInfo();">
+                        <span class="icon2-3 iconsprite2-14"></span>
+                        Thông tin tài khoản
+                    </button>
+                    <label class="item2-10">
+                        <span class="icon2-3 iconsprite2-15"></span>
+                        <input type="file" files-input ng-model="inputfile" multiple ng-change="addfile(inputfile)"
+                            autofocus style="display:none;" />
+                        <span>Cập nhật hình đại diện</span>
+                    </label>
+                    <button class="item2-10" ng-click="changeHinhnen();">
+                        <span class="icon2-3 iconsprite2-15"></span>
+                        Cập nhật hình nền
+                    </button>
+                    <button class="item2-10" ng-click="logout();">
+                        <span class="icon2-3 iconsprite2-16"></span>
+                        Đăng xuất
+                    </button>
+                </div>
+            </div>
+            <div class="wrapper2-2" ng-click="offgotoSignin();">
+                <div class="logo2-1"></div>
+                <p class="lbl2-1">Công chức trực tuyến</p>
+                <p class="lbl2-2">Thành phố hồ chí minh</p>
+            </div>
+            <ion-list class="lst2-1">
+                <ion-item class="item2-1" ng-click="onXulyCongViec()">
+                    <span class="icon2-1 icon2-xlcv">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Xử lý công việc</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onLichCongTac();">
+                    <span class="icon2-1 icon2-lct">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Lịch công tác</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onThongKe();">
+                    <span class="icon2-1 icon2-tk">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Thống kê</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onGiaoViec();">
+                    <span class="icon2-1 icon2-gv">
+                    </span>
+                    <span class="lbl2-3">Giao việc</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onTraCuu();">
+                    <span class="icon2-1 icon2-tc">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Tra cứu</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onDanhBa();">
+                    <span class="icon2-1 icon2-db">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Danh bạ</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onPhanAnhKienNghi();">
+                    <span class="icon2-1 icon2-email">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Phản ánh - Kiến nghị</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onQuyHoachCongDan();" ng-if="!permission">
+                    <span class="icon2-1 icon2-bd">
+                    </span>
+                    <span class="lbl2-3">Tra cứu quy hoạch</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onQuyHoach();" ng-if="permission">
+                    <span class="icon2-1 icon2-bd">
+                    </span>
+                    <span class="lbl2-3">Tra cứu quy hoạch</span>
+                </ion-item>
+                <ion-item class="item2-1" ng-click="onThongBao();">
+                    <span class="icon2-1 icon2-tb">
+                        <!-- <i class="lbl2-3b">35</i> -->
+                    </span>
+                    <span class="lbl2-3">Thông báo</span>
+                </ion-item>
+
+            </ion-list>
+    </ion-content>
+
+    <div class="popup2-1" ng-if="chonHinhnen">
+        <div class="wrapper2-18">
+            <label class="item2-11" ng-click="chonhinhnen(1);">
+                <input type="radio" checked="checked" name="radio">
+                <img src="res/img/style1.PNG" alt="">
+                <span class="lbl2-26">Loại 1</span>
+            </label>
+            <label class="item2-11" ng-click="chonhinhnen(2);">
+                <input type="radio" name="radio">
+                <img src="res/img/style2.PNG" alt="">
+                <span class="lbl2-26">Loại 2</span>
+            </label>
+            <label class="item2-11" ng-click="chonhinhnen(3);">
+                <input type="radio" name="radio">
+                <img src="res/img/style3.PNG" alt="">
+                <span class="lbl2-26">Loại 3</span>
+            </label>
+            <div class="row2-10">
+                <button class="btn2-17" ng-click="cancelChonhinhnen();">Quay lại</button>
+                <button class="btn2-17 active" ng-click="DongyChonhinhnen();">Đồng ý</button>
+            </div>
+        </div>
+    </div>
+
+</ion-view>

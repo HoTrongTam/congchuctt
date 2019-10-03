@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<ion-view class="profile" hide-nav-bar="true">
+    <ion-content class="no-header">
+        <div class="box2-1">
+            <div class="wrapper2-1">
+                <button class="btn2-1 iconbfsprite2-menu"></button>
+                <button class="btn2-1 iconbfsprite2-user"></button>
+            </div>
+            <div class="wrapper2-2">
+                <img class="avatar-img" src="../../res/img/avatar_female.png" ng-if="hasImg" />
+                <p class="info2-1" ng-if="!hasImg">N</p>
+                <p class="lbl2-1">Nguyễn Công Luân</p>
+                <p class="lbl2-2">Trưởng Phòng</p>
+            </div>
+        </div>
+        <div class="tabs">
+            <span class="tab-item" ng-click='opentab(1)' ng-class='{active:tabActive==1}'>Thông tin tài khoản</span>
+            <span class="tab-item" ng-click='opentab(2)' ng-class='{active:tabActive==2}'>Đổi mật khẩu</span>
+        </div>
+        <div class="body-profile">
+            <div class="tab-content tab_content_1 active" ng-if='tabActive==1'>
+                <div class="group2-input">
+                    <span class="lbl2-14">Tên đăng nhập</span>
+                    <input type="text" class="txt2-14" value="ncluan.quan7" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Họ tên</span>
+                    <input type="text" class="txt2-14" value="Nguyễn Công Luân">
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Giới tính</span>
+                    <select class="cbo2-14">
+                        <option selected="" value="Nam ">Nam </option>
+                        <option value="Nữ">Nữ</option>
+                        <option value="Không xác định">Không xác định</option>
+                    </select>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Điện thoại</span>
+                    <input type="text" class="txt2-14" value="0946934151">
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Email</span>
+                    <input type="text" class="txt2-14" value="ncluan.quan7@tphcm.gov.vn">
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Phòng ban</span>
+                    <input type="text" class="txt2-14" value="Phòng Kinh tế" disabled>
+                </div>
+                <div class="group2-input">
+                    <span class="lbl2-14">Chức vụ</span>
+                    <select class="cbo2-14">
+                        <option selected="" value="">--Chọn chức vụ--</option>
+                        <option value="Phó trường phòng">Phó trường phòng</option>
+                        <option value="Trưởng phòng">Trưởng phòng</option>
+                        <option value="Chuyên viên">Chuyên viên</option>
+                    </select>
+                </div>
+                <button class="btn2-14 iconbfsprite2-4">Lưu</button>
+            </div>
+            <div class="tab-content tab_content_2 active" ng-if='tabActive==2'>
+                <input type="text" class="txt2-15" placeholder="Nhập mật khẩu cũ" value="Nhập mật khẩu cũ">
+                <input type="text" class="txt2-15" placeholder="Nhập mật khẩu mới" value="Nhập mật khẩu mới">
+                <input type="text" class="txt2-15" placeholder="Nhập lại mật khẩu mới" value="Nhập lại mật khẩu mới">
+                <button class="btn2-14 iconbfsprite2-4">Lưu thay đổi</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

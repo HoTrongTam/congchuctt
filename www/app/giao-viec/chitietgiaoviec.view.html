@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-giaoviec" hide-back-button="false">
+    <ion-content class="has-header container">
+        <div class="wrapper2-20">
+            <div class="lbl2-11">Thông tin giao việc</div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Nội dung: </span>
+                <span class="lbl2-10c style2-1">{{dataChiTiet.NoiDungGiao}}</span>
+            </div>
+            <div class="lbl2-10" ng-show="trangthai2 == 0 && trangthai == 1 || trangthai2 == 1 && trangthai == 1">
+                <span class="lbl2-10b">Người giao: </span>
+                <span class="lbl2-10c">{{dataChiTiet.NguoiGiao}}</span>
+            </div>
+            <div class="lbl2-10" ng-show="trangthai2 == 1 && trangthai == 0">
+                <span class="lbl2-10b">Người được giao: </span>
+                <span class="lbl2-10c">{{dataChiTiet.NguoiDuocGiao}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Thời hạn: </span>
+                <span class="lbl2-10c">{{dataChiTiet.ThoiHanXuLy}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-13b style2-2">Tệp đính kèm: </span>
+                <br />
+                <span class="lbl2-10c" ng-repeat="file in danhSachFile track by $index" ng-click="openFile(file)">
+                    <i class="icon2-3 ion-android-attach"></i> {{file.name}}
+                    <br />
+                </span>
+            </div>
+        </div>
+        <div class="wrapper2-20 style2-1" ng-show="trangthai == 1 && trangthai2 == 0 || trangthai == 1 && trangthai2 == 1">
+            <div ng-repeat="item in dataChiTietXL">
+                </br>
+                <div class="lbl2-11">Thông tin xử lý</div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Người xử lý: </span>
+                    <span class="lbl2-10c style2-1">{{item.NguoiNhan}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Ngày xử lý: </span>
+                    <span class="lbl2-10c">{{item.NgayXuLy}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-10b">Nội dung xử lý: </span>
+                    <span class="lbl2-10c">{{item.NoiDungXuLy}}</span>
+                </div>
+                <div class="lbl2-10">
+                    <span class="lbl2-13b style2-2">Tệp đính kèm: </span>
+                    <br />
+                    <span class="lbl2-10c" ng-repeat="file in arrFileDinhKemXL track by $index" ng-click="openFile(file)">
+                        <i class="icon2-3 ion-android-attach"></i> {{file.name}}
+                        <br />
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper2-20 style2-1" ng-show="trangthai == 0 && trangthai2 == 0">
+            <div class="lbl2-11">Thông tin xử lý</div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Người xử lý: </span>
+                <span class="lbl2-10c style2-1">{{nguoiXuLy}}</span>
+            </div>
+            <textarea class="teaxtarea2-1" ng-model="formNhacnho.noidungnhacnho" placeholder="Nhập nội dung xử lý..."></textarea>
+            <label class="wrapper2-21">
+                <input type="file" class="file2-1" files-input ng-model="inputfile" multiple ng-change="addfile(inputfile, 1)" autofocus/>
+                <span class="lbl2-27"></span>
+                <span class="lbl2-28">Ảnh, Tệp hoặc video</span>
+            </label>
+            <label ng-if="fileNames" class="file-header-lbl" ng-repeat="name in fileNames track by $index" ng-if="fileName1">
+                <span readonly>{{name}}</span>
+                <button type="submit" ng-click="removeFile($index)" class="ion-close-round img-lbl1">
+                </button>
+            </label>
+        </div>
+    </ion-content>
+    <div class="fixed-top chitiet-vbd" ng-show="trangthai == 0 && trangthai2 == 0">
+        <div class="content">
+            <button class="btn2-2" ng-click="reject()">Hoàn Thành</button>
+            <button class="btn2-2" ng-click="tranfer()">Lưu</button>
+        </div>
+    </div>
+</ion-view>

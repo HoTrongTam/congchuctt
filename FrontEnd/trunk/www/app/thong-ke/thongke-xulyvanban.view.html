@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-xulyvanban">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-thongke">
+            <div class="content">
+                <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Thống kê văn bản đến</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Thống kê văn bản đi</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="container2-1" ng-if="tabIndex===0">
+            <div class="wrapper2-16">
+                <select class="cbo2-15">
+                    <option value="Tháng 11">Tháng 11</option>
+                    <option value="Tháng 12">Tháng 12</option>
+                </select>
+                <select class="cbo2-15">
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+            </div>
+            <div class="wrapper2-17">
+                <p class="lbl2-34">Chi tiết tình hình xử lý văn bản đến</p>
+                <div class="wrapper2-17b">
+                    <div class="box2-2">
+                        <p class="lbl2-34c">- Đã xử lý: 3200</p>
+                        <ul class="lst2-10">
+                            <li class="item2-10">+ Đúng hạn: 3000</li>
+                            <li class="item2-10">+ Trễ hạn: 200</li>
+                        </ul>
+                    </div>
+                    <div class="box2-2">
+                        <p class="lbl2-34c">- Chưa xử lý: 800</p>
+                        <ul class="lst2-10">
+                            <li class="item2-10">+ Trong hạn: 600</li>
+                            <li class="item2-10">+ Quá hạn: 200</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2-1" ng-if="tabIndex===1">
+            <div class="wrapper2-16">
+                <select class="cbo2-15">
+                    <option value="Tháng 11">Tháng 11</option>
+                    <option value="Tháng 12">Tháng 12</option>
+                </select>
+                <select class="cbo2-15">
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke1}}"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

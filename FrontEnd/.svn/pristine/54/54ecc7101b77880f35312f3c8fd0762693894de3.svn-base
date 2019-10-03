@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="login">
+
+    <ion-content scroll="false">
+        <div class="form-login">
+            <form name="formLogin">
+                <label class="item item-input item-stacked-label">
+                    <input type="text" name="username" ng-model="user_form.username" placeholder="Tên đăng nhập">
+                    <span class="input-label">Tên đăng nhập</span>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <!-- <i class="icon ion-ios-locked-outline"></i> -->
+                    <input type="password" name="password" ng-model="user_form.password" placeholder="Mật khẩu">
+                    <span class="input-label">Mật khẩu</span>
+                </label>
+                <div class="row-wfull">
+                    <button class="button" ng-click="signin();">ĐĂNG NHẬP</button>
+                </div>
+                <div class="links">
+                    <a class="link-type1" ng-click="goBack();">Không thể đăng nhập tài khoản?</a>
+                    <!-- dark-bg light -->
+                    <!-- <a class="link-type1" ng-click="goNext();">Đăng ký</a> -->
+                    <!-- calm-bg light -->
+                </div>
+                <!--  <button class="button btn-login light" ng-click="signin();">ĐĂNG NHẬP</button>
+                <div>
+                    <button class="button button-clear button-light btn-forgetpass" ng-click="forgotPass();">Quên mật khẩu?</button>
+                    <button class="button button-clear button-light btn-forgetpass" ng-click="register();">Đăng ký</button>
+                    <button class="button btn-login light" ng-click="signin();">ĐĂNG NHẬP</button>
+                                    <button class="button btn-login light" ng-click="register();">ĐĂNG KÝ</button>
+                </div> -->
+            </form>
+        </div>
+        <button class="btn-demo" ng-click="demo();">Đăng nhập phiên bản demo offline</button>
+    </ion-content>
+   <!--  <ion-footer-bar class="btn-bar">
+        <div class="row-wfull">
+            <button class="button" ng-click="signin();">ĐĂNG NHẬP</button>
+        </div>
+        <div class="tabs">
+            <a class="tab-item quen-pass" ng-click="goBack();">QUÊN MẬT KHẨU</a>
+
+            <a class="tab-item dang-ky" ng-click="goNext();">ĐĂNG KÝ</a>
+
+        </div>
+    </ion-footer-bar> -->
+</ion-view>

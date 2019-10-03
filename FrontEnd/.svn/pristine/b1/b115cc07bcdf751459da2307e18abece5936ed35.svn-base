@@ -1,0 +1,18 @@
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "JYYNTH24MB",
+            "packageType": "development",
+			"provisioningProfile":"DichVuCong_dev",
+            "buildFlag": []
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Distribution",
+            "developmentTeam": "JYYNTH24MB",
+            "packageType": "ad-hoc",
+			"provisioningProfile":"DichVuCong_pro",
+            "buildFlag": []
+        }
+    }
+}

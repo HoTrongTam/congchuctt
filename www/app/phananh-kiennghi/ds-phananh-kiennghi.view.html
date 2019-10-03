@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-phananhkiennghi" hide-back-button="false">
+  <ion-content scroll="false" class="content-type1">
+    <div class="fixed-top list-phananhkiennghi2">
+      <form ng-submit="onSearch()">
+        <div class="wrapper2-3">
+          <input type="text" ng-model="searchForm.tuKhoa" class="txt2-3" placeholder="Nhập tìm kiếm" />
+          <button type="submit" class="btn2-4 iconsprite2-2"></button>
+        </div>
+      </form>
+      <div class="content">
+        <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>
+          <!-- đang chọn xem tab nào thì tab đó thêm class "active" -->Chưa xử lý {{countDSPAKN || ""}} </button>
+        <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Đã xử lý {{countDSChuaXuLy || ""}}</button>
+      </div>
+    </div>
+  </ion-content>
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="Lấy dữ liệu mới" on-refresh="doRefresh();"></ion-refresher>
+    <ion-list class="list2-1" ng-repeat="item in danhsachPAKN track by $index" ng-if="tabIndex===0">
+      <ion-item class="item2-1" ng-click="phananhchitiet(item)">
+        <div class="row2-1">
+          <ion-icon class="icon-doc-1 ion-folder "> </ion-icon>
+          <div class="col-2">
+            <p class="lbl2-3">Người PAGY: {{item.HoTenNguoiHoi}}</p>
+          </div>
+          <p class="lbl2-2">{{item.NgayTao}}</p>
+        </div>
+        <div class="row2-1 style2-1">
+          <div class="group2-6">
+            <span class="lbl2-40">Lĩnh vực phản ánh: </span>
+            <span class="lbl2-41">{{item.TenLinhVuc}}</span>
+          </div>
+        </div>
+        <div class="row2-1 style2-1">
+          <div class="group2-6">
+            <span class="lbl2-40">Nội dung: </span>
+            <span class="lbl2-41">{{item.NoiDungText}}</span>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list class="list2-1" ng-repeat="item in danhsachPAKN track by $index" ng-if="tabIndex===1">
+      <ion-item class="item2-1" ng-click="phananhchitiet(item)">
+        <div class="row2-1">
+          <ion-icon class="icon-doc-1 ion-folder "> </ion-icon>
+          <div class="col-2">
+            <p class="lbl2-3">Người PAGY: {{item.HoTenNguoiHoi}}</p>
+          </div>
+          <p class="lbl2-2">{{item.NgayTao}}</p>
+        </div>
+        <div class="row2-1 style2-1">
+          <div class="group2-6">
+            <span class="lbl2-40">Lĩnh vực phản ánh: </span>
+            <span class="lbl2-41">{{item.TenLinhVuc}}</span>
+          </div>
+        </div>
+        <div class="row2-1 style2-1">
+          <div class="group2-6">
+            <span class="lbl2-40">Nội dung: </span>
+            <span class="lbl2-41">{{item.NoiDungText}}</span>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadPage();" distance="2" immediate-check="false"></ion-infinite-scroll>
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-vbd" hide-back-button="false">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-chitietvbd">
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Chi tiết văn bản</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Quá trình xử lý</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Tiến độ</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="container" ng-if="tabIndex===0">
+            <div class="lbl2-10" ng-if="vanbanden">
+                <span class="lbl2-10b">Số ký hiệu: </span>
+                <span class="lbl2-10c style2-1">{{detail.sokyhieu}}</span>
+            </div>
+            <div class="lbl2-10" ng-if="vanbandi">
+                <span class="lbl2-10b">Mã văn bản: </span>
+                <span class="lbl2-10c style2-1">{{detail.mavanban}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày phát hành: </span>
+                <span class="lbl2-10c">{{detail.ngayphathanh}}</span>
+            </div>
+            <div class="lbl2-10" ng-if="vanbanden">
+                <span class="lbl2-10b">Số đến: </span>
+                <span class="lbl2-10c">{{detail.soden}}</span>
+            </div>
+            <div class="lbl2-10" ng-if="vanbanden">
+                <span class="lbl2-10b">Ngày đến: </span>
+                <span class="lbl2-10c">{{detail.ngayden}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Trích yếu: </span>
+                <span class="lbl2-10c">{{detail.trichyeu}}</span>
+            </div>
+            <div class="lbl2-10" ng-if="vanbanden">
+                <span class="lbl2-10b">Nơi phát hành: </span>
+                <span class="lbl2-10c">{{detail.noiphathanh}}</span>
+            </div>
+            <div class="lbl2-10" ng-if="vanbandi">
+                <span class="lbl2-10b">Nơi nhận: </span>
+                <span class="lbl2-10c">{{detail.noinhan}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Người ký: </span>
+                <span class="lbl2-10c">{{detail.nguoiky}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Loại văn bản: </span>
+                <span class="lbl2-10c">{{detail.tenloaivanban}}</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Hạn xử lý: </span>
+                <span class="lbl2-10c">{{detail.hanxuly}}</span>
+                <span class="lbl2-10c" ng-if="!detail.hanxuly">Không giới hạn</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-13b style2-2">Tệp đính kèm: </span>
+                <span class="lbl2-10c" ng-repeat="file in detail.filedinhkems track by $index" ng-click="openFile(file.resourcecode, file.primkey, file.fileid)">
+                    <i class="icon2-3 ion-android-attach" ></i> {{file.filename}}<br/></span>
+            </div>
+            <div class="lbl2-11">Thông tin xử lý</div>
+            <div class="lbl2-12" ng-repeat="item in detail.thongtinxulys track by $index">
+                <img src="res/img/avatar.png" class="img2-1">
+                <div class="lbl2-12b">
+                    <div class="lbl2-12c">
+                        <div class="lbl2-12e">
+                            <span class="lbl2-12f">{{item.chucvu}}</span>
+                            <span class="lbl2-12g">{{item.tennguoixuly}}</span>
+                        </div>
+                        <p class="lbl2-12h">{{item.thoigianxuly}}</p>
+                    </div>
+                    <div class="lbl2-12d">
+                        <span class="lbl2-12i">Nội dung xử lý:</span>
+                        <span class="lbl2-12k">{{item.noidungxuly}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-if="tabIndex===1" style="white-space: nowrap;">
+          <ion-tree-list items="tasks" template-url="app/xu-ly-cong-viec/chitietvbxuly.treeview.html"></ion-tree-list>
+        </div>
+        <div class="container style2-1" ng-if="tabIndex===2">
+            <div class="lbl2-13">
+                <p class="lbl2-13b iconbfsprite2-3">Tiến độ xử lý văn bản</p>
+                <input type="text" class="dropd2-1" ng-model="tiendocuoi.phantram" mobiscroll-select="dsPhantram">
+            </div>
+
+            <textarea class="textarea2-2" ng-model="tiendocuoi.noidungtiendo" placeholder="Nhập nội dung tiến độ"></textarea>
+            <button class="btn2-15" ng-click="luuTiendo()">Lưu</button>
+        </div>
+    </ion-content>
+    <div class="fixed-top chitiet-vbd">
+        <div class="content">
+            <button class="btn2-2 iconbfsprite2-2 sprite" ng-click="reject()">Trả lại</button>
+            <button class="btn2-2 ion-share" ng-click="tranfer()">Chuyển</button>
+        </div>
+    </div>
+</ion-view>

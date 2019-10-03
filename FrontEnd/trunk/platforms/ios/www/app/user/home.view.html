@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="page1-1">
+    <ion-content class="has-header">
+        <div class="box1-9">
+            <p class="lbl1-20">Tra cứu hồ sơ</p>
+            <div class="box1-10">
+                <label class="input1-2">
+                    <input class="txt1-6" type="text" ng-model="form.sreach" placeholder="Tìm kiếm thủ tục hành chánh" />
+                </label>
+                <button class="button btn1-6 button icon ion-ios-search-strong"></button>
+            </div>
+        </div>
+        <ion-list class="lst2-10">
+            <ion-item class="item2-10" ng-click="onThuTucList(item)">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Thủ tục<br/>hành chính</span>
+            </ion-item>
+            <ion-item class="item2-10">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Tra cứu<br/>hồ sơ</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="showAlert()">
+                <span class="icon2-10"> </span>
+                <span class="lbl2-10">Tra cứu thông tin quy hoạch</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="showAlert()">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Nộp hồ sơ<br/>kinh doanh</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="onBuildRegisterTapped(item)">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Nộp hồ sơ<br/>xây dựng</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="showAlert()">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Góp ý</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="showAlert()">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Trưng cầu<br/>ý kiến</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="showAlert()">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Hướng dẫn</span>
+            </ion-item>
+            <ion-item class="item2-10" ng-click="showAlert()">
+                <span class="icon2-10"></span>
+                <span class="lbl2-10">Thông báo</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

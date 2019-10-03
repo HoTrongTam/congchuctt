@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<ion-view view-title="HƯỚNG DẪN SỬ DỤNG" class="hdsd">
+	<ion-content class="has-header">
+		<div class="lbl1-hd1 item">
+				<ion-img rc="res/img/huongdan/u736.png"></ion-img>
+				<ion-icon name="mycustomicon" item-left primary></ion-icon>
+			5 bước đơn giản <p>để gửi hồ sơ trực tuyến và nhận kết quả</p>
+		</div>
+		<div id="u736" class="ax_default line">
+			<div>
+
+					<img id="u736_img" class="img " src="res/img/huongdan/u736.png"/>
+					<div class ="bottom-left">bottom</div>
+			</div>
+			
+
+		 
+		<div class="lbl1-hd2">
+			Tạo môi trường rữ, cung cấp công cụ tra cứu khai thác tài liệu lưu trữ<br>
+			Tài liệu hướng dẫn sử dụng:
+		</div>
+		<div class="box1-hd1">
+			<button class="btn1-hd1 ion-archive" ng-click="openFile(file.OriginalName,file.UploadName);">Tải file HDSD</button>
+			<button class="btn1-hd1 ion-archive" ng-click="openFile(file.OriginalName,file.UploadName);">Tải file HDSD nâng cao</button>
+		</div>
+	</ion-content>
+</ion-view>

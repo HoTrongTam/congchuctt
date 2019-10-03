@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-xulyhoso">
+    <ion-content class="content-type1 has-header" overflow-scroll="false">
+        <div class="wrapper2-16">
+            <select class="cbo2-15" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+            </select>
+            <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+            </select>
+            <button class="button button-small" style="background-color: #009933;color: #ffffff" ng-click="btnClickCaNam();">Cả
+                năm : {{formdate.year}}</button>
+        </div>
+        <div class="chart-container">
+            <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+        </div>
+        <div class="wrapper2-17">
+            <p class="lbl2-34">Chi tiết tình hình xử lý hồ sơ</p>
+            <div class="wrapper2-17b">
+                <div class="box2-2">
+                    <p class="lbl2-34b">Tổng tồn trước: {{dataTKHoSo.TonTruoc || ""}}</p>
+                    <p class="lbl2-34c">- Đã xử lý: {{dataTKHoSo.TongDaXuLy || ""}}</p>
+                    <ul class="lst2-10">
+                        <li class="item2-10">+ Đúng hạn: {{dataTKHoSo.DaXuLyDungHan || ""}}</li>
+                        <li class="item2-10">+ Quá hạn: {{dataTKHoSo.DaXuLyTreHan || ""}}</li>
+                    </ul>
+                    <p class="lbl2-34c">- Không giải quyết: {{dataTKHoSo.KhongGiaiQuyet || ""}}</p>
+                </div>
+                <div class="box2-2">
+                    <p class="lbl2-34b">Tổng nhận mới: {{dataTKHoSo.NhanMoi || ""}}</p>
+                    <p class="lbl2-34c">- Chưa xử lý: {{dataTKHoSo.TongChuaXuLy || ""}}</p>
+                    <ul class="lst2-10">
+                        <li class="item2-10">+ Trong hạn: {{dataTKHoSo.ChuaXuLyTrongHan || ""}}</li>
+                        <li class="item2-10">+ Quá hạn: {{dataTKHoSo.ChuaXuLyQuaHan || ""}}</li>
+                    </ul>
+                    <p class="lbl2-34c">- Bổ sung: {{dataTKHoSo.BoSung || ""}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="lst2-5">
+            <p class="lbl2-33">Chi tiết lĩnh vực</p>
+            <div class="wrapper2-7" ng-repeat="item in dataChiTietLinhVuc">
+                <div class="wrapper2-17 style2-1">
+                    <p class="lbl2-34 style2-1">{{item.TenLinhVuc}}</p>
+                    <div class="wrapper2-17b">
+                        <div class="box2-2 style2-1">
+                            <p class="lbl2-34c">- Tồn trước: {{item.TonTruoc || ""}}</p>
+                            <p class="lbl2-34c">- Đã xử lý: {{item.DaXuLyDungHan + item.DaXuLyTreHan || ""}}</p>
+                            <ul class="lst2-10">
+                                <li class="item2-10">+ Đúng hạn: {{item.DaXuLyDungHan || ""}}</li>
+                                <li class="item2-10">+ Quá hạn: {{item.DaXuLyTreHan || ""}}</li>
+                            </ul>
+                            <p class="lbl2-34c">- Không giải quyết: {{item.KhongGiaiQuyet || ""}}</p>
+                        </div>
+                        <div class="box2-2 style2-2">
+                            <p class="lbl2-34c">- Nhận mới: {{item.NhanMoi || ""}}</p>
+                            <p class="lbl2-34c">- Chưa xử lý: {{item.ChuaXuLyTrongHan + item.ChuaXuLyQuaHan || ""}}</p>
+                            <ul class="lst2-10">
+                                <li class="item2-10">+ Trong hạn: {{item.ChuaXuLyTrongHan || ""}}</li>
+                                <li class="item2-10">+ Quá hạn: {{item.ChuaXuLyQuaHan || ""}}</li>
+                            </ul>
+                            <p class="lbl2-34c">- Bổ sung: {{item.BoSung || ""}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="wrapper2-17 style2-1">
+                <p class="lbl2-34 style2-1">Lĩnh vực Đầu tư phát triển và phân bổ ngân sách nhà nước</p>
+                <div class="wrapper2-17b">
+                    <div class="box2-2">
+                        <p class="lbl2-34c">- Tồn trước: {{dataTKHoSo.TonTruoc || ""}}</p>
+                        <p class="lbl2-34c">- Đã xử lý: {{dataTKHoSo.TongDaXuLy || ""}}</p>
+                        <ul class="lst2-10">
+                            <li class="item2-10">+ Đúng hạn: {{dataTKHoSo.DaXuLyDungHan || ""}}</li>
+                            <li class="item2-10">+ Quá hạn: {{dataTKHoSo.DaXuLyTreHan || ""}}</li>
+                        </ul>
+                        <p class="lbl2-34c">- Không giải quyết: {{dataTKHoSo.KhongGiaiQuyet || ""}}</p>
+                    </div>
+                    <div class="box2-2">
+                        <p class="lbl2-34c">- Nhận mới: {{dataTKHoSo.NhanMoi || ""}}</p>
+                        <p class="lbl2-34c">- Chưa xử lý: {{dataTKHoSo.TongChuaXuLy || ""}}</p>
+                        <ul class="lst2-10">
+                            <li class="item2-10">+ Trong hạn: {{dataTKHoSo.ChuaXuLyTrongHan || ""}}</li>
+                            <li class="item2-10">+ Quá hạn: {{dataTKHoSo.ChuaXuLyQuaHan || ""}}</li>
+                        </ul>
+                        <p class="lbl2-34c">- Bổ sung: {{dataTKHoSo.BoSung || ""}}</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </ion-content>
+</ion-view>

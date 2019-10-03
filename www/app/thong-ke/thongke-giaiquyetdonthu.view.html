@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-giaiquyetdonthu">
+    <ion-content class="content-type1 has-header" overflow-scroll="false">
+        <div class="wrapper2-16">
+            <select class="cbo2-15" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+            </select>
+            <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+            </select>
+        </div>
+        <div class="chart-container">
+            <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+        </div>
+        <div class="wrapper2-17">
+            <p class="lbl2-34">Chi tiết tình hình giải quyết đơn thư</p>
+            <div class="wrapper2-17b">
+                <div class="box2-2">
+                    <p class="lbl2-34b">Tồn trước: {{dataTKGQDonThu.TonTruoc || ""}}</p>
+                    <p class="lbl2-34c">- Đã xử lý: {{dataTKGQDonThu.TongDaXuLy || ""}}</p>
+                    <ul class="lst2-10">
+                        <li class="item2-10">+ Đúng hạn: {{dataTKGQDonThu.DaXuLyDungHan || ""}}</li>
+                        <li class="item2-10">+ Quá hạn: {{dataTKGQDonThu.DaXuLyQuaHan || ""}}</li>
+                    </ul>
+                </div>
+                <div class="box2-2">
+                    <p class="lbl2-34b">Nhận mới: {{dataTKGQDonThu.NhanMoi || ""}}</p>
+                    <p class="lbl2-34c">- Chưa xử lý: {{dataTKGQDonThu.TongChuaXuLy || ""}}</p>
+                    <ul class="lst2-10">
+                        <li class="item2-10">+ Trong hạn: {{dataTKGQDonThu.ChuaXuLyTrongHan || ""}}</li>
+                        <li class="item2-10">+ Quá hạn: {{dataTKGQDonThu.ChuaXuLyQuaHan || ""}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

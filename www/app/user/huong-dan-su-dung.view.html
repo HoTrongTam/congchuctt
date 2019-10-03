@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<ion-view view-title="HƯỚNG DẪN SỬ DỤNG" class="hdsd">
+	<ion-content class="has-header">
+			<ion-item class="hd1 item">
+					<ion-row class="hd-row">
+							<ion-col class="lcol">5</ion-col>
+								<p style="float:left;"><span>bước đơn giản</span><span> để gửi hồ sơ và nhận kết quả</span></p>
+							</ion-col>
+						</ion-row>
+			</ion-item>
+			<div class="hd-bl1">
+					<img class="hd-img-line" src="res/img/huongdan/u736.png"/>
+					<img class="hd-img1" src="res/img/numbers/one.png"></img>
+					<div class="hd-text">
+							Đăng nhập bằng phần mềm (Hoặc đăng ký tài khoản mới nêú giao dịch lần đầu)
+							<div class="hd-img2">
+								<span class="hd-span1">Đăng ký </span>
+									<img src="res/img/huongdan/u771.png"></img>
+								<span class="hd-span2">Đăng nhập</span>
+							</div>
+					</div>
+			</div>
+			<div class="hd-bl1">
+					<img class="hd-img-line" src="res/img/huongdan/u736.png"/>
+					<img class="hd-img1" src="res/img/numbers/two.png"></img>
+					<div class="hd-text">
+							Chọn thủ tục hành chính cần nộp trực tuyến
+							<div class="hd-img2">
+									<img class="hd-img-icon" src="res/img/huongdan/u763.png"></img>
+									<a style="color:palevioletred">Kinh Doanh </a>
+									<img class="hd-img-icon" src="res/img/huongdan/u767.png"></img>
+									<a style="color:tomato">Xây Dựng</a> 
+								</div>
+					</div>
+			</div>
+			<div class="hd-bl1">
+					<img class="hd-img-line" src="res/img/huongdan/u736.png"/>
+					<img class="hd-img1" src="res/img/numbers/three.png"></img>
+					<div class="hd-text"> 
+							Điền đầy đủ thông tin hồ sơ, đính kèm các chứng từ kèm theo hồ sơ
+								<div class="box-10">
+									<div class="col-1">
+										<p class="lbl-24 pass lbl-step-gui"><span>Bước 1</span></p>
+										<p class="lbl-24 pass lbl-step-tiepnhan"><span>Bước 2</span></p>
+										<p class="lbl-24 pass lbl-step-hentra" ><span>Bước 3</span></p>
+					
+										 <p class="lbl-24 pass lbl-step-hoantat" ng-if="form.NgayHoanThanh != ''" ng-click="showFilesKetQua();">
+											<span>Hoàn tất</span>{{ dt.getTime(form.NgayHoanThanh, 'date') }}
+										</p>
+										<p class="lbl-25">
+											<span class="lbl-35 p1"></span>
+											<span class="lbl-35 p2"></span>
+											<span class="lbl-35 p3"></span>
+										</p> 
+									</div>
+								</div>
+					</div>
+			</div>
+			<div class="hd-bl1" style="margin-top:100px">
+					<img class="hd-img-line" src="res/img/huongdan/u736.png"/>
+					<img class="hd-img1" src="res/img/numbers/four.png"></img>
+					<div class="hd-text">
+							Nộp hồ sơ và xác nhận
+							<div class="hd-img2">
+									<img class="hd-img-icon" src="res/img/huongdan/ico-tick.png"></img>
+									<a style="color:green">Xác nhận </a>
+								</div>
+					</div>
+			</div>
+			<div class="hd-bl1">
+					<img class="hd-img-line" src="res/img/huongdan/u736.png"/>
+					<img class="hd-img1" src="res/img/numbers/five.png"></img>
+					<div class="hd-text">
+							Tra cứu hồ sơ và nhận kết quả
+							<div class="hd-img2">
+									<img class="hd-img-icon" src="res/img/huongdan/ico-folder.png"></img>
+									<a style="color:#2392c1">Tra cứu hồ sơ</a> 
+								</div>
+					</div>
+			</div>
+			
+	</ion-content>
+</ion-view>

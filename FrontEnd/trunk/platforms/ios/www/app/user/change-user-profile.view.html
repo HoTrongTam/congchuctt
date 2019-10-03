@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="change-password" hide-nav-bar="true">
+    <ion-content has-header="false" class="no-header">
+    	<div class="resetpass-box1">
+    		<div class="resetpass-header">
+				<button class="resetpass-btn1" ng-click="back();">&times;</button><!-- nút tắt view đổi mật khẩu -->
+    			<p class="resetpass-lbl1">Thiết lập mật khẩu mới</p>
+    		</div>
+	        <label class="item item-input item-stacked-label ion-android-unlock">
+	        	<!-- <span class="assertive"><!- - cảnh báo (khi cần cảnh báo thì cho text vào đây) Mật khẩu không đúng - -></span> -->
+	            <input type="password" ng-model="form.OldPass" placeholder="Mật khẩu cũ" />
+	            <span class="input-label">Mật khẩu cũ</span>
+	        </label>
+	        <label class="item item-input item-stacked-label ion-android-unlock color-2">
+	            <input type="password" ng-model="form.NewPass" placeholder="Mật khẩu mới" />
+	            <span class="input-label">Mật khẩu mới</span>
+	        </label>
+	        <label class="item item-input item-stacked-label ion-android-unlock color-2">
+	            <span class="assertive" ng-show="!passMatch">Mật khẩu không giống</span>
+	            <input type="password" ng-model="check.NewPassMatch" placeholder="Xác nhận mật khẩu" ng-blur="checkPassword();" />
+	            <span class="input-label">Xác nhận mật khẩu</span>
+	        </label>
+	    	<button class="resetpass-btn2" ng-click="submit();">Đổi mật khẩu</button>
+    	</div>
+    </ion-content>
+</ion-view>

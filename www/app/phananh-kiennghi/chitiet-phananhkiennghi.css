@@ -1,0 +1,41 @@
+.chitiet-pakn ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {
+    top: 70px !important;
+    margin-bottom: 10px;
+}
+
+.chitiet-pakn .lbl2-11 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.chitiet-pakn .lbl2-10 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.chitiet-pakn .lbl2-10c.style2-1 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chitiet-pakn .lbl2-10.style2-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.chitiet-pakn .icon2-20.ion-checkmark {
+    font-size: 18px;
+    color: #0066FF;
+    margin-right: 5px;
+    width: 15px;
+}
+
+.chitiet-pakn .lbl2-10d {
+    font-size: 15px;
+    display: inline-block;
+    width: calc(100% - 20px);
+    color: #666;
+}

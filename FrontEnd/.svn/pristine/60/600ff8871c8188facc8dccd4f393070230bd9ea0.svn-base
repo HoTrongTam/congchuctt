@@ -1,0 +1,26 @@
+<ion-modal-view class="pane2-2 popup-taomoi">
+    <ion-content class="no-header" scroll-y="false">
+        <div class="box1-1">
+            <button class="btn1-2 ">
+                <span class="icon-size3 ion-android-arrow-back" ng-click="closeModal(); "></span>
+            </button>
+            <p class="lbl1-1 ">Tạo mới câu hỏi</p>
+        </div>
+        <div class="group2-1 ">
+            <div class="box-type13 ">
+                <ion-icon class="icon-size1 ion-ios-compose active "> </ion-icon>
+                <input type="text " class="txt1-2 " ng-model="formmodal.TieuDe" placeholder="Tiêu đề " style=" ">
+                <span class="input-label " aria-label="Tiêu đề ">Tiêu đề</span>
+            </div>
+            <div class="box-type13 icon-arrow-down">
+                <ion-icon class="icon-size1 ion-usb active "> </ion-icon>
+                <input class="" ng-model="formmodal.LinhVucID" mobiscroll-select="dsLV"/>
+                <span class="input-label " aria-label="Lĩnh vực">Lĩnh vực</span>
+            </div>
+            <textarea placeholder="Nhập nội dung câu hỏi... " ng-model="formmodal.NoiDungCauHoi" rows="20 " cols="40 " class="textarea2-1 " autocomplete="off " role="textbox " aria-autocomplete="list " aria-haspopup="true "></textarea>
+        </div>
+    </ion-content>
+    <div class="btn-footer ">
+        <button class="btn-popup " ng-click="saveNew()">Tạo mới</button>
+    </div>
+</ion-modal-view>

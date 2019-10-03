@@ -1,0 +1,21 @@
+.chitietlichcongtac .lbl2-20 {background: #F2F2F2;padding: 12px 10px;font-family: 'Rotoro Bold', 'Rotoro';font-weight: 700;font-size: 15px;color: #333333;text-align: center;}
+.chitietlichcongtac .wrapper2-11 {padding: 5px 10px;}
+.chitietlichcongtac [class*="lbl2-"] {font-family: 'Rotoro Regular', 'Rotoro';font-weight: 400;font-size: 16px;margin-bottom: 10px;}
+.chitietlichcongtac .lbl2-20b {font-family: 'Rotoro Bold', 'Rotoro';font-weight: 700;color: #006600;}
+.chitietlichcongtac .lbl2-20c {color: #000000;}
+.chitietlichcongtac .lbl2-20f {display: flex;}
+.chitietlichcongtac .lbl2-20g {width: 190px;}
+.chitietlichcongtac .item2-20 {border: none;background: transparent;color: #0066FF;}
+.chitietlichcongtac .item2-20:before {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    margin: 0 5px 5px 0;
+    background: #B5E1EA;
+    display: inline-block;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    color: #333;
+}

@@ -1,0 +1,54 @@
+.depth-1{/*padding-left:15px*/}.depth-2{padding-left:35px}.depth-3{padding-left:55px}.depth-4{padding-left:75px}.depth-5{padding-left:95px}.depth-6{padding-left:115px}.depth-7{padding-left:135px}.depth-8{padding-left:155px}.depth-9{padding-left:175px}.depth-10{padding-left:195px}.depth-11{padding-left:215px}.depth-12{padding-left:235px}.depth-13{padding-left:255px}.depth-14{padding-left:275px}.depth-15{padding-left:295px}.depth-16{padding-left:315px}.depth-17{padding-left:335px}.depth-18{padding-left:355px}.depth-19{padding-left:375px}.depth-20{padding-left:395px}.depth-21{padding-left:415px}.depth-22{padding-left:435px}.depth-23{padding-left:455px}.depth-24{padding-left:475px}.depth-25{padding-left:495px}.depth-26{padding-left:515px}.depth-27{padding-left:535px}.depth-28{padding-left:555px}.depth-29{padding-left:575px}.depth-30{padding-left:595px}.depth-31{padding-left:615px}.depth-32{padding-left:635px}.depth-33{padding-left:655px}.depth-34{padding-left:675px}.depth-35{padding-left:695px}.icon.ion-arrow-down-b,.icon.ion-arrow-right-b{padding-right:5px}
+.tree-item1 {border: none;display: flex;margin: 0;flex-wrap: wrap;}
+.icon-tree-1{
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 10px;
+  color: #fff;
+  background: #A6D86E;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+.icon-tree-1.noseen {
+  background: #979C8A;
+}
+
+.icon-tree-1.noseen ~ .tree-info1 .tree-name1 {
+  color: #000;
+}
+.tree-info1 {padding-left: 10px;width: calc(100% - 30px);min-height: 40px;}
+.tree-name1 {color: #009933;font-size: 15px;margin-bottom: 5px;margin-top: 1px;}
+/* .tree-item1:before {
+  content: "";
+  position: relative;
+  top: 10px;
+  bottom: 0;
+  left: 10px;
+  display: block;
+  z-index: -1;
+  width: 0;
+  border-left: 1px dashed #009933;
+}
+.tree-item1:after {
+    content: "";
+    position: relative;
+    top: 9px;
+    bottom: 0;
+    left: 10px;
+    display: block;
+    z-index: -1;
+    width: 30px;
+    border-top: 1px dashed #009933;
+} */
+.tree-item1:last-child:before {display: none;}
+.tree-item1:last-child:after {display: none;}
+/* .tree2-1b {padding-left: 30px;width: 100%;} */
+.wrapper2-1 {margin-bottom: 10px;}
+.tree-name1 {display: inline-block;}
+.tree-item1 {overflow: visible}
+.tree-item1.disabled .icon2-3{background: #979C8A;}
+.tree-item1.disabled .tree-name{color:#000;}
+.tree-item1.disabled .tree-name2{color: #f00;}
+/* .tree2-1b.child .tree-item2::before{display: none} */

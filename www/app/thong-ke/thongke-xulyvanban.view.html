@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-xulyvanban">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-thongke">
+            <div class="content">
+                <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Thống kê văn bản đến</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Thống kê văn bản đi</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header" overflow-scroll="false">
+        <div class="container2-1" ng-if="tabIndex===0">
+            <div class="wrapper2-16">
+                <select class="cbo2-15" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+                </select>
+                <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+                </select>
+                <button class="button button-small" style="background-color: #009933;color: #ffffff" ng-click="onClickCaNamVBDen();">Cả năm : {{formdate.year}}</button>
+            </div>
+            <div class="chart-container">
+                <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke}}"></div>
+            </div>
+            <div class="wrapper2-17">
+                <p class="lbl2-34">Chi tiết tình hình xử lý văn bản đến</p>
+                <div class="wrapper2-17b">
+                    <div class="box2-2">
+                        <p class="lbl2-34c">- Đã xử lý: {{dataTKVBDen.TongDaXuLy || ""}}</p>
+                        <ul class="lst2-10">
+                            <li class="item2-10">+ Đúng hạn: {{dataTKVBDen.DaXuLyDungHan || ""}}</li>
+                            <li class="item2-10">+ Trễ hạn: {{dataTKVBDen.DaXuLyTreHan || ""}}</li>
+                        </ul>
+                    </div>
+                    <div class="box2-2">
+                        <p class="lbl2-34c">- Chưa xử lý: {{dataTKVBDen.TongChuaXuLy || ""}}</p>
+                        <ul class="lst2-10">
+                            <li class="item2-10">+ Trong hạn: {{dataTKVBDen.ChuaXuLyTrongHan || ""}}</li>
+                            <li class="item2-10">+ Quá hạn: {{dataTKVBDen.ChuaXuLyQuaHan || ""}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2-1" ng-if="tabIndex===1">
+            <div class="wrapper2-16">
+                <select class="cbo2-15" ng-model="countSelectedMonths" ng-options="label for label in monthArray" ng-change="onChangeMonths(countSelectedMonths)">
+                </select>
+                <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+                </select>
+                <button class="button button-small" style="background-color: #009933;color: #ffffff" ng-click="onClickCaNamVBDi();">Cả năm : {{formdate.year}}</button>
+            </div>
+            <div class="chart-container">
+                <div fusioncharts width="100%" height="400" type="doughnut2d" dataSource="{{myDataSource_thongke1}}"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

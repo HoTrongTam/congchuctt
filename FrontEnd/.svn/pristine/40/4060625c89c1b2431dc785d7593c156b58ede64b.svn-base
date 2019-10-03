@@ -1,0 +1,15 @@
+.thongke-xulyphananh .wrapper2-16 {padding: 10px;text-align: right}
+.thongke-xulyphananh .cbo2-15 {padding: 5px;border: none;font-weight: 600;font-size: 16px;margin-left: 5px;color: #009900;}
+.thongke-xulyphananh .wrapper2-17 {padding-top: 15px;margin: 0 10px;border-top: 1px solid #ddd;}
+.thongke-xulyphananh .lbl2-34 {text-align: center;font-weight: 700;font-size: 16px;color: #333333;}
+.thongke-xulyphananh .wrapper2-17b {padding: 5px 20px 0;display: flex;align-items: center;font-size: 16px;}
+.thongke-xulyphananh .box2-2 {width: 50%;}
+.thongke-xulyphananh .lbl2-34b {font-weight: 700;color: #009933;padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #F2F2F2;}
+.thongke-xulyphananh .lbl2-34b::before {content: "•";display: inline-block;color: #009933;font-size: 25px;margin-right: 5px;vertical-align: bottom;}
+.thongke-xulyphananh .lbl2-34c {margin-bottom: 3px;}
+.thongke-xulyphananh .lst2-10 {padding-left: 10px;}
+.thongke-xulyphananh .item2-10 {margin-bottom: 3px;}
+
+@media (min-width: 767px) {
+    .thongke-xulyphananh .wrapper2-17{width: 70%;margin: 0 auto}
+}

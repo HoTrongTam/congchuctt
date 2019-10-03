@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ 'titlepush' | translate | uppercase }}" class="push">
+    <ion-content>
+
+        <ion-refresher pulling-text="{{ 'pulltorefresh' | translate }}" on-refresh="doRefresh()"></ion-refresher>
+
+        <ion-list ng-class="{ 'has-error': hasError }">
+            <!-- ng-class="{'viewed':item.viewed == 1}" -->
+            <ion-item class="item-icon-right item-icon-left item-text-wrap" ng-class="{ viewed: item.viewed == 0 }" ng-repeat="item in list | filter:filters | orderBy:sorter" ng-click="onItemTapped(item);">
+                <!-- <i class="icon ion-android-drafts" ng-class="{'ion-email-unread' : item.viewed == 0 ,'ion-email inactive' : item.viewed == 1 }"></i> -->
+                <!-- <i class="icon placeholder-icon" ng-class="getPushIcon(item.module);"></i> -->
+                <i class="icon ion-speakerphone placeholder-icon"></i>
+                <div class="row"><div class="col title">{{ ::item.title }}</div><div class="col datetime">{{ ::getDateTime(item.createddate*1000) }}</div></div>
+                <div class="msg">{{ ::item.message }}</div>
+                <!-- <h4>{{ ::item.createddate | date : config.dateformat}}</h4> -->
+                <i class="icon ion-ios-arrow-right placeholder-icon"></i>
+                 <!-- isDel: {{ item.del }} -->
+                <ion-option-button class="button-assertive placeholder-icon" ng-click="onDeleteTapped(item);">
+					<i class="icon ion-trash-b"></i>
+				</ion-option-button>
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="2" immediate-check="false"></ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>

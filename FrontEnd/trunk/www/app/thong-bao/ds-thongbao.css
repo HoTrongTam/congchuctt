@@ -1,0 +1,6 @@
+.list-thongbao .item2-1 {width: 100%;border: none;display: flex;padding: 12px 10px;flex-wrap: wrap;flex-wrap: wrap;border-bottom: 1px dotted #666;}
+.list-thongbao .lbl2-23 {font-size: 16px;text-overflow: clip;white-space: normal;text-align: left;color: #333333;width: calc(100% - 23px);}
+.list-thongbao .item2-1:before {content: "•";color: #009802;font-size: 35px;margin-right: 10px;}
+.list-thongbao .lbl2-23b {font-weight: 400;font-style: italic;font-size: 13px;color: #0066FF;margin-left: 23px;}
+.list-thongbao .list {padding: 0;}
+.list-thongbao .item2-1:last-child{border-bottom: none;}

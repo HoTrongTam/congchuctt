@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title | uppercase }}" class="home">
+
+	<div class="bar bar-header bar-light">
+		<ion-nav-buttons side="left">
+    		<button class="button ion-menu"></button>
+		</ion-nav-buttons>
+  		<h1 class="title">bar-light</h1>
+		<ion-nav-buttons side="right">
+		    <button class="button icon-homepb-login"></button>
+		</ion-nav-buttons>
+	</div>
+
+    <ion-content class="has-header">
+        <!-- <div class="fixed-top">
+            <button class="btn-type0 icon-left-menu"></button>
+            menu-toggle="left"
+            <button class="btn-type0 icon-homepb-login"></button>
+        </div> -->
+        <div class="intro-box1">
+            <div class="content">
+                <img class="intro-img-logo" src="res/img/homepb-icon.png" />
+                <p class="lbl-2">Chào mừng bạn đến với<span class="lbl-2b">Dịch vụ công <!-- Tỉnh Quảng Ninh --></span></p>
+                <div class="icon-user-default"></div>
+                <!-- <p class="lbl-2 margin-t1">Bạn chưa có tài khoản?</p> -->
+                <button class="btn-type1 " ng-click="gotoRegister();">Đăng ký</button>
+                <button class="btn-type1 btn-dangky" ng-click="gotoSignin();">Đăng nhập</button>
+
+            </div>
+        </div>
+
+        <div class="homepb-box2">
+            <div class="content">
+                <button class="btn-type2" ng-click="onMenuItemTapped('procedure-list');">
+                    <span class="icon ecityzen-tim-thutuc"></span>
+                    <span class="lbl-desc">Thủ tục hành chính</span>
+                </button>
+                <button class="btn-type2" ng-click="onMenuItemTapped('document-list');">
+                    <span class="icon ecityzen-tin-tuc"></span>
+                    <span class="lbl-desc">Hồ sơ của tôi</span>
+                </button >
+                <button class="btn-type2" ng-click="demo();">
+                    <span class="icon ecityzen-demooffline"></span>
+                    <span class="lbl-desc">Demo offline</span>
+                </button >
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

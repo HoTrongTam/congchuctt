@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-vbd" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-chitietvbd">
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Chi tiết văn bản</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Quá trình xử lý</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Tiến độ</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <div class="container" ng-if="tabIndex===0">
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Số ký hiệu: </span>
+                <span class="lbl2-10c style2-1">1724/UBND</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày phát hành: </span>
+                <span class="lbl2-10c">11/10/2017</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Số đến: </span>
+                <span class="lbl2-10c">7563</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Ngày đến: </span>
+                <span class="lbl2-10c">11/10/2017 15:26</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Trích yếu: </span>
+                <span class="lbl2-10c">Góp ý dự thảo Nghị định quy định về quản lý, bảo vệ kết cấu hạ tầng giao thông đường sắt</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Nơi phát hành: </span>
+                <span class="lbl2-10c">Sở Giao Thông Vận Tải</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Người ký: </span>
+                <span class="lbl2-10c">Võ Khánh Hưng</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Loại văn bản: </span>
+                <span class="lbl2-10c">Công văn</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Hạn xử lý: </span>
+                <span class="lbl2-10c">20/10/2017</span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Tệp đính kèm: </span>
+                <span class="lbl2-10c">
+                    <i class="icon2-3 ion-android-attach"></i> 1724/UBNDsigned.pdf</span>
+            </div>
+            <div class="lbl2-11">Văn bản liên quan</div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Văn bản đến: </span>
+                <span class="lbl2-10c"></span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Văn bản đi: </span>
+                <span class="lbl2-10c"></span>
+            </div>
+            <div class="lbl2-10">
+                <span class="lbl2-10b">Hồ sơ công việc: </span>
+                <span class="lbl2-10c"></span>
+            </div>
+            <div class="lbl2-11">Thông tin xử lý</div>
+            <div class="lbl2-12">
+                <img src="../../res/img/avatar.png" src="res/img/avatar.png" class="img2-1">
+                <div class="lbl2-12b">
+                    <div class="lbl2-12c">
+                        <div class="lbl2-12e">
+                            <span class="lbl2-12f">Phó Trưởng Phòng</span>
+                            <span class="lbl2-12g">Mai Thanh Sang</span>
+                        </div>
+                        <p class="lbl2-12h">10:10 31/10/2017</p>
+                    </div>
+                    <div class="lbl2-12d">
+                        <span class="lbl2-12i">Nội dung xử lý:</span>
+                        <span class="lbl2-12k">Đ/C đề xuất góp ý</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-if="tabIndex===1">
+            <ion-list class="tree2-1">
+                <ion-item class="tree-item2">
+                    <span class="icon2-3 ion-checkmark-round"></span>
+                    <div class="tree-info">
+                        <p class="tree-name" ng-model="collapsed" ng-click="collapsed=!collapsed">Nguyễn Văn Ngô - <span class="tree-name2">22/10/2017</span></p>
+                        <div class="wrapper2-3" ng-show="collapsed">
+                            <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                            <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                            <p class="lbl2-14">Nội dung xử lý: </p>
+                        </div>
+                    </div>
+                    <ion-list class="tree2-1b">
+                        <ion-item class="tree-item2">
+                            <span class="icon2-3 ion-checkmark-round"></span>
+                            <div class="tree-info">
+                                <p class="tree-name" ng-model="collapsed1" ng-click="collapsed1=!collapsed1">Mai Thanh Sang</p>
+                                <div class="wrapper2-3" ng-show="collapsed1">
+                                    <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                    <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                    <p class="lbl2-14">Nội dung xử lý: </p>
+                                </div>
+                            </div>
+                            <ion-list class="tree2-1b child">
+                                <ion-item class="tree-item2">
+                                    <span class="icon2-3 ion-checkmark-round"></span>
+                                    <div class="tree-info">
+                                        <p class="tree-name" ng-model="collapsed1" ng-click="collapsed1=!collapsed1">Nguyễn Công Luân - <span class="tree-name2">26/10/2017</span></p>
+                                        <div class="wrapper2-3" ng-show="collapsed1">
+                                            <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                            <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                            <p class="lbl2-14">Nội dung xử lý: </p>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="tree-item2 disabled">
+                                    <span class="icon2-3 ion-checkmark-round"></span>
+                                    <div class="tree-info">
+                                        <p class="tree-name" ng-model="collapsed2" ng-click="collapsed2=!collapsed2">Nguyễn Công Luân - <span class="tree-name2">26/10/2017</span></p>
+                                        <div class="wrapper2-3" ng-show="collapsed2">
+                                            <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                            <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                            <p class="lbl2-14">Nội dung xử lý: </p>
+                                        </div>
+                                    </div>
+                                </ion-item>
+                            </ion-list>
+                        </ion-item>
+                        <ion-item class="tree-item2 disabled">
+                            <span class="icon2-3 ion-checkmark-round"></span>
+                            <div class="tree-info">
+                                <p class="tree-name" ng-model="collapsed2" ng-click="collapsed2=!collapsed2">Nguyễn Văn Ngô</p>
+                                <div class="wrapper2-3" ng-show="collapsed2">
+                                    <p class="lbl2-14">Ngày nhận: 22/10/2017 14:10:34</p>
+                                    <p class="lbl2-14">Ngày xử lý: 22/10/2017 15:10:34</p>
+                                    <p class="lbl2-14">Nội dung xử lý: </p>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="container style2-1" ng-if="tabIndex===2">
+            <div class="lbl2-13">
+                <p class="lbl2-13b iconbfsprite2-3">Tiến độ xử lý văn bản</p>
+                <select class="dropd2-1">
+                    <option value="%">%</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                </select>
+            </div>
+            <textarea class="textarea2-2" placeholder="Nhập nội dung tiến độ"></textarea>
+            <button class="btn2-15">Lưu</button>
+        </div>
+    </ion-content>
+    <div class="fixed-top chitiet-vbd">
+        <div class="content">
+            <button class="btn2-2 ion-share">Chuyển</button>
+            <button class="btn2-2 iconbfsprite2-2 sprite">Trả lại</button>
+        </div>
+    </div>
+</ion-view>

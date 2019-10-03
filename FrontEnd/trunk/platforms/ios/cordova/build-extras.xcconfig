@@ -1,0 +1,4 @@
+CODE_SIGN_IDENTITY = iPhone Developer
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer
+PROVISIONING_PROFILE = DichVuCong_dev
+DEVELOPMENT_TEAM = JYYNTH24MB

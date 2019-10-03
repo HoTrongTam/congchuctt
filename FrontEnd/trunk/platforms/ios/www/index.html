@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="format-detection" content="telephone=no">
+        <title>Dich vu cong</title>
+
+        <link rel="manifest" href="manifest.json">
+
+        <!-- <link href="lib/ionic/css/ionic.css" rel="stylesheet"> -->
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <link href="css/ionic.app.min.css" rel="stylesheet">
+        <link href="lib/ionic-toast-0.1.1/dist/style.css" rel="stylesheet" />
+        <link href="lib/mobiscroll.custom/css/mobiscroll.custom-3.2.6.min.css" rel="stylesheet" />
+
+    <script src="cordova.js"></script>
+
+        <link href="app/app.css" rel="stylesheet">
+        <link href="app/main.css" rel="stylesheet">
+        <link href="app/icon.css" rel="stylesheet">
+        <link href="app/user/intro.css" rel="stylesheet">
+        <link href="app/user/login.css" rel="stylesheet">
+        <link href="app/user/user-register.css" rel="stylesheet">
+        <link href="app/user/home.css" rel="stylesheet">
+        <link href="app/user/menu.css" rel="stylesheet">
+        <link href="app/user/user-profile.css" rel="stylesheet">
+        <link href="app/user/change-user-profile.css" rel="stylesheet">
+        <link href="app/user/about.css" rel="stylesheet">
+        <link href="app/user/work-place-choose.css" rel="stylesheet">
+        <link href="app/user/forget-password.css" rel="stylesheet">
+        <link href="app/quan-ly-thu-tuc/procedure-list.css" rel="stylesheet">
+        <link href="app/quan-ly-thu-tuc/procedure-detail.css" rel="stylesheet">
+        <link href="app/quan-ly-ho-so/document-list.css" rel="stylesheet">
+        <link href="app/quan-ly-ho-so/document-detail.css" rel="stylesheet">
+        <link href="app/user/news-detail.css" rel="stylesheet">
+        <link href="app/hoi-dap/hoidap-list.css" rel="stylesheet">
+        <link href="app/hoi-dap/hoidap-detail.css" rel="stylesheet">
+        <link href="app/quan-ly-ho-so/tinh-hinh-xu-ly.css" rel="stylesheet">
+        <link href="app/quan-ly-ho-so/thong-ke.css" rel="stylesheet">
+        <link href="app/user/tra-cuu-lich-lanh-dao.css" rel="stylesheet">
+        <link href="app/user/huong-dan-su-dung.css" rel="stylesheet">
+        <link href="app/user/contact.css" rel="stylesheet">
+        <link href="app/user/kich-hoat-tai-khoan.css" rel="stylesheet">
+        <link href="app/user/home-2.css" rel="stylesheet">
+        <link href="app/quan-ly-xay-dung/build-register.css" rel="stylesheet">
+
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+        <!-- lib -->
+        <script type="text/javascript" src="lib/ng-cordova.min.js"></script>
+        <script type="text/javascript" src="lib/moment.min.js"></script>
+        <script type="text/javascript" src="lib/angular-environment.min.js"></script>
+        <!-- <script type="text/javascript" src="lib/fastclick.js"></script> -->
+        <!-- <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script> -->
+        <script type="text/javascript" src="lib/ionic-toast-0.1.1/dist/ionic-toast.js"></script>
+        <script type="text/javascript" src="lib/mobiscroll.custom/js/mobiscroll.custom-3.2.6.min.js"></script>
+        <script type="text/javascript" src="lib/aes.min.js"></script>
+		<script type="text/javascript" src="lib/socket.io.js"></script>
+        <script type="text/javascript" src="lib/FPT_NotificationClient.js"></script>
+        <script type="text/javascript" src="lib/fusionchart/fusioncharts.js"></script>
+        <script type="text/javascript" src="lib/fusionchart/angular-fusioncharts.min.js"></script>
+        <script type="text/javascript" src="lib/fusionchart/themes/fusioncharts.theme.fint.js"></script>
+
+        <!-- common -->
+        <script src="app/common/factory.module.js"></script>
+            <script src="app/common/const.js"></script>
+            <script src="app/common/const.api.js"></script>
+            <script src="app/common/common.factory.js"></script>
+            <!-- <script src="app/common/log.factory.js"></script> -->
+            <script src="app/common/native.factory.js"></script>
+            <script src="app/common/popup.factory.js"></script>
+            <script src="app/common/file.factory.js"></script>
+            <script src="app/common/datetime.factory.js"></script>
+            <script src="app/common/loader.factory.js"></script>
+            <script src="app/common/utils.js"></script>
+            <script src="app/common/api.js"></script>
+            <!-- <script src="app/common/directive.module.js"></script> -->
+			<script src="app/common/mobiscroll.i18n.vi.js"></script>
+            <!-- <script src="app/common/filter.controller.js"></script> -->
+
+        <!-- user -->
+        <script src="app/user/user.module.js"></script>
+        <script src="app/user/user.factory.js"></script>
+        <script src="app/user/user.controller.js"></script>
+        <script src="app/user/intro.controller.js"></script>
+        <script src="app/user/user-register.controller.js"></script>
+        <script src="app/user/home.controller.js"></script>
+        <script src="app/user/home2.controller.js"></script>
+		<script src="app/user/user-profile.controller.js"></script>
+        <script src="app/user/change-user-profile.controller.js"></script>
+        <script src="app/user/about.controller.js"></script>
+        <script src="app/user/news-detail.controller.js"></script>
+        <!-- <script src="app/user/dashboard.controller.js"></script> -->
+        <script src="app/user/tra-cuu-lich-lanh-dao.controller.js"></script>
+        <script src="app/user/huong-dan-su-dung.controller.js"></script>
+
+        <!-- document -->
+        <script src="app/quan-ly-ho-so/document.module.js"></script>
+        <script src="app/quan-ly-ho-so/document.factory.js"></script>
+        <script src="app/quan-ly-ho-so/document-list.controller.js"></script>
+        <script src="app/quan-ly-ho-so/document-detail.controller.js"></script>
+        <script src="app/quan-ly-ho-so/tinh-hinh-xu-ly.controller.js"></script>
+        <script src="app/quan-ly-ho-so/thong-ke.controller.js"></script>
+
+        <!-- build -->
+        <script src="app/quan-ly-xay-dung/build.module.js"></script>
+        <script src="app/quan-ly-xay-dung/build.factory.js"></script>
+        <script src="app/quan-ly-xay-dung/build-register.controller.js"></script>
+
+        <!-- procedure -->
+        <script src="app/quan-ly-thu-tuc/procedure.module.js"></script>
+        <script src="app/quan-ly-thu-tuc/procedure.factory.js"></script>
+        <script src="app/quan-ly-thu-tuc/procedure-detail.controller.js"></script>
+        <script src="app/quan-ly-thu-tuc/procedure-list.controller.js"></script>
+        <script src="app/quan-ly-thu-tuc/search.controller.js"></script>
+
+        <!-- hoidap -->
+        <script src="app/hoi-dap/hoi-dap.module.js"></script>
+        <script src="app/hoi-dap/hoi-dap.factory.js"></script>
+        <script src="app/hoi-dap/hoidap-list.controller.js"></script>
+        <script src="app/hoi-dap/hoidap-detail.controller.js"></script>
+
+		<!-- master -->
+        <script src="app/master/master.module.js"></script>
+        <script src="app/master/master.factory.js"></script>
+
+        <!-- Push notification -->
+        <!-- <script src="app/push-notification/push.module.js"></script>
+        <script src="app/push-notification/push.factory.js"></script>
+        <script src="app/push-notification/push.controller.js"></script>
+        <script src="app/push-notification/push-detail.controller.js"></script> -->
+        <script src="app/user/thong-bao.controller.js"></script>
+        <link href="app/user/thong-bao.css" rel="stylesheet">
+        <!-- Thong bao -->
+        <script src="app/user/thong-bao.controller.js"></script>
+        <script href="app/user/thong-bao.css" rel="stylesheet"></script>
+
+		<!-- Chat bot -->
+		<script src="app/chat-bot/chat-bot.module.js"></script>
+        <script src="app/chat-bot/chat-bot.factory.js"></script>
+        <script src="app/chat-bot/chat-bot.controller.js"></script>
+
+        <!-- app -->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.controller.js"></script>
+        <script src="lib/socket.io.js"></script>
+        <script src="lib/FPT_NotificationClient.js"></script>
+    </head>
+
+    <body ng-app="FTravel" class="platform-ios platform-cordova platform-webview">
+        <ion-nav-view></ion-nav-view>
+    </body>
+</html>

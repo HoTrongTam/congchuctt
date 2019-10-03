@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitietlichcongtac">
+    <ion-content class="has-header">
+        <p class="lbl2-20" ng-if="fomrdataLCTUyBan">{{fomrdataLCTUyBan.giohop}} {{fomrdataLCTUyBan.thuhop}} ngày {{fomrdataLCTUyBan.ngayhop}}</p>
+        <div class="wrapper2-11">
+            <p class="lbl2-20b">{{fomrdataLCTUyBan.noidunghop || ""}}</p>
+            <p class="lbl2-20c">Chủ trì: {{fomrdataLCTUyBan.nguoichutri || ""}}</p>
+            <p class="lbl2-20d">Địa điểm: {{fomrdataLCTUyBan.diadiem || ""}}</p>
+            <p class="lbl2-20e">Thành phần tham gia: {{fomrdataLCTUyBan.thanhphanthamdu || ""}}</p>
+            <div class="lbl2-20f">
+                <p class="lbl2-20g">Văn bản liên quan: </p>
+                <div class="lst2-20" ng-repeat="list in fomrdataLCTUyBan.filedinhkems">
+                    <button class="item2-20 ion-android-attach" ng-click="openFile({{list.resourcecode}},{{list.primkey}},{{list.fileid}})">{{list.filename}}</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

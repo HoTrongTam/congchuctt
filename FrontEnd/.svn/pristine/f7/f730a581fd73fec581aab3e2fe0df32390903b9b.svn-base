@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>Dich vu cong</title>
+    <link rel="manifest" href="manifest.json">
+    <!-- <link href="lib/ionic/css/ionic.css" rel="stylesheet"> -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+    <link href="lib/ionic-toast-0.1.1/dist/style.css" rel="stylesheet" />
+    <link href="lib/mobiscroll.custom/css/mobiscroll.custom-3.2.6.min.css" rel="stylesheet" />
+    <script src="cordova.js"></script>
+    <link href="app/app.css" rel="stylesheet">
+    <link href="app/main.css" rel="stylesheet">
+    <link href="app/icon.css" rel="stylesheet">
+    <link href="lib/ion-tree-list/ion-tree-list.min.css" rel="stylesheet">
+    <link href="app/user/intro.css" rel="stylesheet">
+    <link href="app/user/login.css" rel="stylesheet">
+    <link href="app/user/user-register.css" rel="stylesheet">
+    <link href="app/user/home.css" rel="stylesheet">
+    <link href="app/user/menu.css" rel="stylesheet">
+    <link href="app/user/user-profile.css" rel="stylesheet">
+    <link href="app/user/change-password.css" rel="stylesheet">
+    <link href="app/user/about.css" rel="stylesheet">
+    <link href="app/user/work-place-choose.css" rel="stylesheet">
+    <link href="app/user/forget-password.css" rel="stylesheet">
+    <link href="app/user/forget-password-update.css" rel="stylesheet">
+    <link href="app/user/news-detail.css" rel="stylesheet">
+    <link href="app/user/huong-dan-su-dung.css" rel="stylesheet">
+    <link href="app/user/contact.css" rel="stylesheet">
+    <link href="app/user/kich-hoat-tai-khoan.css" rel="stylesheet">
+    <link href="app/user/config.css" rel="stylesheet">
+
+    <link href="app/xu-ly-cong-viec/ds-xulycongviec.css" rel="stylesheet">
+    <link href="app/xu-ly-cong-viec/chuyenxuly.css" rel="stylesheet">
+    <link href="app/xu-ly-cong-viec/chitietvbxuly.css" rel="stylesheet">
+    <link href="app/xu-ly-cong-viec/chitiethoso.css" rel="stylesheet">
+    <link href="app/xu-ly-cong-viec/chitietvbchidao.css" rel="stylesheet">
+    <link href="app/xu-ly-cong-viec/travb.css" rel="stylesheet">
+    <link href="app/lich-cong-tac/ds-lichcongtac.css" rel="stylesheet">
+    <link href="app/lich-cong-tac/chitietlichcongtac.css" rel="stylesheet">
+    <link href="app/giao-viec/ds-giaoviec.css" rel="stylesheet">
+    <link href="app/giao-viec/chitietgiaoviec.css" rel="stylesheet">
+    <link href="app/giao-viec/nhapgiaoviec.css" rel="stylesheet">
+    <link href="app/danh-ba/ds-danhba.css" rel="stylesheet">
+    <link href="app/danh-ba/chitietdanhba.css" rel="stylesheet">
+    <link href="app/tra-cuu/ds-tracuu.css" rel="stylesheet">
+    <link href="app/thong-bao/ds-thongbao.css" rel="stylesheet">
+    <link href="app/thong-bao/chitietthongbao.css" rel="stylesheet">
+    <link href="app/thong-ke/ds-thongke.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-giaiquyetdonthu.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-danhgiahailong.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-congviecdagiao.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-xulyphananh.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-xulyhoso.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-xulyvanban.css" rel="stylesheet">
+    <link href="app/thong-ke/thongke-chuyennganh.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script type="text/javascript" src="lib/ion-tree-list/ion-tree-list.js"></script>
+    <!-- lib -->
+    <script type="text/javascript" src="lib/ng-cordova.min.js"></script>
+    <script type="text/javascript" src="lib/moment.min.js"></script>
+    <script type="text/javascript" src="lib/angular-environment.min.js"></script>
+    <script type="text/javascript" src="lib/ionic-toast-0.1.1/dist/ionic-toast.js"></script>
+    <script type="text/javascript" src="lib/mobiscroll.custom/js/mobiscroll.custom-3.2.6.min.js"></script>
+    <script type="text/javascript" src="lib/aes.min.js"></script>
+    <script type="text/javascript" src="lib/socket.io.js"></script>
+    <script type="text/javascript" src="lib/FPT_NotificationClient.js"></script>
+    <script type="text/javascript" src="lib/fusionchart/fusioncharts.js"></script>
+    <script type="text/javascript" src="lib/fusionchart/angular-fusioncharts.min.js"></script>
+    <script type="text/javascript" src="lib/fusionchart/themes/fusioncharts.theme.fint.js"></script>
+    <!-- common -->
+    <script src="app/common/factory.module.js"></script>
+    <script src="app/common/const.js"></script>
+    <script src="app/common/const.api.js"></script>
+    <script src="app/common/common.factory.js"></script>
+    <!-- <script src="app/common/log.factory.js"></script> -->
+    <script src="app/common/native.factory.js"></script>
+    <script src="app/common/popup.factory.js"></script>
+    <script src="app/common/file.factory.js"></script>
+    <script src="app/common/datetime.factory.js"></script>
+    <script src="app/common/loader.factory.js"></script>
+    <script src="app/common/utils.js"></script>
+    <script src="app/common/api.js"></script>
+    <!-- <script src="app/common/directive.module.js"></script> -->
+    <script src="app/common/mobiscroll.i18n.vi.js"></script>
+    <!-- <script src="app/common/filter.controller.js"></script> -->
+    <!-- user -->
+    <script src="app/user/user.module.js"></script>
+    <script src="app/user/user.factory.js"></script>
+    <script src="app/user/user.controller.js"></script>
+    <script src="app/user/intro.controller.js"></script>
+    <script src="app/user/user-register.controller.js"></script>
+    <script src="app/user/home.controller.js"></script>
+    <script src="app/user/user-profile.controller.js"></script>
+    <script src="app/user/change-password.controller.js"></script>
+    <script src="app/user/about.controller.js"></script>
+    <script src="app/user/huong-dan-su-dung.controller.js"></script>
+    <script src="app/user/config.controller.js"></script>
+    <!-- giaoviec -->
+    <script src="app/giao-viec/giaoviec.module.js"></script>
+    <script src="app/giao-viec/giaoviec.factory.js"></script>
+    <script src="app/giao-viec/ds-giaoviec.controller.js"></script>
+    <script src="app/giao-viec/chitietgiaoviec.controller.js"></script>
+    <script src="app/giao-viec/nhapgiaoviec.controller.js"></script>
+    <!-- lichcongtac -->
+    <script src="app/lich-cong-tac/lichcongtac.module.js"></script>
+    <script src="app/lich-cong-tac/lichcongtac.factory.js"></script>
+    <script src="app/lich-cong-tac/ds-lichcongtac.controller.js"></script>
+    <script src="app/lich-cong-tac/chitietlichcongtac.controller.js"></script>
+    <!-- xulycongviec -->
+    <script src="app/xu-ly-cong-viec/xulycongviec.module.js"></script>
+    <script src="app/xu-ly-cong-viec/xulycongviec.factory.js"></script>
+    <script src="app/xu-ly-cong-viec/ds-xulycongviec.controller.js"></script>
+    <script src="app/xu-ly-cong-viec/chuyenxuly.controller.js"></script>
+    <script src="app/xu-ly-cong-viec/chitietvbxuly.controller.js"></script>
+    <script src="app/xu-ly-cong-viec/chitiethoso.controller.js"></script>
+    <script src="app/xu-ly-cong-viec/chitietvbchidao.controller.js"></script>
+    <script src="app/xu-ly-cong-viec/travb.controller.js"></script>
+    <!-- danhba -->
+    <script src="app/danh-ba/danhba.module.js"></script>
+    <script src="app/danh-ba/danhba.factory.js"></script>
+    <script src="app/danh-ba/ds-danhba.controller.js"></script>
+    <script src="app/danh-ba/chitietdanhba.controller.js"></script>
+    <!-- tracuu -->
+    <script src="app/tra-cuu/tracuu.module.js"></script>
+    <script src="app/tra-cuu/tracuu.factory.js"></script>
+    <script src="app/tra-cuu/ds-tracuu.controller.js"></script>
+    <!-- Thong bao -->
+    <script src="app/thong-bao/thongbao.module.js"></script>
+    <script src="app/thong-bao/thongbao.factory.js"></script>
+    <script src="app/thong-bao/ds-thongbao.controller.js"></script>
+    <script src="app/thong-bao/chitietthongbao.controller.js"></script>
+    <!-- Thong ke -->
+    <script src="app/thong-ke/thongke.module.js"></script>
+    <script src="app/thong-ke/thongke.factory.js"></script>
+    <script src="app/thong-ke/ds-thongke.controller.js"></script>
+    <script src="app/thong-ke/thongke-giaiquyetdonthu.controller.js"></script>
+    <script src="app/thong-ke/thongke-danhgiahailong.controller.js"></script>
+    <script src="app/thong-ke/thongke-congviecdagiao.controller.js"></script>
+    <script src="app/thong-ke/thongke-xulyphananh.controller.js"></script>
+    <script src="app/thong-ke/thongke-xulyhoso.controller.js"></script>
+    <script src="app/thong-ke/thongke-xulyvanban.controller.js"></script>
+    <script src="app/thong-ke/thongke-chuyennganh.controller.js"></script> 
+    <!-- master -->
+    <script src="app/master/master.module.js"></script>
+    <script src="app/master/master.factory.js"></script>
+    <script src="app/user/thong-bao.controller.js"></script>
+    <!-- app -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+    <script src="lib/socket.io.js"></script>
+    <script src="lib/FPT_NotificationClient.js"></script>
+</head>
+
+<body ng-app="FTravel">
+    <ion-nav-view></ion-nav-view>
+</body>
+
+</html>

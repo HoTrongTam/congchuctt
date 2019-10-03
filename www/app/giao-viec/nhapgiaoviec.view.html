@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="nhap-nhapgiaoviec" hide-back-button="false">
+    <ion-header-bar class="bar-positive">
+        <button class="btn1-2" ng-click="closeModal();">
+            <span class="icon-size3 ion-android-arrow-back"></span>
+        </button>
+        <h1 class="title">Tạo mới giao việc</h1>
+    </ion-header-bar>
+    <ion-content class="content-type1 has-header">
+        <div class="group2-3">
+            <textarea class="tarea2-2" ng-model="formmodal.NoiDungGiao" placeholder="Nhập nội dung giao việc ..."></textarea>
+        </div>
+        <div class="group2-4">
+            <p class="lbl2-31 iconsprite2-18"></p>
+            <input type="text" class="txt2-20" ng-model="formmodal.ThoiHanXuLy" placeholder="Thời gian xử lý" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-empty lbl-date"
+            mobiscroll-date/>
+        </div>
+        <div class="group2-4">
+            <p class="lbl2-31 iconsprite2-18"></p>
+            <input type="text" class="txt2-20" ng-model="formmodal.nguoinhanid" mobiscroll-select="dsCN"/>
+        </div>
+        <div class="group2-5">
+            <ion-list class="list2-1">
+                <ion-item class="item2-1" ng-repeat="item in tempNguoixulys track by $index">
+                    <ion-icon class="icon2-36 ion-checkmark"></ion-icon>
+                    <span class="lbl2-32">{{item.NguoiNhan}}</span>
+                </ion-item>
+            </ion-list>
+        </div>
+        <label class="wrapper2-21">
+            <input type="file" class="file2-1" files-input ng-model="inputfile" multiple ng-change="addfile(inputfile)" autofocus/>
+            <span class="lbl2-27"></span>
+            <span class="lbl2-28">Ảnh, Tệp hoặc video</span>
+        </label>
+        <label class="file-header-lbl" ng-repeat="name in fileNames track by $index" ng-if="fileName1">
+            <span readonly>{{name}}</span>
+            <button type="submit" ng-click="removeFile($index)" class="ion-close-round img-lbl1">
+            </button>
+        </label>
+    </ion-content>
+    <div class="fixed-top nhap-nhapgiaoviec">
+        <div class="content">
+            <button class="btn2-23" ng-click="save();">Giao việc</button>
+            <!-- <button class="btn2-23" ng-click="save();" ng-if="!isIDNhap">Lưu</button> -->
+            <!-- <button class="btn2-2" ng-click="insert();" ng-if="isIDNhap">Giao việc</button> -->
+        </div>
+    </div>
+</ion-view>

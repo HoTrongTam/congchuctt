@@ -1,0 +1,39 @@
+
+.push .list .item .row .col,
+.push .list .item .row {
+    padding: 0;
+}
+.push .list .item .col.datetime {
+    font-size: 0.7em;
+    text-align: right;
+    width: 10%;
+}
+.push .list .item .col.title {
+    width: 90%;
+    font-size: 0.8em;
+}
+.push .list .item .msg {
+    font-size: 0.7em;
+}
+/*.push .list .item.viewed .icon::before,*/
+/*.push .list .item.viewed .title,*/
+.push .list .item {
+    /*border: none;*/
+    /*margin-top: 1px;*/
+    /*border-color: #fff;*/
+}
+.push .list .item.viewed .item-content{
+    color: #80BBFF;
+    /*background-color: #e8f1fb;*/
+}
+.push .list .item.viewed h4,.push-detail .list .item.viewed h4 {
+    color : #666;
+}
+
+.push-detail .list .item:last-child {
+    margin-top:1px;
+}
+
+.push-detail .list .item.viewed  .item-content .icon:before , .push .list .item.viewed .item-content .icon:first-child:before {
+    /*color : #666;*/
+}

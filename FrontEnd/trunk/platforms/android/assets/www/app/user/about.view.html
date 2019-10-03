@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ 'Thông tin ứng dụng' | uppercase }}" class="about">
+	<!-- Trên header có: nút back, tiêu đề -->
+    <ion-content class="has-header">
+    	<div class="box-31">
+    		<span class="lbl-app-icon"></span>
+    		<p class="lbl-44">DỊCH VỤ CÔNG<br/>
+    			<span class="lbl-44c">HỆ THỐNG CHÍNH QUYỀN ĐIỆN TỬ<!-- TỈNH QUẢNG NINH --></span>
+    		</p>
+    	</div>
+    	<div class="box-32 border-clr-1">
+    		<p class="lbl-42 lbl-title">Phiên bản ứng dụng</p>
+    		<p class="lbl-43">Version: <span>{{ ::CONST.APP_VER }}</span></p>
+    		<p class="lbl-43">Build: <span>{{ ::CONST.APP_REVISION }}</span></p>
+    	</div>
+    	<!-- <div class="box-32 border-clr-2">
+    		<p class="lbl-42 lbl-title">Cơ quan chủ quản</p>
+    		<p class="lbl-42">© Ủy ban nhân dân Tỉnh Quảng Ninh</p>
+    		<p class="lbl-42">Website: <a href="http://congchuc.quangninh.gov.vn">congchuc.quangninh.gov.vn</a></p>
+    	</div>
+    	<div class="box-32">
+    		<p class="lbl-42 lbl-title">Hỗ trợ trực tuyến</p>
+    		<p class="lbl-42">Điện thoại: <span>0203.3.618.429, 0203.3.619.429</span></p>
+    		<p class="lbl-42">Email: <a href="mailto:chinhquyendientu@quangninh.gov.vn"> chinhquyendientu@quangninh.gov.vn</a></p>
+    	</div> -->
+    	<div class="box-32 border-clr-4">
+    		<p class="lbl-42 lbl-title">Đơn vị phát triển</p>
+    		<p class="lbl-42 icon-logo-fpt"><span class="color-666"><b class="lbl-fptco">Công ty Hệ thống Thông tin FPT</b><i class="color-666">Địa chỉ:</i> Tầng 22 tòa nhà Keangnam Landmark 72 Tower - E6 Phạm Hùng, Hà Nội</span></p>
+    	</div>
+		
+		<button class="btn-type18 style-2" ng-click="workPlaceTapped();">Chọn server</button>
+		
+    </ion-content>
+</ion-view>

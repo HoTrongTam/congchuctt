@@ -1,0 +1,326 @@
+/*
+ * user controller
+ * @2017
+ */
+
+(function() {
+'use strict';
+
+
+angular
+    .module('FTravel.user')
+    .factory('UserFtr', userFtr)
+;
+
+userFtr.$inject = [
+    '$q', '$rootScope', '$ionicModal', '$ionicHistory', '$state',
+    'API', 'CONST', 'API_CONST', 'LSFtr', 'Popup', 'MasterFtr'
+];
+
+function userFtr(
+    $q, $rootScope, $ionicModal, $ionicHistory, $state,
+    API, CONST, API_CONST, LSFtr, Popup, MasterFtr
+) {
+    var self = this;
+
+    self.signinModal = null;
+    self.openSignin = function(sco) {
+        sco.workPlace = null;
+        sco.workPlace = LSFtr.get(CONST.WORK_PLACE_TAG)
+        // sco.Captcha1111 = "";
+        // sco.iNumber = Math.floor(Math.random() * 10000);
+        sco.isShow = false;
+        sco.active = true;
+        sco.changeActive = function() {
+            sco.active = !sco.active;
+        };
+
+        if (!sco.workPlace) {} else {
+            API.setBase(sco.workPlace.MobileServerURL);
+        }
+        sco.workPlaces = [];
+        sco.workPlaceModal = null;
+
+        // sco.signinModal = null;
+        if (!self.signinModal) {
+            $ionicModal.fromTemplateUrl('app/user/sign-in.modal.html', {
+                scope: sco
+            }).then(function(modal) {
+                self.signinModal = modal;
+                self.signinModal.show();
+            });
+        } else self.signinModal.show();
+
+        sco.user_form = {
+            // 'username': '','password': ''
+            'username': '', 'password': ''
+            // 'username': 'thuanhc2', 'password': '123'
+            // 'username': 'cuongnt31','password': '123456@'
+        };
+
+        sco.close = function() {
+            self.signinModal.hide();
+        };
+
+        sco.signin = function() {
+            // sco.openActiveUser(); return;
+            $ionicHistory.clearCache();
+            self.signin(sco.user_form).then(function(rep) {
+                if (rep&&rep.StatusCode === 0) {
+                    API.setHeader('Authorization', 'Bearer ' + rep.Token);
+                    Popup.t('Đăng nhập thành công');
+                    self.signinModal.hide();
+                    // self.signinModal.remove();
+                    self.getInfo({
+                        userName: sco.user_form.username
+                    }).then(function(repinfo) {
+                        console.log(repinfo);
+                        fpt_notification.connection(sco.workPlace.NotificationPushURL, repinfo.KhachHangID.toString(), CONST.APP_CODE, 'mobile');
+                        socket.on('push_count', function(msg) {
+                            $rootScope.notifyMessageCount = msg.count;
+                            $rootScope.$apply();
+                        });
+                    }, function(err){Popup.e(err)});
+
+                } else if(rep.StatusCode === -29) {
+                    Popup.c('Tài khoản chưa kích hoạt, Bấm xác nhận để vào kích hoạt', function(ok){
+                        if(ok) self.openActiveUser(sco);
+                    });
+                }
+            }, function(err) {
+                Popup.e(err);
+            });
+        };
+
+        sco.openForgetPass = function() {
+            self.openForgetPass(sco);
+        };
+
+        // sco.registerModal = null;
+        sco.openRegisterUser = function() {
+            // 	if (!sco.registerModal) {
+            // 		$ionicModal.fromTemplateUrl('app/user/user-register.modal.html', {
+            // 			scope: sco,
+            // 			animation: 'slide-in-up'
+            // 		}).then(function(modal) {
+            // 			sco.modal = modal;
+            // 			sco.registerModal = modal;
+            // 		});
+            // 	} else sco.registerModal.show();
+            self.signinModal.hide();
+            $state.go('app.user-register', {});
+        };
+
+        sco.workPlaceTapped = function() {
+            // if (sco.workPlaces.length <= 0)
+                MasterFtr.getDSServer().then(function(rep) {
+                    sco.workPlaces = rep;
+                }, function(err) {});
+
+            if (!sco.workPlaceModal) {
+                $ionicModal.fromTemplateUrl('app/user/work-place-choose.modal.html', {
+                    scope: sco
+                }).then(function(modal) {
+                    sco.workPlaceModal = modal;
+                    sco.workPlaceModal.show();
+                });
+            } else sco.workPlaceModal.show();
+        };
+
+        sco.onServerSelected = function(item) {
+            LSFtr.set(CONST.WORK_PLACE_TAG, item);
+
+            sco.workPlace = item;
+
+            API.setBase(item.MobileServerURL);
+            // API_CONST.user.getToken.base = item.AuthenURL;
+
+            sco.workPlaceModal.hide();
+        };
+    };
+
+    self.openActiveUser = function(sco) {
+        sco.form_active_user = {
+            UserName: '',
+            MaXacThuc: ''
+        };
+
+        if (!sco.activeUserModal) {
+            $ionicModal.fromTemplateUrl('app/user/kich-hoat-tai-khoan.modal.html', {
+                scope: sco,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                sco.activeUserModal = modal;
+                sco.activeUserModal.show();
+            });
+        } else sco.activeUserModal.show();
+
+        sco.submitActiveUser = function() {
+            self.active(sco.form_active_user).then(function(rep) {
+                sco.activeUserModal.hide();
+                Popup.a('Kích hoạt tài khoản thành công, vui lòng đăng nhập lại');
+            }, function(err){Popup.e(err)});
+        };
+    };
+
+    self.openForgetPass = function(sco) {
+        sco.iNumber = Math.floor(Math.random() * 10000);
+        sco.form_resetpass = {
+            userName : '',
+            soDienThoai : '',
+            email : '',
+            sendType: 1,
+            captcha: ''
+        };
+
+        if (!sco.forgetPassModal) {
+            $ionicModal.fromTemplateUrl('app/user/forget-password.modal.html', {
+                scope: sco,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                sco.forgetPassModal = modal;
+                sco.forgetPassModal.show();
+            });
+        } else sco.forgetPassModal.show();
+
+        sco.checkCaptcha = function(straaa) {
+            if (straaa == sco.iNumber)
+                sco.isShow = true;
+            else
+                sco.isShow = false;
+        };
+
+        sco.submitResetpass = function(straaa) {
+            var _msg_err = '';
+    		if(sco.form_resetpass.sendType == 0&&sco.form_resetpass.soDienThoai.length <= 0) _msg_err += 'Bạn chưa nhập số điện thoại<br>';
+    		if(sco.form_resetpass.sendType == 1&&sco.form_resetpass.email.length <= 0) _msg_err += 'Bạn chưa nhập email<br>';
+            if((sco.form_resetpass.captcha - '0') !== sco.iNumber) _msg_err += 'Mã bảo vệ chưa đúng<br>';
+    		if(_msg_err !== '') {
+    			Popup.e(_msg_err);
+    			return;
+    		}
+
+            self.resetPassword(sco.form_resetpass).then(function(rep){
+                // console.log(JSON.stringify(rep));
+                sco.forgetPassModal.hide();
+                Popup.a('Thông tin của bạn đã được gửi thành công!');
+            }, function(err){Popup.e(err)});
+        };
+    };
+
+    self.workPlaceTapped = function(sco) {
+        if (sco.workPlaces.length <= 0)
+            MasterFtr.getDSServer().then(function(rep) {
+                sco.workPlaces = rep;
+            }, function(err) {});
+
+        if (!sco.workPlaceModal) {
+            $ionicModal.fromTemplateUrl('app/user/work-place-choose.modal.html', {
+                scope: sco
+            }).then(function(modal) {
+                sco.workPlaceModal = modal;
+                sco.workPlaceModal.show();
+            });
+        } else sco.workPlaceModal.show();
+    };
+
+    self.getToken = function(params) {
+        var _params = {
+            encryptedText: self.encrypt({
+                'Username': params.username,
+                'Password': params.password
+            })
+        };
+        return API.call(API_CONST.user.getToken, _params);
+    };
+
+    self.getHDSD = function() {
+    	var _params = {
+    		strAppCode : 'DVC'
+    	};
+    	return API.call( API_CONST.user.getHDSD, _params );
+    };
+
+    self.signin = function(params) {
+        var deferred = $q.defer();
+        var _params = {
+            strUserName: params.username
+        };
+        self.getToken(params).then(function(rep) {
+            deferred.resolve(rep);
+        }, function(err) {
+            deferred.reject(err);
+        });
+
+        return deferred.promise;
+    };
+
+    self.getInfo = function(params) {
+        var deferred = $q.defer();
+
+        API.call(API_CONST.user.getInfo, params).then(function(rep) {
+            $rootScope.user = rep;
+            deferred.resolve(rep);
+        }, function(err) {
+            deferred.reject(err);
+        });
+
+        return deferred.promise;
+    };
+
+    self.dangXuat = function(params) {
+        var deferred = $q.defer();
+
+        API.endSession();
+
+        deferred.resolve(true);
+
+        return deferred.promise;
+    };
+
+    self.register = function(params) {
+        var id = params.ChungMinhNhanDan;
+        params.MaSoThue = id;
+
+        if(params.LoaiTaiKhoan === 1) params.MaSoThue = '';
+        if(params.LoaiTaiKhoan === 2) params.ChungMinhNhanDan = '';
+        return API.call(API_CONST.user.register, params);
+    };
+
+	self.active = function(params) {
+        return API.call(API_CONST.user.active, params);
+    };
+
+    self.resetPassword = function(params) {
+        return API.call(API_CONST.user.resetPassword, params);
+    };
+
+	self.doiMatKhau = function(params) {
+        var _params = {
+            encryptedText: self.encrypt(params)
+        }
+        return API.call(API_CONST.user.doiMatKhau, _params);
+    };
+
+    self.encrypt = function(params) {
+        var key = CryptoJS.enc.Utf8.parse(CONST.KEY);
+        var iv = CryptoJS.enc.Utf8.parse(CONST.IV);
+
+        var encruptedLogin = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(JSON.stringify(params)), key, {
+            keySize: 128,
+            iv: iv,
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.Pkcs7
+        });
+        encruptedLogin.replace(/[+]/gi, "_");
+        encruptedLogin.replace(/[/]/gi, "-");
+        encruptedLogin.replace(/[=]/gi, "$");
+
+        return encruptedLogin;
+    };
+
+    return self;
+}
+
+
+})();

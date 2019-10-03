@@ -1,0 +1,56 @@
+[class*="iconsprite2-"],
+[class*="iconbfsprite2-"]:before,
+[class*="iconafsprite2-"]:after {
+    background-image: url(../res/img/main2.png), url(res/img/main2.png);
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+}
+.icon2-1 {
+    background-image: url(../res/img/main2.png), url(res/img/main2.png);
+    background-repeat: no-repeat;
+    background-size: 700px 700px;
+}
+/* Icon home */
+.iconbfsprite2-menu:before{background-position: 3px 4px;}
+.iconbfsprite2-user:before{background-position: 4px -27px;}
+.icon2-xlcv{background-position: -73px -1px;}
+.icon2-lct{background-position: -144px -1px;}
+.icon2-tk{background-position: -215px -1px;} 
+.icon2-gv{background-position: -285px -1px}
+.icon2-tc{background-position: -354px -1px;}
+.icon2-db{background-position: -427px -1px;}
+.icon2-email{background-position: -493px -1px;}
+.icon2-td{background-position: -564px -1px;}
+.icon2-tb{background-position: -634px -1px;}
+.icon2-bd{background-position: -425px -320px;}
+/* .icon2-bd{background-position: -335px -250px;} */
+
+.home.style2-2 .icon2-1.icon2-xlcv{background-position: -52px -47px;background-color: #E7A12D}
+.home.style2-2 .icon2-1.icon2-lct{background-position: -108px -45px;background-color:#46B33E;}
+.home.style2-2 .icon2-tk{background-position: -164px 4px;} 
+.home.style2-2 .icon2-gv{background-position: -222px 4px}
+.home.style2-2 .icon2-tc{background-position: -275px 4px;}
+.home.style2-2 .icon2-db{background-position: -335px 4px;}
+.home.style2-2 .icon2-email{background-position: -389px 4px;}
+.home.style2-2 .icon2-td{background-position: -446px 4px;}
+.home.style2-2 .icon2-tb{background-position: -501px 4px;}
+.home.style2-2 .icon2-bd{background-position: -335px -250px;}
+
+.home.style2-3 .icon2-1.icon2-xlcv{background-position: -164px -47px;background-color: #E7A12D}
+.home.style2-3 .icon2-1.icon2-lct{background-position: -108px -45px;background-color:#46B33E;}
+.home.style2-3 .icon2-1.icon2-tk{background-position: -276px -45px;background-color:#CB36FF;} 
+.home.style2-3 .icon2-1.icon2-gv{background-position: -222px -45px;background-color:#B59191;}
+.home.style2-3 .icon2-1.icon2-tc{background-position: -332px -45px;background-color:#0098FF;}
+.home.style2-3 .icon2-1.icon2-db{background-position: -389px -45px;background-color:#FFAC36;}
+.home.style2-3 .icon2-1.icon2-email{background-position: -444px -45px;background-color:#009866;}
+.home.style2-3 .icon2-1.icon2-td{background-position: -500px -45px;background-color:#CBCB36;}
+.home.style2-3 .icon2-1.icon2-tb{background-position: 5px -96px;background-color:#9898FF;}
+.home.style2-3 .icon2-1.icon2-bd{background-position: -335px -250px; background-color:rgb(102, 42, 129);}
+.button.iconsprite2-schedule {
+    display: inline-block;
+    width: 46px;
+    height: 44px;
+    background-position: 5px -124px;
+    border-color: transparent;
+    background-color: transparent;
+}

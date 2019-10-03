@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<ion-modal-view class="kich-hoat-tk" >
+    <div class="bar bar-header bar-positive">
+        <button class="button button-icon icon ion-ios-arrow-left" ng-click="activeUserModal.hide();"></button>
+        <h1 class="title">KÍCH HOẠT TÀI KHOẢN</h1>
+    </div>
+
+    <ion-content class="has-header">
+        <form class="box1-42">
+            <p class="lbl1-41">Vui lòng kiểm tra tin nhắn/ email để nhận mã kích hoạt.</p>
+            <label class="item item-input item-stacked-label">
+                <input type="text" name="username" ng-model="form_active_user.UserName" placeholder="Tên đăng nhập" autocorrect="off" autocapitalize="off" />
+                <span class="input-label">Tên đăng nhập</span>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <input type="number" ng-model="form_active_user.MaXacThuc" placeholder="Mã kích hoạt" />
+                <span class="input-label">Mã kích hoạt</span>
+            </label>
+            <div class="row-wfull">
+                <button type="submit" class="button btn1-5" ng-click="submitActiveUser();">Kích hoạt tài khoản</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

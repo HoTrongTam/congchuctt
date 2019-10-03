@@ -1,0 +1,16 @@
+.chitiet-danhba .wrapper2-13 {text-align: center;padding: 15px;}
+.chitiet-danhba .lbl2-13c {display: inline-block;width: 50px;height: 50px;line-height: 50px;border-radius: 50%;font-size: 22px;color: #fff;}
+.chitiet-danhba .lbl2-13d {font-weight: 700;font-size: 16px;}
+.chitiet-danhba .lst2-8 {display: flex;padding: 0 10px 10px;align-items: center;}
+.chitiet-danhba .item2-8 {width: 25%;text-align: center;color: #0033FF;font-size: 15px;background: transparent;border: none;padding: 0;}
+.chitiet-danhba .icon2-8 {width: 30px;height: 30px;display: inline-block;background: #0033FF;border-radius: 50%;font-size: 20px;color: #fff;line-height: 30px;}
+.chitiet-danhba .lbl2-13e {margin: 5px 0 0;}
+.chitiet-danhba .lbl2-13f {display: flex;align-items: center;font-size: 15px;}
+.chitiet-danhba .lbl2-13g,.chitiet-danhba .lbl2-13h {font-size: 16px;}
+.chitiet-danhba .lbl2-13g {width: 100px;}
+.chitiet-danhba .lbl2-13h {width: calc(100% - 100px);}
+
+@media (min-width: 768px) {
+    .chitiet-danhba {background: #fff;}
+    .chitiet-danhba .scroll {width: 70%;margin: 0 auto;}
+}

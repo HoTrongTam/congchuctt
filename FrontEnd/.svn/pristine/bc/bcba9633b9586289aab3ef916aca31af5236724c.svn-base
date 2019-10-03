@@ -1,0 +1,18 @@
+.thongke-xulyvanban .fixed-top.list-thongke {background: transparent;border: none;}
+.thongke-xulyvanban .btn1-1 {width: 50%;font-size: 14px;}
+.thongke-xulyvanban ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 90px;padding-top: 0;}
+.thongke-xulyvanban .wrapper2-16 {padding: 10px;text-align: right}
+.thongke-xulyvanban .cbo2-15 {padding: 5px;border: none;font-weight: 600;font-size: 16px;margin-left: 5px;color: #009900;}
+.thongke-xulyvanban .wrapper2-17 {padding: 15px 0;margin: 0 10px;border-top: 1px solid #ddd;}
+.thongke-xulyvanban .lbl2-34 {text-align: center;font-weight: 700;font-size: 16px;color: #333333;}
+.thongke-xulyvanban .wrapper2-17b {padding: 5px 20px 0;display: flex;align-items: center;font-size: 14px;}
+.thongke-xulyvanban .box2-2 {width: 50%;}
+.thongke-xulyvanban .lbl2-34b {font-weight: 700;color: #009933;padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #F2F2F2;}
+.thongke-xulyvanban .lbl2-34b::before {content: "•";display: inline-block;color: #009933;font-size: 25px;margin-right: 5px;vertical-align: bottom;}
+.thongke-xulyvanban .lbl2-34c {margin-bottom: 3px;}
+.thongke-xulyvanban .lst2-10 {padding-left: 10px;}
+.thongke-xulyvanban .item2-10 {margin-bottom: 3px;}
+
+@media (min-width: 767px) {
+    .thongke-xulyvanban .wrapper2-17{width: 70%;margin: 0 auto}
+}

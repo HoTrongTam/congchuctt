@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<ion-view view-title="{{ ::title | uppercase }}" class="hdlist">
+    <ion-content class="has-header">
+        <ion-refresher pulling-text="Lấy dữ liệu mới" on-refresh="doRefresh();"></ion-refresher>
+        <ion-list class="list1-2">
+            <ion-item class="item-type1" ng-click="viewDetail(item.CauHoiID);" ng-repeat="item in list track by $index">
+                <div class="row-type3">
+                    <div class="col-1">
+                        <button class="lbl1-2 selected avatar-icon-letter" data="{{item.HoTen.charAt(0)}}"></button>
+                    </div>
+                    <div class="col-2">
+                        <p class="lbl1-5">{{item.HoTen}}</p>
+                        <p class="lbl-3">{{item.TieuDe}}</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="lbl-4">{{dt.getTime(item.NgayHoi,'hour')}}</p>
+                    </div>
+                </div>
+                <div class="row-type4">
+                    <p class="lbl-5 style2">{{item.TenLinhVuc}}</p>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll ng-if="noMoreItemsAvailable" on-infinite="loadMore();" distance="2" immediate-check="false"></ion-infinite-scroll>
+    </ion-content>
+    <button class="btn1-7 ion-plus-round" ng-click="openModal();"></button>
+</ion-view>

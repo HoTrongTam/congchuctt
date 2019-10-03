@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitietlichcongtac" hide-back-button="true">
+    <ion-content class="has-header">
+        <p class="lbl2-20">08:00 Thứ 5 ngày 30/01/2017</p>
+        <div class="wrapper2-11">
+            <p class="lbl2-20b">Dự Hội nghị sinh hoạt chuyên đề kỷ niệm 100 năm cách mạng Tháng Mười Nga</p>
+            <p class="lbl2-20c">Chủ trì: Đ/C Nguyễn Văn Tú (Phó chủ tịch)</p>
+            <p class="lbl2-20d">Địa điểm: Phòng họp số 1</p>
+            <p class="lbl2-20e">Thành phần tham gia: Các phòng ban chuyên môn</p>
+            <div class="lbl2-20f">
+                <p class="lbl2-20g">Văn bản liên quan: </p>
+                <div class="lst2-20">
+                    <button class="item2-20 ion-android-attach">1724/UBNDsigned.pdf</button>
+                    <button class="item2-20 ion-android-attach">1724/UBNDsigned.pdf</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="thongke-giaiquyetdonthu">
+    <ion-content class="content-type1 has-header" overflow-scroll="false">
+        <div class="wrapper2-16">
+            <select class="cbo2-15" ng-model="countSelectedYears" ng-options="label for label in yearArray" ng-change="onChangeYears(countSelectedYears)">
+            </select>
+        </div>
+        <div fusioncharts width="100%" height="400" type="bar2d" dataSource="{{myDataSource_thongke}}"></div>
+    </ion-content>
+</ion-view>

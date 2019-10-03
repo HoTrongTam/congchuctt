@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="travb" hide-back-button="true">
+    <ion-content class="has-header">
+        <p class="lbl2-19">Số văn bản: 3614/UBND</p>
+        <p class="lbl2-19b">Góp ý dự thảo Nghị định quy định về quản lý, bảo vệ kết cấu hạ tầng giao thông đường sắt</p>
+        <textarea placeholder="Nội dung xử lý" class="texta2-1"></textarea>
+        <div class="wrapper2-5">
+            <span class="lbl2-4c">Thông báo: </span>
+            <label class="lbl2-9">
+                <input type="checkbox" class="cbo2-1"> SMS
+            </label>
+            <label class="lbl2-9">
+                <input type="checkbox" class="cbo2-1"> Email
+            </label>
+        </div>
+        <p class="lbl2-19c">Người nhận: Hồ Thanh Hoa (Phòng Kinh tế - Văn thư)</p>
+    </ion-content>
+    <div class="fixed-top travb">
+        <button class="btn2-2 iconbfsprite2-2 sprite">Trả lại</button>
+    </div>
+</ion-view>

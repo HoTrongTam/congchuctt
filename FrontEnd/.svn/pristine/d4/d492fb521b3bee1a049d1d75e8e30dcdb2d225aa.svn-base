@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-xulycongviec" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-xulycongviec2">
+            <div class="wrapper2-3">
+                <input type="text" class="txt2-3" placeholder="Nhập tìm kiếm" />
+                <button class="btn2-4 iconsprite2-2"></button>
+            </div>
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>
+                    <!-- đang chọn xem tab nào thì tab đó thêm class "active" -->Văn bản (5)</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Hồ sơ (10)</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Chỉ đạo (5)</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <ion-list class="list2-1" ng-if="tabIndex===0">
+            <ion-item class="item2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số văn bản: 3614/UBND</p>
+                        <p class="lbl2-4">Hạn xử lý: 31/10/2017</p>
+                    </div>
+                    <p class="lbl2-2">24/10/2018</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <span class="lbl2-5">Góp ý dự thảo Nghị định quy định về quản lý, bảo vệ kết cấu hạ tầng giao thông đường sắt</span>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <p class="lbl2-6">Sở giao thông vận tải - Võ Khánh Hưng</p>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số văn bản: 3614/UBND</p>
+                        <p class="lbl2-4">Hạn xử lý: 31/10/2017</p>
+                    </div>
+                    <p class="lbl2-2">24/10/2018</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <span class="lbl2-5">Góp ý dự thảo Nghị định quy định về quản lý, bảo vệ kết cấu hạ tầng giao thông đường sắt</span>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <p class="lbl2-6">Sở giao thông vận tải - Võ Khánh Hưng</p>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số văn bản: 3614/UBND</p>
+                        <p class="lbl2-4">Hạn xử lý: 31/10/2017</p>
+                    </div>
+                    <p class="lbl2-2">24/10/2018</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <span class="lbl2-5">Góp ý dự thảo Nghị định quy định về quản lý, bảo vệ kết cấu hạ tầng giao thông đường sắt</span>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <p class="lbl2-6">Sở giao thông vận tải - Võ Khánh Hưng</p>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số văn bản: 3614/UBND</p>
+                        <p class="lbl2-4">Hạn xử lý: 31/10/2017</p>
+                    </div>
+                    <p class="lbl2-2">24/10/2018</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <span class="lbl2-5">Góp ý dự thảo Nghị định quy định về quản lý, bảo vệ kết cấu hạ tầng giao thông đường sắt</span>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <p class="lbl2-6">Sở giao thông vận tải - Võ Khánh Hưng</p>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list class="list2-1" ng-if="tabIndex===1">
+            <ion-item class="item2-1 style2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số biên nhận: 1600709500085</p>
+                    </div>
+                    <p class="lbl2-2">22/10/2017</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Cấp thay đổi nội dung đăng ký kinh doanh
+                            <p class="lbl2-5b">Họ Tên: Nguyễn Thị Kim Hương</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-6 style2-1">
+                        <p class="lbl2-4">Hạn xử lý: 24/10/2017</p>
+                        Ngày hẹn trả: 31/10/2017
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1 style2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số biên nhận: 1600709500085</p>
+                    </div>
+                    <p class="lbl2-2">22/10/2017</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Cấp thay đổi nội dung đăng ký kinh doanh
+                            <p class="lbl2-5b">Họ Tên: Nguyễn Thị Kim Hương</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-6 style2-1">
+                        <p class="lbl2-4">Hạn xử lý: 24/10/2017</p>
+                        Ngày hẹn trả: 31/10/2017
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1 style2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số biên nhận: 1600709500085</p>
+                    </div>
+                    <p class="lbl2-2">22/10/2017</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Cấp thay đổi nội dung đăng ký kinh doanh
+                            <p class="lbl2-5b">Họ Tên: Nguyễn Thị Kim Hương</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-6 style2-1">
+                        <p class="lbl2-4">Hạn xử lý: 24/10/2017</p>
+                        Ngày hẹn trả: 31/10/2017
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1 style2-1">
+                <div class="row2-1">
+                    <input type="checkbox" class="cbo2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số biên nhận: 1600709500085</p>
+                    </div>
+                    <p class="lbl2-2">22/10/2017</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Cấp thay đổi nội dung đăng ký kinh doanh
+                            <p class="lbl2-5b">Họ Tên: Nguyễn Thị Kim Hương</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                    <div class="lbl2-6 style2-1">
+                        <p class="lbl2-4">Hạn xử lý: 24/10/2017</p>
+                        Ngày hẹn trả: 31/10/2017
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list class="list2-1" ng-if="tabIndex===2">
+            <ion-item class="item2-1 style2-2">
+                <p class="lbl2-3">Số văn bản: 1231/STTTT</p>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Về báo cáo kết quả triển khai DVC tháng 10
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Nội dung chỉ đạo: </span> Báo cáo kết quả thực hiện</p>
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Hạn xử lý: </span> 23/10/2017</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1 style2-2">
+                <p class="lbl2-3">Số văn bản: 1231/STTTT</p>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Về báo cáo kết quả triển khai DVC tháng 10
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Nội dung chỉ đạo: </span> Báo cáo kết quả thực hiện</p>
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Hạn xử lý: </span> 23/10/2017</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1 style2-2">
+                <p class="lbl2-3">Số văn bản: 1231/STTTT</p>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Về báo cáo kết quả triển khai DVC tháng 10
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Nội dung chỉ đạo: </span> Báo cáo kết quả thực hiện</p>
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Hạn xử lý: </span> 23/10/2017</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1 style2-2">
+                <p class="lbl2-3">Số văn bản: 1231/STTTT</p>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <div class="lbl2-5">
+                            Về báo cáo kết quả triển khai DVC tháng 10
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Nội dung chỉ đạo: </span> Báo cáo kết quả thực hiện</p>
+                            <p class="lbl2-5c">
+                                <span class="lbl2-5d">Hạn xử lý: </span> 23/10/2017</p>
+                        </div>
+                        <label class="star2-1">
+                            <input type="checkbox" class="star">
+                            <span class="star-icon iconsprite2-star"></span>
+                        </label>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="fixed-top list-xulycongviec" ng-if="tabIndex===0 || tabIndex===1">
+        <div class="content">
+            <label class="lbl2-7">
+                <input type="checkbox" class="cbo2-1">Chọn tất cả</label>
+            <button class="btn2-2">Chuyển</button>
+        </div>
+    </div>
+</ion-view>

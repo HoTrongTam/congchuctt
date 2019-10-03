@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-thongbao" hide-back-button="false">
+    <ion-content class="content-type1 has-header">
+        <ion-list class="list2-1" ng-repeat="list in mythongbao">
+            <div ng-if="list.hienthi">
+                <ion-item class="item2-1" id="{{list.ThongBaoNoiBoID}}" ng-click="gotoChitietthongbao({{list.ThongBaoNoiBoID}});">
+                    <p class="lbl2-23">{{list.TieuDe}}</p>
+                    <p class="lbl2-23b">{{list.NgayKetThuc}}</p>
+                </ion-item>
+            </div>
+            <div ng-if="!list.hienthi">
+                <ion-item class="item2-2" id="{{list.ThongBaoNoiBoID}}" ng-click="gotoChitietthongbao({{list.ThongBaoNoiBoID}});">
+                    <p class="lbl2-23">{{list.TieuDe}}</p>
+                    <p class="lbl2-23b">{{list.NgayKetThuc}}</p>
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadThongBao()" distance="2" immediate-check="false"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

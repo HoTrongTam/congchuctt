@@ -1,0 +1,44 @@
+.list-lichcongtac .btn1-1 {font-size: 14px}
+.list-lichcongtac .list {padding: 0;max-width: 100%;}
+.list-lichcongtac .item2-1.item {width: 100%;display: flex;align-items: center;border: none;padding: 15px 10px}
+.list-lichcongtac .item2-1.item:nth-child(odd) {background: #F7F7F7;}
+.list-lichcongtac .content {display: flex;align-items: center;padding: 0 10px;justify-content: space-between;}
+.fixed-top.list-lichcongtac {height: 85px;}
+.list-lichcongtac .txt2-3 {width: 100%;padding: 5px 30px 5px 10px;height: 40px;}
+.list-lichcongtac ion-content.scroll-content.ionic-scroll:not(.content-type1):not(.div-popup):not(.box1-2) {top: 140px;padding-top: 0;}
+.list-lichcongtac .wrapper2-3 {position: relative;}
+.list-lichcongtac .btn2-4 {width: 30px;height: 30px;position: absolute;top: 6px;right: 5px;border: none;background-color: #27A8D3;border-radius: 50%;padding: 0;}
+.list-lichcongtac .iconsprite2-3 {background-position: -282px -64px;}
+.list-lichcongtac .lst2-6 {margin-top: 5px;}
+.list-lichcongtac .dropdown2-1 {width: 100px;height: 25px;font-family: 'Rotoro Regular', 'Rotoro';font-weight: 400;font-size: 16px;color: #000000;}
+.list-lichcongtac .dropdown2-1.style2-1 {width: 260px;}
+.list-lichcongtac .lbl2-17 {font-family: 'Rotoro Bold', 'Rotoro';font-weight: 700;font-size: 16px;color: #0000FF;margin-top: 20px;padding-bottom: 5px;border-bottom: 1px solid #000;}
+.list-lichcongtac .lbl2-18 {font-family: 'Rotoro Bold', 'Rotoro';font-weight: 700;font-size: 16px;color: #0000FF;width: 50px;text-align: left}
+.list-lichcongtac .lbl2-18b {width: calc(100% - 50px);text-align: left;}
+.list-lichcongtac .lbl2-18b [class*="lbl2-"] {font-family: 'Rotoro Regular', 'Rotoro';white-space: normal;font-size: 16px;font-weight: 400;}
+.list-lichcongtac .lbl2-18b .lbl2-18c {color: #006600;}
+.list-lichcongtac .lbl2-18b .lbl2-18d {font-family: 'Rotoro Bold', 'Rotoro';font-weight: 700;color: #666666;}
+.list-lichcongtac .lbl2-18b .lbl2-18e {color: #000000;}
+.list-lichcongtac .lbl2-18f {font-size: 14px;color: #0000FF;margin-top: 3px;}
+.list-lichcongtac .btn2-16 {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    color: #75A8B4;
+    background: #B5E1EA;
+    display: inline-block;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    border: none;
+    padding: 0;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.list-lichcongtac .lbl2-18.style2-1 {width: 70px;text-align: center;}
+.list-lichcongtac .style2-1 .lbl2-18b {width: calc(100% - 70px);}
+@media screen and (min-width: 768px) {
+    .list-lichcongtac {background: #f2f2f2;}
+    .fixed-top.list-lichcongtac {width: 70%;left: 15%;}
+}

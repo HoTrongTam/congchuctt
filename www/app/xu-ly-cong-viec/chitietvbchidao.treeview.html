@@ -1,0 +1,23 @@
+<span class="icon-tree-1 ion-checkmark-round" ng-class="{'noseen': item.ngayxem == ''}">
+</span>
+<div class="tree-info1" ng-controller="ChiTietVBChiDaoCtrl">
+    <p class="tree-name1" ng-model="collapsed" ng-click="collape($event)">{{item.nguoixuly}} -
+        <span class="tree-name1" ng-if="item.ngayxem != ''">{{item.ngayxem|date:'dd/MM/yyyy'}}</span>
+        <span class="tree-name1" ng-if="item.ngayxem == ''" style="color:black;">Chưa xử lý</span>
+    </p>
+    <div class="wrapper2-1" ng-show="collapsed">
+        <p class="lbl2-14">Ngày nhận: {{item.ngaynhan}}</p>
+        <p class="lbl2-14">Ngày xử lý: {{item.ngayxuly}}</p>
+        <p class="lbl2-6b">Tiến độ xử lý:</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{(item.tiendo === '')?'0':item.tiendo}}" aria-valuemin="0" aria-valuemax="100"
+                style="width:{{(item.tiendo === '')?'0':item.tiendo}}%">
+                <span class="progress-value">{{(item.tiendo === '')?'0':item.tiendo}}%</span>
+            </div>
+        </div>
+        <div class="lbl2-16">
+            <textarea class="textarea2-2" ng-model="item.noidungnhacnho" placeholder="Nhập nội dung nhắc nhở"></textarea>
+            <button class="btn2-15" ng-click="luuNhacnho(item);">Gửi</button>
+        </div>
+    </div>
+</div>

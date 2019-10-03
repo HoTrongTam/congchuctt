@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-tracuu" ng-class="{drop: tabIndex===0}" hide-back-button="false">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-tracuu2">
+                <form ng-submit="onSearch()">
+            <div class="wrapper2-3" name="formtimkiemtracuu">
+                <input type="text" ng-model="searchForm.keyword" class="txt2-3" placeholder="Nhập tìm kiếm"
+                />
+                <button type="submit" class="btn2-4 iconsprite2-2"></button>
+            </div>
+            </form>
+            <div class="content">
+                <button class="btn1-1" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>Văn bản</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Hồ sơ</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===2}' ng-click='onTabChange(2)'>Chỉ đạo</button>
+                <div class="content child" ng-show="tabIndex===0">
+                    <button class="btn1-1" ng-class='{active: chiltabIndex==0}' ng-click='onChilTabChange(0)'>Văn bản đến</button>
+                    <button class="btn1-1" ng-class='{active: chiltabIndex==1}' ng-click='onChilTabChange(1)'>Văn bản đi</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <ion-list class="list2-1" ng-if="tabIndex===0">
+            <ion-item class="item2-1" ng-if="chiltabIndex===0" ng-repeat="list in mytracuuvanbanden" ng-click="detailtracuuvanbanden({{list}})">
+                <div class="row2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số văn bản: {{list.sokyhieugoc}}</p>
+                        <p class="lbl2-4">Hạn xử lý: {{list.hanxuly}}</p>
+                    </div>
+                    <p class="lbl2-2">{{list.ngayden}}</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <span class="lbl2-5">{{list.trichyeu}}</span>
+                    </div>
+                    <p class="lbl2-6">{{list.noiphathanh}} - {{list.nguoiky}}</p>
+                </div>
+            </ion-item>
+            <ion-item class="item2-1" ng-if="chiltabIndex===1" ng-repeat="list in mytracuuvanbandi" ng-click="detailtracuuvanbandi({{list}})">
+                <div class="row2-1">
+                    <div class="col-2">
+                        <p class="lbl2-3">Số văn bản: {{list.vanbandiid}}</p>
+                        <p class="lbl2-4">Hạn xử lý: {{list.ngayhoanthanh}}</p>
+                    </div>
+                    <p class="lbl2-2">{{list.ngayphathanh}}</p>
+                </div>
+                <div class="row2-1">
+                    <div class="row2-1b">
+                        <span class="lbl2-5">{{list.trichyeu}}</span>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list class="list2-1" id="" ng-if="tabIndex===1">
+            <div ng-repeat="list in mytracuuhoso">
+                <ion-item class="item2-1 style2-1" id="{{list.hosomotcuaid}}" ng-click="detailtracuuhoso({{list.hosomotcuaid}});">
+                    <div class="row2-1">
+                        <div class="col-2">
+                            <p class="lbl2-3">Số biên nhận: {{list.sobiennhan}}</p>
+                        </div>
+                        <p class="lbl2-2">{{list.ngaynhan}}</p>
+                    </div>
+                    <div class="row2-1">
+                        <div class="row2-1b">
+                            <div class="lbl2-5">
+                                {{list.loaihoso}}
+                                <p class="lbl2-5b">Họ Tên: {{list.hoten}}</p>
+                            </div>
+                        </div>
+                        <div class="lbl2-6 style2-1">
+                            <p class="lbl2-4">Hạn xử lý: 24/10/2017</p>
+                            Ngày hẹn trả: {{list.ngayhentra}}
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-list class="list2-1" ng-if="tabIndex===2">
+            <div ng-repeat="list in mytracuuchidao" >
+                <ion-item class="item2-1 style2-2" ng-click="detailtracuuchidao({{list}})">
+                    <p class="lbl2-3">Số văn bản: {{list.sovanban}}</p>
+                    <div class="row2-1">
+                        <div class="row2-1b">
+                            <div class="lbl2-5">
+                                {{list.trichyeu}}
+                                <p class="lbl2-5c">
+                                    <span class="lbl2-5d">Nội dung chỉ đạo: </span> {{list.noidungchidao}}</p>
+                                <p class="lbl2-5c">
+                                    <span class="lbl2-5d">Hạn xử lý: </span> {{list.hanxuly}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loaddulieuvanban()" distance="1%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

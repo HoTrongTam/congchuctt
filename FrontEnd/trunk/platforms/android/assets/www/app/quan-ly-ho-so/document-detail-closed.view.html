@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<ion-view view-title="{{ ::title }}" class="document-detail">
+
+    <ion-content class="has-header">
+      <div>view trang thai ko chinh sua</div>
+		<div>{{documentDetail.TenThuTuc}}</div>
+    <button ng-click='onSaveBtnTap()'>save</button>
+
+    <div style="    padding: 10px;
+    border: 1px solid black;
+        " >
+      <div style="width:80%;">
+        <p>
+          {{documentDetail.ThongTinNguoiGui.TenHienThi}}
+        </p>
+        <p>
+          {{documentDetail.ThongTinNguoiGui.DTDDCaNhan}}
+        </p>
+        <p>
+          {{documentDetail.ThongTinNguoiGui.email}}
+        </p>
+      </div>
+      <div style="width:19%; ">
+        <button ng-click='onShowSenderInfoBtnTap(true)'>Edit</button>
+      </div>
+
+      <div style="width:80%;" ng-show='isShowSenderInfo'>
+        <p>
+          Ten hien thi:
+          <input ng-model='documentDetail.ThongTinNguoiGui.TenHienThi'></input>
+          <!-- {{documentDetail.ThongTinNguoiGui.TenHienThi}} -->
+        </p>
+        <p>
+          DTDD ca nhan:
+          <input ng-model='documentDetail.ThongTinNguoiGui.DTDDCaNhan'></input>
+          <!-- {{documentDetail.ThongTinNguoiGui.DTDDCaNhan}} -->
+        </p>
+        <p>
+          Email:
+          <input ng-model='documentDetail.ThongTinNguoiGui.email'></input>
+
+        </p>
+        <div style="width:19%; ">
+          <button ng-click='onShowSenderInfoBtnTap(false)'>Hide</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div style="    padding: 10px;
+    border: 1px solid black;
+        " >
+      <div style="width:80%; ">
+        <!-- <p>
+          {{documentDetail.DiaChiDangKy.TinhThanh}}
+        </p> -->
+        <p>
+          DiaChiDangKy:{{documentDetail.DiaChiDangKy}}
+        </p>
+        <!-- <p>
+          PhuongXa:{{documentDetail.DiaChiDangKy.PhuongXa}}
+        </p>
+        <p>
+          TenDuong:{{documentDetail.DiaChiDangKy.TenDuong}}
+        </p>
+        <p>
+          SoNha:{{documentDetail.DiaChiDangKy.SoNha}}
+        </p> -->
+      </div>
+      <div style="width:19%;">
+        <button ng-click='onShowRegisterAddressBtnTap(true)'>Edit</button>
+      </div>
+      <div style="width:80%;" ng-show='isShowRegisterAddress'>
+        <p>
+          Quan Huyen:
+          <select ng-model="selectedDistrict" ng-change="onChangeDistrict(selectedDistrict)"
+              ng-options="district as district.MoTa for district in listDistrict">
+          </select>
+          <!-- {{documentDetail.ThongTinNguoiGui.TenHienThi}} -->
+        </p>
+        <p>
+          Phuong xa:
+          <select ng-model="selectedWard" ng-change="onChangeWard(selectedWard)"
+              ng-options="ward as ward.MoTa for ward in listWard">
+          </select>
+          <!-- {{documentDetail.ThongTinNguoiGui.DTDDCaNhan}} -->
+        </p>
+        <p>
+          Ten Duong:
+          <select ng-model="selectedStreet" ng-change="onChangeStreet(selectedStreet)"
+              ng-options="street as street.TenDuong for street in listStreet">
+          </select>
+        </p>
+        <p>
+        So nha:
+          <input ng-model='documentDetail.SoNha'></input>
+        </p>
+        <p>
+          {{documentDetail.DiaChiDangKy}}
+        </p>
+        <div style="width:19%; ">
+          <button ng-click='onShowRegisterAddressBtnTap(false)'>Hide</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="    padding: 10px;
+    border: 1px solid black;
+        " >
+      <div style="width:80%; ">
+        <!-- <p>
+          {{documentDetail.DiaChiDangKy.TinhThanh}}
+        </p> -->
+        <p ng-repeat="item in documentDetail.DanhSachFile">
+          <span>{{item.MoTaFile}}</span> <span>{{item.FilleUrl}}</span>
+          <button ng-click="onViewFileBtnTap(item)">Xem file</button>
+        </p>
+
+      </div>
+
+
+    </div>
+
+    <div style="width:100%;height:400px;">
+      <!-- <embed style='width:100%;height:100%' ng-src="{{content}}" ></embed> -->
+      <div ng-if='fileShowObj.fileType=="pdf"'></div>
+      <object    data="{{fileShowObj.contentUrl}}" type="application/pdf" style="width: 100%; height: 100%;"></object>
+      <img ng-if='fileShowObj.fileType=="png"' ng-src='{{fileShowObj.contentUrl}}' style="width: 100%; height: 100%;" />
+    </div>
+
+    </ion-content>
+
+</ion-view>

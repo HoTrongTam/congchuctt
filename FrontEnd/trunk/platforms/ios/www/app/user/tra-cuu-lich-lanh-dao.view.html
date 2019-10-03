@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<ion-view view-title="LỊCH LÃNH ĐẠO" class="lich-danh-dao">
+	<ion-content class="has-header">
+		<div class="box1-5">
+			<p class="lbl1-22">Tra cứu lịch của lãnh đạo</p>
+	<div class="input1-1 ion-android-calendar">
+                <input class="date1-1" ng-model="fake.mydate1" mobiscroll-date="setDatetime" placeholder="Chọn ngày" />
+        </div>
+            <div class="input1-1 ion-person-stalker aficon-arrow-down">
+                <input ng-model="soSelected.value" mobiscroll-select="soSet" mobiscroll-data="dsSo" />
+        </div>
+            <button class="btn1-4 ion-ios-search-strong" ng-click="doRefresh();">Tra cứu</button>
+		</div>
+		<p class="lbl1-23" ng-if="lichcongtac.length>0">
+            Lịch công tác của 
+            <span class="lbl1-23a">{{soSelected.text}}</span> ngày 
+            <span class="lbl1-23a">{{dt.getTime(fake.mydate1,'date')}}</span>
+        </p>
+
+        <div class="box1-6">
+            <div class="item1-4" ng-repeat = "item in lichcongtac track by $index">
+                <p class="lbl1-24">Chủ trì: {{item.ChuTri}}<span class="lbl1-24b">Thời gian: {{dt.getTime(item.NgayHop,'date')}} {{item.GioHop}}</span></p>
+                <p class="lbl1-25 ion-chatboxes">{{item.NoiDungCongViec}}</p>
+                <p class="lbl1-25 ion-person-stalker">{{item.LanhDaoPhong}}</p>
+                <p class="lbl1-25 ion-android-pin">{{item.DiaDiem}}</p>
+            </div>
+        </div>
+		
+	</ion-content>
+</ion-view>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-procedure" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-procedure">
+            <div class="content">
+                <button class="btn1-1 active" ng-class='{active: tabIndex===0}' ng-click='onTabChange(0)'>
+                    <!-- đang chọn xem tab nào thì tab đó thêm class "active" -->Tất cả</button>
+                <button class="btn1-1" ng-class='{active: tabIndex===1}' ng-click='onTabChange(1)'>Mới thay đổi</button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <ion-list class="list1-2">
+            <ion-item class="item-type1" ng-click="onDocumentItemTapped(item)">
+                <div class="row-type3 ">
+                    <div class="col-1 ">
+                        <button class="lbl1-2 selected avatar-icon-letter " data="X"></button>
+                    </div>
+                    <div class="col-2 ">    
+                        <p class="lbl1-5 ">Xây dựng</p>
+                        <p class="lbl-3 ">Cấp giấy phép xây dựng nhà ở riêng lẻ</p>
+                    </div>
+                    <div class="star_header ">
+                        <p class="lbl-4 ">25/10</p>
+                    </div>
+                </div>
+                <!-- <div class="row-type4 ">
+                    <div class="row-1 ">
+                        <p class="lbl-5 style2 ">{{vb.SoVanBan}}</p>
+                        <p class="lbl2-3 lbl2-phanhoi" ng-if="vb.NoiDungPhanHoi" data="{{getFirstCharOfStr(vb.TenDonViGui)}}">
+                            <span class="icon2-1 ion-chatbox-working"> {{vb.NoiDungPhanHoi}}</span>
+                        </p>
+                        <label class="lbl-5 style2-1" ng-if="vb.isSelect" ng-click="show_popup_nhapso(vb);$event.stopPropagation();">
+                            ✓
+                        </label>
+                    </div>
+                </div> -->
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3 ">
+                    <div class="col-1 ">
+                        <button class="lbl1-2 selected avatar-icon-letter " data="D"></button>
+                    </div>
+                    <div class="col-2 ">
+                        <p class="lbl1-5 ">Đăng ký kinh doanh</p>
+                        <p class="lbl-3 ">Đăng ký cấp giấy chứng nhận đăng ký kinh doanh</p>
+                    </div>
+                    <div class="star_header ">
+                        <p class="lbl-4 ">25/10</p>
+                    </div>
+                </div>
+                <!-- <div class="row-type4 ">
+                                <div class="row-1 ">
+                                    <p class="lbl-5 style2 ">{{vb.SoVanBan}}</p>
+                                    <p class="lbl2-3 lbl2-phanhoi" ng-if="vb.NoiDungPhanHoi" data="{{getFirstCharOfStr(vb.TenDonViGui)}}">
+                                        <span class="icon2-1 ion-chatbox-working"> {{vb.NoiDungPhanHoi}}</span>
+                                    </p>
+                                    <label class="lbl-5 style2-1" ng-if="vb.isSelect" ng-click="show_popup_nhapso(vb);$event.stopPropagation();">
+                                        ✓
+                                    </label>
+                                </div>
+                            </div> -->
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3 ">
+                    <div class="col-1 ">
+                        <button class="lbl1-2 selected avatar-icon-letter " data="T"></button>
+                    </div>
+                    <div class="col-2 ">
+                        <p class="lbl1-5 ">Tư pháp</p>
+                        <p class="lbl-3 ">Chứng thực hợp đồng, giao dịch liên quan đến tài sản là động sản</p>
+                    </div>
+                    <div class="star_header ">
+                        <p class="lbl-4 ">25/10</p>
+                    </div>
+                </div>
+                <!-- <div class="row-type4 ">
+                                <div class="row-1 ">
+                                    <p class="lbl-5 style2 ">{{vb.SoVanBan}}</p>
+                                    <p class="lbl2-3 lbl2-phanhoi" ng-if="vb.NoiDungPhanHoi" data="{{getFirstCharOfStr(vb.TenDonViGui)}}">
+                                        <span class="icon2-1 ion-chatbox-working"> {{vb.NoiDungPhanHoi}}</span>
+                                    </p>
+                                    <label class="lbl-5 style2-1" ng-if="vb.isSelect" ng-click="show_popup_nhapso(vb);$event.stopPropagation();">
+                                        ✓
+                                    </label>
+                                </div>
+                            </div> -->
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3 ">
+                    <div class="col-1 ">
+                        <button class="lbl1-2 selected avatar-icon-letter " data="X"></button>
+                    </div>
+                    <div class="col-2 ">
+                        <p class="lbl1-5 ">Xây dựng</p>
+                        <p class="lbl-3 ">Cấp giấy phép xây dựng nhà ở riêng lẻ</p>
+                    </div>
+                    <div class="star_header ">
+                        <p class="lbl-4 ">25/10</p>
+                    </div>
+                </div>
+                <!-- <div class="row-type4 ">
+                                <div class="row-1 ">
+                                    <p class="lbl-5 style2 ">{{vb.SoVanBan}}</p>
+                                    <p class="lbl2-3 lbl2-phanhoi" ng-if="vb.NoiDungPhanHoi" data="{{getFirstCharOfStr(vb.TenDonViGui)}}">
+                                        <span class="icon2-1 ion-chatbox-working"> {{vb.NoiDungPhanHoi}}</span>
+                                    </p>
+                                    <label class="lbl-5 style2-1" ng-if="vb.isSelect" ng-click="show_popup_nhapso(vb);$event.stopPropagation();">
+                                        ✓
+                                    </label>
+                                </div>
+                            </div> -->
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3 ">
+                    <div class="col-1 ">
+                        <button class="lbl1-2 selected avatar-icon-letter " data="D"></button>
+                    </div>
+                    <div class="col-2 ">
+                        <p class="lbl1-5 ">Đăng ký kinh doanh</p>
+                        <p class="lbl-3 ">Đăng ký cấp giấy chứng nhận đăng ký kinh doanh</p>
+                    </div>
+                    <div class="star_header ">
+                        <p class="lbl-4 ">25/10</p>
+                    </div>
+                </div>
+                <!-- <div class="row-type4 ">
+                                            <div class="row-1 ">
+                                                <p class="lbl-5 style2 ">{{vb.SoVanBan}}</p>
+                                                <p class="lbl2-3 lbl2-phanhoi" ng-if="vb.NoiDungPhanHoi" data="{{getFirstCharOfStr(vb.TenDonViGui)}}">
+                                                    <span class="icon2-1 ion-chatbox-working"> {{vb.NoiDungPhanHoi}}</span>
+                                                </p>
+                                                <label class="lbl-5 style2-1" ng-if="vb.isSelect" ng-click="show_popup_nhapso(vb);$event.stopPropagation();">
+                                                    ✓
+                                                </label>
+                                            </div>
+                                        </div> -->
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3 ">
+                    <div class="col-1 ">
+                        <button class="lbl1-2 selected avatar-icon-letter " data="T"></button>
+                    </div>
+                    <div class="col-2 ">
+                        <p class="lbl1-5 ">Tư pháp</p>
+                        <p class="lbl-3 ">Chứng thực hợp đồng, giao dịch liên quan đến tài sản là động sản</p>
+                    </div>
+                    <div class="star_header ">
+                        <p class="lbl-4 ">25/10</p>
+                    </div>
+                </div>
+                <!-- <div class="row-type4 ">
+                                            <div class="row-1 ">
+                                                <p class="lbl-5 style2 ">{{vb.SoVanBan}}</p>
+                                                <p class="lbl2-3 lbl2-phanhoi" ng-if="vb.NoiDungPhanHoi" data="{{getFirstCharOfStr(vb.TenDonViGui)}}">
+                                                    <span class="icon2-1 ion-chatbox-working"> {{vb.NoiDungPhanHoi}}</span>
+                                                </p>
+                                                <label class="lbl-5 style2-1" ng-if="vb.isSelect" ng-click="show_popup_nhapso(vb);$event.stopPropagation();">
+                                                    ✓
+                                                </label>
+                                            </div>
+                                        </div> -->
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

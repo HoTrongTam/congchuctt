@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<ion-view view-title="Thông Báo" class="thong-bao">
+    <ion-content scroll="false" class="content-type1 scroll-content ionic-scroll scroll-content-false  has-header empty">
+        <div class="fixed-top nofi-fix">
+            <div class="content">
+                <div class="warning-noti">Hệ thống sẽ bảo trì lúc 21:00 ngày 25/10/2017 để nâng cấp </div>
+                <div class="search-noti">
+                    <input type="text" class="in-search" placeholder="Tìm nội dung/số hiệu thông báo" />
+                    <button class="bg_sample btn-search"></button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header nofi-page">
+        <ion-refresher pulling-text="Lấy dữ liệu mới" on-refresh="doRefresh();"></ion-refresher>
+        <ion-list class="ls-noti">
+            <ion-item class="item {{getClassIconAction(item.ActionCode)}} noseen" ng-repeat="item in list track by $index" ng-click="goDetail(item)">
+                <span class="iconsprite2-7-6 icon-noti"></span>
+                <div class="title-noti">
+                    <p class="t-sub-w">
+                        <span class="maint-noti">{{getNameHeaderItem(item.ActionCode)}} - {{Datetime.getTime(item.Message.Date,"DD/MM/YYYY hh:mm:ss")}} </span>
+                    </p>
+                </div>
+                <span class="name-noti">{{item.Message.Title}}</span>
+                <span class="subt-noti2">{{item.Message.Detail}}</span>
+                <span class="no-seen" ng-if="item.State == 0">New</span>
+                <ion-option-button class="button-positive item-type1" ng-click="delItemThongBao($index)">
+                    <i class="icon1-2 ion-close-round"><br>Xóa</i>
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+        <!--  <input type="button" name="" ng-click="getmore()"> -->
+        <ion-infinite-scroll ng-if="isLoadMore" on-infinite="loadMore()" distance="1%" immediate-check="false"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

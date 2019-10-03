@@ -1,0 +1,13 @@
+.list-thongke .list {max-width: 100%;display: flex;flex-wrap: wrap;align-items: center;margin:20px 0}
+.list-thongke .item2-2 {min-height: 100px;width: 50%;text-align: center;border: none;margin: 0;padding: 12px;}
+.list-thongke .icon2-3 {width: 60px;height: 60px;display: inline-block;margin-bottom: 10px;border-radius: 50%;}
+.list-thongke .item2-2:first-child .icon2-3 {background-color: #CB6636}
+.list-thongke .item2-2:nth-child(2) .icon2-3 {background-color: #369866}
+.list-thongke .item2-2:nth-child(3) .icon2-3 {background-color: #FF9803}
+.list-thongke .item2-2:nth-child(4) .icon2-3 {background-color: #369898}
+.list-thongke .item2-2:nth-child(5) .icon2-3 {background-color: #CB9898}
+.list-thongke .item2-2:nth-child(6) .icon2-3 {background-color: #3698FF}
+.list-thongke .item2-2:nth-child(7) .icon2-3 {background-color: #CB9836}
+.list-thongke .item2-2:nth-child(8) .icon2-3 {background-color: #9898FF}
+.list-thongke .iconsprite2-6 {background-position: -89px -123px;background-size: 480px 480px;}
+.list-thongke .lbl2-33 {font-weight: 700;font-size: 16px;color: #666666;}

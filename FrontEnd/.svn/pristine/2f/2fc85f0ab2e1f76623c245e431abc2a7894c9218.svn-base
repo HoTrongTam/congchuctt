@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-thongke" hide-back-button="true">
+    <ion-content class="content-type1 has-header">
+        <ion-list class="list2-2">
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Xử lý văn bản</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Xử lý hồ sơ</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Phản ánh, kiến nghị</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Xử phạt hành chính</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Chuyên ngành</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Giao việc</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Đánh giá hài lòng</p>
+            </ion-item>
+            <ion-item class="item2-2">
+                <span class="icon2-3 iconsprite2-6"></span>
+                <p class="lbl2-33">Giải quyết đơn thư</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

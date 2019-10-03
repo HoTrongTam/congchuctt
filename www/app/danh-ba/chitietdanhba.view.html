@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="chitiet-danhba">
+    <ion-content class="content-type1 has-header">
+        <div class="wrapper2-13">
+            <ion-avatar item-start>
+                <!-- <button class="lbl1-2 selected avatar-icon-letter" data="{{charfisrtname | uppercase}}" ng-if="{{obj.URL==""}}"></button> -->
+                <img class="imgavatar" src="{{DataCT.URL || res/img/avatar_female.png}}"> </ion-avatar>
+
+            <p class="lbl2-13d">{{DataCT.HoTen}}</p>
+        </div>
+        <div class="lst2-8">
+            <button class="item2-8">
+                <a ng-href="sms:{{DataCT.SoDienThoai}}">
+                    <span class="icon2-8 ion-ios-chatbubble"></span>
+                    <p class="lbl2-13e">Nhắn tin</p>
+                </a>
+            </button>
+            <button class="item2-8">
+                <a ng-href="tel:{{DataCT.SoDienThoai}}">
+                    <span class="icon2-8 ion-ios-telephone"></span>
+                    <p class="lbl2-13e">Gọi điện</p>
+                </a>
+            </button>
+            <button class="item2-8" style="text-decoration: underline;" ng-click="onZaloClick()">
+                <a >
+                    <span class="icon2-8 ion-ios-videocam"></span>
+                    <p class="lbl2-13e">Zalo</p>
+                </a>
+            </button>
+            <button class="item2-8">
+                <a ng-href="mailto:{{DataCT.Email}}">
+                    <span class="icon2-8 ion-ios-email"></span>
+                    <p class="lbl2-13e">Gửi thư</p>
+                </a>
+            </button>
+        </div>
+        <div class="wrapper2-13">
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Số điện thoại: </span>
+                <span class="lbl2-13h">{{DataCT.SoDienThoai}} </span>
+            </p>
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Email: </span>
+                <span class="lbl2-13h">{{DataCT.Email}} </span>
+            </p>
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Phòng ban: </span>
+                <span class="lbl2-13h">{{DataCT.TenPhongBan}} </span>
+            </p>
+            <p class="lbl2-13f">
+                <span class="lbl2-13g">Chức vụ: </span>
+                <span class="lbl2-13h">{{DataCT.TenChucVu}} </span>
+            </p>
+        </div>
+    </ion-content>
+</ion-view>

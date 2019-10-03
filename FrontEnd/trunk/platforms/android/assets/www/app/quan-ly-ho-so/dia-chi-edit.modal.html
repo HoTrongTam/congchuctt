@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+
+<ion-modal-view class="modal-popup style3">
+<!-- <div class="div-popup popup-style1 focus-input-ttcd"> -->
+<div class="div-popup">
+	<div class="box-7">
+		<buton class="btn-back-2" ng-click="diaChiEditModal.hide();">
+		</buton>
+		<p class="lbl-16">Địa chỉ đăng ký</p>
+		<button ng-click="update('DRAFT');">Lưu</button>
+	</div>
+	<div class="box-13 pad-type4">
+		<div class="input-type2 item item-input item-stacked-label">
+		  	<input ng-model="quanHuyenSelected" mobiscroll-select="quanHuyenSet" readonly />
+			<span class="input-label">Huyện/ Thị/ TP</span>
+		</div>
+
+		<div class="input-type2 item item-input item-stacked-label f-right">
+		  	<input ng-model="phuongXaSelected" mobiscroll-select="phuongXaSet" readonly />
+			<span class="input-label">Phường/ Xã</span>
+		</div>
+
+		<!-- <div class="input-type2 item item-input item-stacked-label border-style1">
+		  	<input ng-model="detail.Duong" placeholder="nhập tên đường" />
+		  	<span class="input-label">Tên đường</span>
+		</div> -->
+
+		<div class="input-type1 item item-input item-stacked-label f-right">
+			<input type="text" ng-model="form.SoNhaDangKy" placeholder="Số nhà" />
+			<span class="input-label">Số nhà</span>
+		</div>
+	</div>
+</div>
+
+</ion-modal-view>

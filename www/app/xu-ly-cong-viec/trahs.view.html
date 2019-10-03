@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="travb" hide-back-button="false">
+    <ion-content class="has-header">
+        <p class="lbl2-19">Số biên nhận: {{sobiennhan}}</p>
+        <p class="lbl2-19b">{{loaihoho}}</p>
+        <p class="lbl2-19b">Họ tên: {{nguoidaidien}}</p>
+        <textarea placeholder="Nội dung xử lý" ng-model="rejectform.noidungxuly" class="texta2-1"></textarea>
+        <div class="wrapper2-5">
+            <span class="lbl2-4c">Thông báo: </span>
+            <label class="lbl2-9">
+                <input type="checkbox" ng-model="rejectform.sendsms" class="cbo2-1"> SMS
+            </label>
+            <label class="lbl2-9">
+                <input type="checkbox" ng-model="rejectform.sendemail" class="cbo2-1"> Email
+            </label>
+        </div>
+        <p class="lbl2-19c">Người nhận: {{nguoitralai.tennguoinhan}} ({{nguoitralai.phongban}})</p>
+    </ion-content>
+    <div class="fixed-top travb">
+        <button class="btn2-2 iconbfsprite2-2 sprite" ng-click="reject()">Trả lại</button>
+    </div>
+</ion-view>

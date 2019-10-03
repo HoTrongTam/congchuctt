@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<ion-view view-title="{{::title}}" class="list-danhba" hide-back-button="true">
+    <ion-content scroll="false" class="content-type1">
+        <div class="fixed-top list-danhba2">
+            <div class="wrapper2-3">
+                <input type="text" class="txt2-3" placeholder="Nhập tìm kiếm" />
+                <button class="btn2-4 iconsprite2-2"></button>
+            </div>
+        </div>
+    </ion-content>
+    <ion-content class="has-header">
+        <ion-list class="list1-2">
+            <ion-item class="item-type1">
+                <div class="row-type3">
+                    <div class="col-1">
+                        <button class="lbl1-2 selected avatar-icon-letter" data="N">
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="lbl2-18 style2-1">Nguyễn Văn Toàn - Văn phòng HĐND&UBND</p>
+                        <p class="lbl2-18">Chức vụ: Chánh văn phòng</p>
+                        <p class="lbl2-18">Số điện thoại: 0988650788</p>
+                        <p class="lbl2-18">Email: nvtoan.quan7@tphcm.gov.vn</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3">
+                    <div class="col-1">
+                        <button class="lbl1-2 selected avatar-icon-letter" data="L">
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="lbl2-18 style2-1">Lê Thành Chung - Phòng Tư pháp</p>
+                        <p class="lbl2-18">Chức vụ: Chánh văn phòng</p>
+                        <p class="lbl2-18">Số điện thoại: 0988650788</p>
+                        <p class="lbl2-18">Email: nvtoan.quan7@tphcm.gov.vn</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3">
+                    <div class="col-1">
+                        <button class="lbl1-2 selected avatar-icon-letter" data="V">
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="lbl2-18 style2-1">Vũ Tuấn Anh - Phòng Tổng hợp</p>
+                        <p class="lbl2-18">Chức vụ: Chánh văn phòng</p>
+                        <p class="lbl2-18">Số điện thoại: 0988650788</p>
+                        <p class="lbl2-18">Email: nvtoan.quan7@tphcm.gov.vn</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item-type1">
+                <div class="row-type3">
+                    <div class="col-1">
+                        <button class="lbl1-2 selected avatar-icon-letter" data="T">
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <p class="lbl2-18 style2-1">Trần Hải Minh - Phòng Văn hóa thông tin</p>
+                        <p class="lbl2-18">Chức vụ: Chánh văn phòng</p>
+                        <p class="lbl2-18">Số điện thoại: 0988650788</p>
+                        <p class="lbl2-18">Email: nvtoan.quan7@tphcm.gov.vn</p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

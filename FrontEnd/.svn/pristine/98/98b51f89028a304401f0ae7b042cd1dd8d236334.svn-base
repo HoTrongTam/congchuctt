@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<ion-modal-view class="modal-popup style2">
+<!-- <div class="div-popup popup-style1 focus-input-ttcd"> -->
+<div class="div-popup">
+	<div class="box-7">
+		<buton class="btn-back-2" ng-click="customerEditModal.hide();"></buton>
+		<p class="lbl-16">Người đứng tên hồ sơ</p>
+		<button ng-click="update('DRAFT')">Lưu</button>
+	</div>
+
+	<ion-content class="has-header">
+	<div class="box-13 pad-type5">
+	  	<div class="section">
+			<div class="input-type1 item item-input item-stacked-label">
+				<input type="text" placeholder="Họ và tên" ng-model="form.DungTenHoVaTen" />
+				<span class="input-label">Họ và tên</span>
+				<!-- <span class="lbl-msg-warning" ng-class='{show : !isValidUserName}'> Vui lòng nhập họ và tên</span> -->
+			</div>
+			<div class="input-type3 f-right">
+			  	<p class="lbl-inline">Giới tính</p>
+			  	<div class="toggle-flat option-type1">
+				  	<div ng-class="{ 'active':form.DungTenGioiTinh === 2 }" class="opt" ng-click="changeSex(2);">Nam</div>
+				  	<div ng-class="{ 'active':form.DungTenGioiTinh === 1 }" class="opt" ng-click="changeSex(1)">Nữ</div>
+			  	</div>
+			</div>
+			<div class="input-type5">
+			  	<span class="lbl-inline">Ngày sinh</span>
+			  	<input class="mbs-date1-1" ng-model="form.birthday" mobiscroll-date="setDatetime" placeholder="Ngày Sinh" />
+			</div>
+
+			<!-- <label class="input-type2 item item-input item-stacked-label f-right">
+			  <select ng-model="selectedQuocgia" ng-change="onChangeQuocGia(selectedQuocgia)" ng-options="quocgia as quocgia.TenQuocGia for quocgia in LstQuocgia track by quocgia.QuocGiaID">
+			  </select>
+			</label> -->
+			<!-- </div> -->
+		</div>
+
+	<!-- <div class="box-13 pad-type5"> -->
+		<div class="section">
+			<p class="lbl-32">Giấy tờ tùy thân</p>
+			<div class="input-type2 item item-input item-stacked-label">
+<input ng-model="loaiGiayToSelected" mobiscroll-select="loaiGiayToSet" mobiscroll-data="dsLoaiGiayTo" readonly />
+<span class="input-label">Loại giấy tờ</span>
+			</div>
+			<div class="input-type1b item item-input item-stacked-label f-right">
+				<input type="text" placeholder="Số giấy tờ" ng-model="form.DungTenSoGiayToTuyThan" />
+				<span class="input-label">Số giấy tờ</span>
+				<!-- <span class="lbl-msg-warning" ng-class='{show : !isValidSoGiayTo}'>Vui lòng nhập số giấy tờ</span> -->
+			</div>
+			<div class="input-type5">
+				<span class="lbl-inline">Ngày cấp</span>
+				<input class="mbs-date1-1" ng-model="form.DungTenNgayCap" mobiscroll-date="setDatetime" placeholder="Ngày cấp" readonly />
+				<!-- <input type="date" class="date-type2" ng-model='tempUserInfor.NgayCap' /> -->
+			</div>
+			<div class="input-type1b item item-input item-stacked-label f-right">
+				<input type="text" placeholder="Nơi cấp" ng-model="form.DungTenNoiCap" />
+				<span class="input-label">Nơi cấp</span>
+			</div>
+		</div>
+
+		<div class="section">
+			<p class="lbl-32">Thông tin liên lạc</p>
+			<div class="input-type1b item item-input item-stacked-label">
+				<input type="tel" placeholder="Số điện thoại" ng-model="form.DungTenDienThoai" />
+				<span class="input-label">Số điện thoại</span>
+				<!-- <span class="lbl-msg-warning" ng-class='{show : !isValidDTDDCaNhan}'>Vui lòng nhập số điện thoại</span> -->
+			</div>
+			<div class="input-type1b item item-input item-stacked-label f-right">
+				<input type="email" placeholder="Email" ng-model="form.DungTenEmail" />
+				<span class="input-label">Email</span>
+			</div>
+			<div class="input-type1 item item-input item-stacked-label w2">
+				<input type="text" placeholder="Địa chỉ thường trú" ng-model="form.DungTenHoKhauThuongTru" />
+				<span class="input-label">Địa chỉ thường trú</span>
+			</div>
+			<!-- <div class="input-type7">
+		  		<ion-checkbox ng-model="saveToProfile">Cập nhật thông tin trên vào tài khoản cá nhân của tôi.</ion-checkbox>
+			</div> -->
+		</div>
+
+	</div>
+	</ion-content>
+	<!-- <div class="div-footer-type2">
+	  <ion-checkbox ng-model="ApplyToUserProfile" ng-change='onCheckboxChange(ApplyToUserProfile)'>Tôi đồng ý cập nhật thông tin cả nhân của tài khoản.</ion-checkbox>
+	</div> -->
+
+</div>
+
+</ion-modal-view>

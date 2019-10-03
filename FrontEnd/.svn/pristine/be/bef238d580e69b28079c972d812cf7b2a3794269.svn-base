@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<ion-view view-title="THÔNG TIN LIÊN HỆ" class="contact">
+	<ion-content class="has-header">
+		<div class="box1-40">
+			<p class="lbl1-52 ion-social-whatsapp"></p>
+			<div class="box1-41">
+				<span class="lbl1-53a">
+					Hỗ trợ trực tuyến
+				</span>
+				<span class="lbl1-53b">0333.618.429<br><i class="lbl1-53c"> - </i>0333.619.429</span>
+			</div>
+		</div>
+		<div class="box1-40">
+			<p class="lbl1-52 ion-android-mail"></p>
+			<div class="box1-41">
+				<span class="lbl1-53a">
+					Hỗ trợ trực tuyến
+				</span>
+				<a class="lbl1-53d" href="mailto:chinhquyendientu@quangninh.gov.vn">chinhquyendientu<br>@quangninh.gov.vn</a>
+			</div>
+		</div>
+		<div class="box1-40 size-2">
+			<p class="lbl1-52 ion-earth"></p>
+			<div class="box1-41">
+				<span class="lbl1-53a">Website:</span>
+				<a class="lbl1-53d" target="_blank" href="http://dichvucong.quangninh.gov.vn">http://dichvucong.quangninh.gov.vn</a>
+				<!-- <span class="lbl1-53e">CHÍNH QUYỀN ĐIỆN TỬ TỈNH QUẢNG NINH<br>Cơ quan chủ quản: Ủy ban nhân dân Tỉnh Quảng Ninh</span> -->
+			</div>
+		</div>
+	</ion-content>
+</ion-view>	

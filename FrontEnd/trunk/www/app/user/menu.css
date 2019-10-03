@@ -1,0 +1,270 @@
+.menu .scroll-content {
+    top: 80px !important;
+}
+
+.menu.menu-left .bg-menu-left {
+    display: block;
+    width: 100%;
+    height: 160px;
+    background: url(../../res/img/bg_menu.jpg) no-repeat, url(res/img/bg_menu.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.menu.menu-left .bar.expanded {
+    top: 0 !important;
+    background: transparent;
+    height: 160px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu.menu-left .wrapper1-2 {
+    text-align: center;
+}
+
+.menu.menu-left .lbl2-1 {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin: .2rem 0 .5rem;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.82);
+}
+
+.menu.menu-left .lbl2-2 {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.82);
+}
+
+.menu.menu-left .img2-1 {
+    width: 54px;
+    height: 54px;
+}
+
+.menu.menu-left .avatar {
+    margin-left: 5px;
+    margin-top: 5px !important;
+    width: 50px;
+    height: 50px;
+}
+
+.menu .avatar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #BBBBBB;
+}
+
+.avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.box-user-info {
+    padding-left: 10px;
+}
+
+.platform-ios .box-user-info {
+    margin-top: 0 !important;
+}
+
+.menu.menu-left .bar .box-user-info .title {
+    position: inherit;
+    height: auto;
+    margin: 5px auto 0 auto !important;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1em;
+    color: #fff;
+}
+
+.menu.menu-left .bar .box-user-info .lbl-12 {
+    position: inherit;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.menu.menu-left .scroll-content.expanded {
+    top: 160px !important;
+    background-color: #263140;
+}
+
+.menu .overflow-scroll .scroll {
+    background-color: #263140;
+}
+
+.menu.menu-left .disable-user-behavior .list {
+    padding: 0;
+    margin: 0;
+}
+
+.menu .list .item {
+    border: none;
+    color: #7D97A2;
+}
+
+.menu.menu-left .disable-user-behavior .item {
+    margin: 0 auto 1px auto;
+    background: transparent;
+    color: #e5e5e5;
+    border-bottom: 1px solid #222c3a;
+    position: relative;
+}
+
+.menu.menu-left .list .item.selected,
+.menu.menu-left .list .item.active {
+    color: #bf9910;
+}
+
+.menu.menu-left .list .item .icon-size1 {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 23px;
+}
+
+.menu.menu-left .list .item.style-2 {
+    background: #304158;
+    font-size: 12px;
+    border-bottom: 1px solid #304158;
+    padding: 5px 15px;
+    border-top: none;
+}
+
+.menu.menu-left .list .item.style-1:not(.selected) {
+    color: #999;
+}
+
+.icon-null {
+    opacity: 0;
+}
+
+.menu.menu-left .list .item .icon-size1[class*="ion-"] {
+    background-image: none;
+}
+
+.icon-size1.ion-stats-bars:before {
+    font-size: 27px;
+    line-height: 25px;
+}
+
+.icon-size1.ion-android-globe:before {
+    font-size: 26px;
+    line-height: 20px;
+}
+
+.icon-size1.ion-home:before {
+    font-size: 26px;
+    line-height: 20px;
+}
+
+.iconsprite2-trangchu {
+    background-position: -181px -101px;
+}
+
+.iconsprite2-xulycongviec {
+    background-position: -216px -101px;
+}
+
+.iconsprite2-lichcongtac {
+    background-position: -251px -101px;
+}
+
+.iconsprite2-thongke {
+    background-position: -286px -101px;
+}
+
+.iconsprite2-giaoviec {
+    background-position: -320px -101px;
+}
+
+.iconsprite2-danhba {
+    background-position: -215px -132px;
+}
+
+.iconsprite2-email {
+    background-position: -251px -132px;
+}
+
+.iconsprite2-tracuu {
+    background-position: -286px -132px;
+}
+
+.iconsprite2-traodoi {
+    background-position: -320px -132px;
+}
+
+.iconsprite2-thongtintaikhoan {
+    background-position: -110px -132px;
+}
+
+.iconsprite2-thongtinungdung {
+    background-position: -145px -132px;
+}
+
+.iconsprite2-caidat {
+    background-position: -180px -132px;
+}
+
+.iconsprite2-dangxuat {
+    background-position: -40px -132px;
+}
+
+/* .iconbf2-thutuchanhchinh {
+    background-position: -287px -111px;
+}
+.iconbf2-tracuuhoso {
+    background-position: -287px -146px;
+}
+.iconbf2-thongtinquyhoach {
+    background-position: -287px -181px;
+}
+.iconbf2-hosokinhdoanh {
+    background-position: -287px -216px;
+}
+.iconbf2-hosoxaydung {
+    background-position: -287px -252px;
+}
+.iconbf2-gopy {
+    background-position: -285px -284px;
+}
+.iconbf2-trungcauykien {
+    background-position: -287px -322px;
+}
+
+.menu.menu-left .list .item.selected .iconbf2-thutuchanhchinh {
+    background-position: -321px -111px;
+}
+.menu.menu-left .list .item.selected .iconbf2-tracuuhoso {
+    background-position: -321px -146px;
+}
+.menu.menu-left .list .item.selected .iconbf2-thongtinquyhoach {
+    background-position: -321px -181px;
+}
+.menu.menu-left .list .item.selected .iconbf2-hosokinhdoanh {
+    background-position: -321px -216px;
+}
+.menu.menu-left .list .item.selected .iconbf2-hosoxaydung {
+    background-position: -321px -252px;
+}
+.menu.menu-left .list .item.selected .iconbf2-gopy {
+    background-position: -321px -284px;
+}
+.menu.menu-left .list .item.selected .iconbf2-trungcauykien {
+    background-position: -321px -322px;
+} */

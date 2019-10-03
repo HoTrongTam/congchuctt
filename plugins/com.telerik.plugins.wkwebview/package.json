@@ -1,0 +1,52 @@
+{
+  "_from": "cordova-plugin-wkwebview",
+  "_id": "cordova-plugin-wkwebview@0.6.10",
+  "_inBundle": false,
+  "_integrity": "sha1-/A9eop4IusD9qZ4tKmr4GLrmkts=",
+  "_location": "/cordova-plugin-wkwebview",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-wkwebview",
+    "name": "cordova-plugin-wkwebview",
+    "escapedName": "cordova-plugin-wkwebview",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-wkwebview/-/cordova-plugin-wkwebview-0.6.10.tgz",
+  "_shasum": "fc0f5ea29e08bac0fda99e2d2a6af818bae692db",
+  "_spec": "cordova-plugin-wkwebview",
+  "_where": "D:\\FPT\\Project\\DichVuCongQuan7\\trunk",
+  "bundleDependencies": false,
+  "cordova_name": "WKWebView Polyfill",
+  "deprecated": false,
+  "description": "A drop-in replacement of UIWebView for boosted performance and enhanced HTML5 support",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "issue": "https://github.com/Telerik-Verified-Plugins/WKWebView/issues",
+  "keywords": [
+    "Webkit",
+    "Webkit webview",
+    "WKWebView Polyfill",
+    "WKWebView",
+    "WebView+",
+    "ecosystem:cordova"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-wkwebview",
+  "platforms": [
+    "ios"
+  ],
+  "repo": "https://github.com/Telerik-Verified-Plugins/WKWebView.git",
+  "version": "0.6.10"
+}

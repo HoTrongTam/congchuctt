@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<ion-side-menus enable-menu-with-back-views="false" class="main-menu">
+
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-positive" align-title="left">
+            <ion-nav-back-button class="button button-icon ion-android-arrow-back no-text"></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon ion-android-menu" menu-toggle="left" ng-click="onMenuTapped();"></button>
+                <!-- <button class="button button-icon ion-android-home" ng-click="openHome();" ng-if="show_homeBtn"></button> -->
+
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <span ng-if="showBtnBarRight">
+                    <!-- <button class="button button-icon btn-search-1" ng-if="show_SreachBtn" ng-click="openSearch();"></button> -->
+                    <button class="button button-icon iconbfmain-notification" ng-click="gotoNotification()">
+                        <span class="lbl1-num-notification" ng-if="user.KhachHangID&&notifyMessageCount>0">{{notifyMessageCount}}</span>
+                    </button>
+                    <!--  <button class="button button-icon ion-home-camera"></button> -->
+                    <button class="button button-icon ion-person" ng-click="gotoSignin();" ng-if="!user"></button>
+                    <button class="button button-icon ion-ios-search-strong" ng-click="openFilter();" ng-if="show_filter"></button>
+                    <!-- <button class="button button-icon ion-android-funnel" ng-click="openFilter();" ng-if="show_filter"></button> -->
+                    <!-- <button class="btn-type5 clr-trans" ng-show="show_NopHoSobtn && show_NopHoSobtn1" ng-click="createDocumentOntap()">Nộp hồ sơ</button>
+                <button class="btn-type5 clr-trans" ng-show="showSaveHoSoBtn" ng-click="changeStatusDocumentOntap()">Nộp HS</button>
+                <button class="btn-type5 clr-trans" ng-show="showSaveHoSoBtn" ng-click="sendDocumentOntap()">Lưu HS</button> -->
+                </span>
+            </ion-nav-buttons>
+            <!-- <ion-nav-buttons side="right">
+                <button class="button button-icon ion-ios-bell-outline badge-number" ng-class="{badgenumber: notificationNo == 0}" ng-click="gotoPushView();" data-badge="{{ notificationNo }}"></button>
+            </ion-nav-buttons> -->
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent"></ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <div class="bg-menu-left"></div>
+        <ion-header-bar class="bar expanded" ng-click="onUserDetailTap();" menu-close>
+            <div class="wrapper1-2">
+                <img class="img2-1" src="res/img/logo.png" alt="" />
+                <p class="lbl2-1">Uỷ ban nhân dân quận 7</p>
+                <p class="lbl2-2">Thành phố hồ chí minh</p>
+            </div>
+        </ion-header-bar>
+        <ion-content class="expanded">
+            <ion-list>
+                <ion-item class="item-icon-left stable {{item.cssStyle}}" ng-class="{ 'selected': item.selected }" ng-repeat="item in menu"
+                    ng-click="onItemTapped(item);" ng-if="item.active">
+                    <i class="icon-size1 {{ item.icon }}"></i>{{ item.name }}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+
+</ion-side-menus>
